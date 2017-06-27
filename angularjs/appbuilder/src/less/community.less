@@ -1,0 +1,505 @@
+.community-main{
+	.header{
+		padding-left: 0;
+		span{
+			width: 100%;
+		}
+	}
+	.list{
+		margin-top: 1.2rem;
+		background: @basebg;
+		padding-top: .2rem;
+		margin-bottom: 1.1rem;
+		li{
+			height: 2.4rem;
+			background: #fff;
+			padding: .2rem 0 .2rem .4rem;
+			border: 0;
+			margin-bottom: .2rem;
+			img{
+				display: inline-block;
+				width: 2rem;
+				height: 2rem;
+				vertical-align: top;
+			}
+			dl{
+				display: inline-block;
+				width: 7rem;
+				padding-left: .2rem;
+				.title{
+					.font28;
+					color: @basecolor;
+					font-weight: 900;
+					.line-ellipsis;
+				}
+				.description{
+					color: @salecolor;
+					.font24;
+					.line-ellipsis;
+				}
+				.info{
+					color: @salecolor;
+					.font20;
+					margin-top: .1rem;
+					img{
+						height: .72rem;
+						width: .72rem;
+						display: inline-block;
+						border-radius: .1rem;
+					}
+					span{
+						padding-right: .5rem;
+						background: url(../img/forum_icon_moer_nor.png) no-repeat right center;
+						background-size: .2rem .32rem;
+						height: .72rem;
+						line-height: .72rem;
+						float: right;
+						display: block;
+					}
+				}
+			}	
+		}
+	}
+}
+.community-sublist{
+	.header{
+		span{
+			.line-ellipsis;
+		}
+	}
+	.list-title{
+		height: 3rem;
+		color: #fff;
+		padding: .2rem 0 0 .2rem;
+		margin-top: 1.2rem;
+		position: relative;
+		z-index: 1;
+		overflow: hidden;
+		.blur{
+			position: absolute;
+			top: .01rem;
+			left: .01rem;;
+			z-index: -1;
+			width: 9.98rem;
+			height: 2.98rem;
+			background-repeat: no-repeat;
+			background-size: 10rem 3rem;
+			-webkit-filter:blur(3px);
+		}
+		.img-box{
+			.block-float;
+			width: 1.33rem;
+			height: 1.33rem;
+			padding: .05rem;
+			background: #fff;
+			border-radius: .1rem;
+			line-height: .5rem;
+			position:relative;
+			img{
+				width: 1.23rem;
+				height: 1.23rem;
+			}
+		}
+		.list-info{
+			position:relative;
+			.block-float;
+			width: 8rem;
+			margin-left: .2rem;
+			span{
+				display: block;
+				.font20;
+			}
+			.title{
+				.font32;
+			}
+		}
+	}
+	.list-title:after{
+		.clear;
+	}
+	.list{
+		background: @basebg;
+		padding-top: .2rem;
+		dl{
+			background: #fff;
+			margin-bottom: .2rem;
+			padding: .4rem;
+			.title{
+				.font24;
+				color: @salecolor;
+				.user{
+					width: 1rem;
+					height: 1rem;
+					border-radius: 1rem;
+					margin-right: .2rem;
+				}
+				.level{
+					width: .4rem;
+					height: .35rem;
+					margin-left: .1rem;
+				}
+			}
+			.subtiitle{
+				color: #15528d;
+				.font28;
+				margin-top: .2rem;
+				span.tag{
+					background: @activecolor;
+					color: #fff;
+					border-radius: .1rem;
+					margin-right: .1rem;
+					padding: 0 .05rem 0 .05rem;
+				}
+			}
+			.des{
+				.font24;
+				color: @basecolor;
+				margin-top: .1rem;
+				max-height: 2.2rem;
+				overflow: hidden;
+			}
+			.info{
+				margin-top: .5rem;
+				.font24;
+				color: @salecolor;
+				.right{
+					float: right;
+					span{
+						.block-float;
+						margin-top: .1rem;
+						min-width: 1rem;
+					}
+					.zan{
+						width: .75rem;
+						height: .75rem;
+						background: url(../img/forum_icon_like_nor.png) no-repeat left center;
+						background-size: .75rem;
+						.block-float;
+					}
+					.zan.active{
+						width: .75rem;
+						height: .75rem;
+						background: url(../img/forum_icon_like_sel.png) no-repeat left center;
+						background-size: .75rem;
+						.block-float;
+					}
+					.discuss{
+						width: .75rem;
+						height: .75rem;
+						background: url(../img/forum_icon_comment_nor.png) no-repeat left center;
+						background-size: .75rem;
+						.block-float;
+					}
+				}
+			}
+			.info:after{
+				.clear;
+			}
+			.img{
+				margin-top: .2rem;
+				img{
+					.block-float;
+					width: 2.88rem;
+					height: 2.88rem;
+					margin-right: .18rem;
+					margin-top: .18rem;
+				}
+			}
+			.img:after{
+				.clear;
+			}
+		}
+	}
+}
+
+.community-edit{
+	.header{
+		button{
+			float: left;
+			display: block;
+			.font24;
+			color: @basecolor;
+			margin-top: .1rem;
+			background: @basebg;
+		}
+	}
+	.edit-con{
+		margin-top: 1.2rem;
+		.title,.des{
+			width: 10rem;
+			.border-bottom(@baseborder);
+			padding-left: .3rem;
+		}
+		input,textarea{
+			width: 100%;
+			.font28;
+			border: 0;
+		}
+		input{
+			min-height: 1rem;
+		}
+		textarea{
+			min-height: 4.8rem;
+		}
+		.photo{
+			position: relative;
+			img,.uploader{
+				display: inline-block;
+				width: 2.7rem;
+				height: 2.7rem;
+				margin-left: .43rem;
+				margin-top: .43rem;
+			}
+			span{
+				.font28;
+				color: @salecolor;
+				display: inline-block;
+				width: 2rem;
+				text-align: left;
+				vertical-align: middle;
+				margin-left: .2rem;
+				.font24;
+			}
+			.uploader{
+				position: absolute;
+				left: 0;
+				top: 0;
+				z-index: 2;
+				opacity: 0;
+				background-size: 2.7rem 2.7rem;
+			}
+			.img-queue{
+				display: inline-block;
+				position: relative;
+				i{
+					position: absolute;
+					background: url(../img/forum_posts_button_delete_nor.png);
+					width: .6rem;
+					height: .6rem;
+					background-size: .6rem;
+					z-index: 3;
+					right: -.2rem;
+					top:.2rem;
+				}
+				span{
+					width: 2.7rem;
+					height: .8rem;
+					display: block;
+					position: absolute;
+					overflow: hidden; 
+					z-index: 3;
+					left: .25rem;
+					top: .4rem;
+					color: #fff;
+					.font20;
+					padding-top: .1rem;
+					background: rgba(0, 0, 0, 0.5)
+				}
+			}
+		}
+	}
+}
+
+.community-main.detail{
+	>.header{
+		padding-left: .5rem;
+		span{
+			width: 7.5rem;
+		}
+	}
+	>.con{
+		margin-top: 1.2rem;
+		padding: .2rem .2rem;
+		>.author{
+			line-height: .8rem;
+			overflow: hidden;
+			>img.author-head{
+				width: 1.2rem;
+				height:1.2rem;
+				line-height: 1.2rem;
+				border-radius: .8rem;
+				float: left;
+
+			}
+			>.author-detail{
+				float: left;
+				>.name{
+					color: @salecolor;
+					.font28;
+					margin-left:.2rem; 
+				}
+				>img.author-level{
+					width: .5rem;
+					height: .5rem;
+				}
+				>.date{
+					color: @salecolor;
+					.font24;
+					margin-top: -.2rem;
+					margin-left:.2rem; 
+					padding: 0;
+					//float: left!important;
+				}
+			}
+			
+		}
+		>h3{
+			color: #15528d;
+			.font28;
+			>span{
+				background: @activecolor;
+				color: #fff;
+				border-radius: .1rem;
+				margin-right: .1rem;
+				margin-left: .1rem;
+				padding:0 .1rem;
+			}
+		}
+		>.word{
+			.font28;
+			color: @basecolor;
+			margin-top: .2rem;
+			>img{
+				display: block;
+				margin: 0 auto;
+				width:100%;
+			}
+		}
+		>.operation{
+			margin-top: .2rem;
+			>button{
+				width: .8rem;
+				height: .8rem;
+				.block-right;
+			}
+			>span{
+				.block-right;
+				height: .8rem;
+				line-height: .8rem;
+			}
+			>.zan{
+				background: url(../img/forum_icon_like_nor.png) no-repeat center; 
+				background-size: .8rem;
+			}
+			>.zan.active{
+				background: url(../img/forum_icon_like_sel.png) no-repeat center; 
+				background-size: .8rem;
+			}
+			>.comment-num{
+				background: url(../img/forum_icon_comment_nor.png) no-repeat center; 
+				background-size: .8rem;
+				margin-left: .2rem;
+			}
+		}
+		>.operation:after{
+			.clear;
+		}
+		>.tips{
+			height: .88rem;
+			.font28;
+			background: #f1f1f1 url(../img/forum_icon_like_sel.png) no-repeat .2rem .1rem;
+			background-size: .6rem;
+			padding-left: .9rem;
+			line-height: .88rem;
+			.line-ellipsis;
+		}
+	}
+	>.no-conment{
+		background: #fff;
+		margin-top: .2rem;
+		.font28;
+		text-align: center;
+		padding-top: .2rem;
+	}
+	>.conment{
+		margin-top: .2rem;
+		background: #fff;
+		padding-top: .2rem;
+		>.tag{
+			background: @activecolor;
+			height: .7rem;
+			line-height: .7rem;
+			width: 2.6rem;
+			color: #fff;
+			.font28;
+			font-weight: 900;
+			padding-left: .4rem;
+			border-radius: 0 .53rem .53rem 0;
+		}
+		>.loading-comment{
+			text-align: center;
+			>img{
+				width: 1rem;
+				height: 1rem;
+			}
+		}
+		>ul{
+			.border-top(@baseborder);
+			>li{
+				padding: .2rem .4rem .4rem .2rem;
+				.border-bottom(@baseborder);
+				>img{
+					width: 1rem;
+					height: 1rem;
+					border-radius: 1rem;
+				}
+				>.name{
+					color: @salecolor;
+					.font28;
+				}
+				>.date{
+					color: @salecolor;
+					.font24;
+				}
+				>.des{
+					margin-left: 1.1rem;
+				}
+				>.seller{
+					background: #fcfcfc;
+					width: 8rem;
+					margin-left: 1.1rem;
+					padding: .2rem;
+					margin-top: .2rem;
+					.border(@baseborder);
+					>span{
+						color: @salecolor;
+						.font24;
+					}
+					>div{
+						color: @basecolor;
+						.font28;
+					}
+				}
+			}
+		}
+	}
+	.send{
+		position: fixed;
+		z-index: 99;
+		height: 1.5rem;
+		background: #f1f1f1;
+		bottom: 0;
+		width: 10rem;
+		>textarea{
+			float: left;
+			width: 8.3rem;
+			height: 1rem;
+			margin-top: .2rem;
+			border:0;
+			margin-left: .2rem;
+			border-radius: .1rem;
+			resize: none;
+		}
+		>a{
+			color: @basecolor;
+			display: block;
+			float: left;
+			.font28;
+			margin-left: .2rem;
+			margin-top: .4rem;
+		}
+	}
+	.send:after{
+		.clear;
+	}
+}

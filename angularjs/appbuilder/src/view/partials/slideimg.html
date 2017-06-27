@@ -1,0 +1,10 @@
+<div class="slide-img">
+	<div class="img-box" ng-swipe-left="goleft()" ng-swipe-right="goright()">
+		<img ng-repeat="img in imgs" ng-src="{{img.imagePath||img.url}}" style="left: {{($index-slideindex)*10}}rem;" ng-click="goDetail(img.type,img.resourceType,img.resourceId,img.url)" alt="{{img.name}}">
+	</div>
+	<div class="img-btn">
+		<ol>
+			<li ng-class="{active:slideindex==$index}" ng-repeat="img in imgs" ></li>
+		</ol>
+	</div>		
+</div>

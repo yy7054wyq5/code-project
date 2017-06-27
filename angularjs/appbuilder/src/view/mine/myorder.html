@@ -1,0 +1,80 @@
+<div class="myorder-main" style="top:1rem">
+	<div class="header">
+		<i ui-sref="mine"></i>
+		<span>我的订单</span>
+	</div>
+	<swipemenu discount="4" diswidth="2"></swipemenu>
+	<div ng-if="myOrder.length===0" class="no-order">暂无订单~~~</div>
+	<ul class="list" ng-if="myOrder.length>0">
+		<li ng-repeat="order in myOrder">
+			<div class="title" ui-sref="order-detail({id: order.id})">订单编号：{{order.id}}
+				<span class="status" ng-if="order.payState==0">未支付</span>
+				<span class="status" ng-if="order.payState==1">已支付</span>
+				<span class="status" ng-if="order.payState==2">支付失败</span>
+				<span class="status" ng-if="order.payState==3">已发货</span>
+				<span class="status" ng-if="order.payState==4">货到付款</span>
+				<span class="status" ng-if="order.payState==5">已取消</span>
+				<span class="status" ng-if="order.payState==6">已完成</span>
+			</div>
+			<div class="detail" ng-repeat="detail in order.detail" ui-sref="order-detail({id: order.id})">
+				<img lazy-src="{{detail.imagePath}}">
+				<dl class="product">
+					<dd class="product-title">{{detail.name}}</dd>
+					<dd class="product-size">{{detail.spec}}</dd>
+					<dd class="product-count" ng-if="order.type==1"><span>&yen;{{detail.price}}</span>x{{detail.number}}</dd>
+					<dd class="product-count" ng-if="order.type==2"><img src="http://appbuilder.loongjoy.com/phoneweb/app/img/integral_product_icon.png"><span>{{detail.price}}</span>x{{detail.number}}</dd>
+				</dl>
+			</div>
+			<div class="total" ng-if="order.type==1">共{{order.totalNum}}件商品 合计：&yen;<span>{{order.factPrice}}</span>（含运费&yen;{{order.shippingPrice}}）</div>
+			<div class="total" ng-if="order.type==2">共{{order.totalNum}}件商品 合计：<img src="http://appbuilder.loongjoy.com/phoneweb/app/img/integral_product_icon.png"><span>{{order.factPrice}}</span>（含运费&yen;{{order.shippingPrice}}）</div>
+			<button class="get" ng-if="order.payState==3" ng-click="takeGoods(order.id)">确认收货</button>
+			<button class="discuz" ng-if="order.payState==5" ng-click="deleteGoods(order.id)">删除</button>
+
+			<!-- <button class="discuz" ng-if="order.payState==6&&order.haveComment=='false'||order.payState==6&&order.haveComment=='false'&&!comment" ng-click="takeComments(order.id)">立即评价</button> -->
+
+			<button class="discuz" ng-if="order.payState==6&&order.haveComment=='false'" ng-click="takeComments(order.id)">立即评价</button>
+			<button class="get" ng-if="order.payState==2">重新支付</button>
+			<button class="get" ng-if="order.payState==0||order.payState==2" ng-click="goConfirm($index)">去支付</button>
+			<button class="discuz" ng-if="order.payState==0" ng-click="cancelOrder(order.id)">取消订单</button>
+		</li>
+<!-- 		<li>
+			<div class="title">订单编号：21313132<span class="status">已发货</span></div>
+			<div class="detail">
+				<img src="/phoneweb/app/img/temp/0-1.jpg">
+				<dl class="product">
+					<dd class="product-title">和风马马属210g佐料四选一大家立刻大叫阿娇阿娇打开了巨大</dd>
+					<dd class="product-size">口味：抹茶味 规格：210g</dd>
+					<dd class="product-count"><span>&yen;3.00</span>x2</dd>
+				</dl>
+			</div>
+			<div class="total">共两件商品 合计：&yen;<span>6.00</span>（含运费&yen;0.00）</div>
+			<button class="get">确认收货</button>
+		</li>
+		<li>
+			<div class="title">订单编号：21313132<span class="status">待评论</span></div>
+			<div class="detail">
+				<img src="/phoneweb/app/img/temp/0-1.jpg">
+				<dl class="product">
+					<dd class="product-title">和风马马属210g佐料四选一大家立刻大叫阿娇阿娇打开了巨大</dd>
+					<dd class="product-size">口味：抹茶味 规格：210g</dd>
+					<dd class="product-count"><span>&yen;3.00</span>x2</dd>
+				</dl>
+			</div>
+			<div class="total">共两件商品 合计：&yen;<span>6.00</span>（含运费&yen;0.00）</div>
+			<button class="discuz">立即评价</button>
+		</li>
+		<li>
+			<div class="title">订单编号：21313132<span class="status">未支付</span></div>
+			<div class="detail">
+				<img src="/phoneweb/app/img/temp/0-1.jpg">
+				<dl class="product">
+					<dd class="product-title">和风马马属210g佐料四选一大家立刻大叫阿娇阿娇打开了巨大</dd>
+					<dd class="product-size">口味：抹茶味 规格：210g</dd>
+					<dd class="product-count"><span>&yen;3.00</span>x2</dd>
+				</dl>
+			</div>
+			<div class="total">共两件商品 合计：&yen;<span>6.00</span>（含运费&yen;0.00）</div>
+			<button class="get">重新支付</button>
+		</li> -->
+	</ul>
+</div>

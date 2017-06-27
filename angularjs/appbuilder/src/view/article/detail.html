@@ -1,0 +1,35 @@
+<div class="article-main detail">
+	<div class="header">
+		<i ui-sref="article-list"></i>
+		<span translate="articleDetails"></span>
+	</div>
+	<div class="content">
+		<h3 ng-bind-template="{{detail.name}}"></h3>
+		<span class="date" ng-bind-template="{{detail.createTime}}"></span>
+		<div class="con" ng-bind-html="word"></div>
+	</div>
+	<div class="no-conment" ng-if="detail.commentCount===0" translate="noComment"></div>
+	<div class="conment" ng-if="detail.commentCount>0">
+		<div class="tag" translate="allComments"></div>
+		<div ng-if="discomment==0" class="loading-comment"><img src="http://appbuilder.loongjoy.com/phoneweb/app/img/loading.gif"></div>
+		<ul>
+			<li ng-repeat="conment in comments">
+				<img ng-src="{{conment.userImagePath}}">
+				<span class="name" ng-bind-template="{{conment.nickname}}"></span>
+				<span class="date pull-right" ng-bind-template="{{conment.updateTime}}"></span>
+				<div class="des" ng-bind-template="{{conment.content}}"></div>
+				<div class="seller" ng-if="conment.reply">
+					<span class="name" translate="merchantReply"></span>
+					<span class="date" ng-bind-template="{{conment.reply.updateTime}}"></span>
+					<div ng-bind-template="{{conment.reply.content}}"></div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div style="height:1.5rem; background:#fff;">
+	</div>
+	<div class="send">
+		<input placeholder="{{'commentArticle' | translate}}" ng-model="articleConment" maxlength="200" ng-focus="tips()">
+		<a ng-click="sendConment(detail.id)" translate="sendOut"></a>
+	</div>
+</div>

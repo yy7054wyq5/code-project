@@ -1,0 +1,60 @@
+<div class="calendar-main" calendar>
+	<div class="header">
+		<i backpage></i>
+		<span translate="filter"></span>
+	</div>
+	<div class="menu">
+		<div class="status-name">
+			<span ng-if="payState==-1" translate="whole"></span>
+			<span ng-if="payState==0" translate="notPaid"></span>
+			<span ng-if="payState==1" translate="alreadyPaid"></span>
+			<span ng-if="payState==2" translate="paymentFailure"></span>
+			<span ng-if="payState==3" translate="alreadyAhipped"></span>
+			<span ng-if="payState==4" translate="cashOnDelivery"></span>
+			<span ng-if="payState==5" translate="canceled"></span>
+			<span ng-if="payState==6" translate="completed"></span>
+		</div>
+		<div class="line"></div>
+		<div class="classic-name">
+			<span ng-if="tag==2" translate="IntegrationOrder"></span>
+			<span ng-if="!tag || tag==1" translate="ProductOrder"></span>
+		</div>
+		<ul class="week">
+			<li translate="Sun"></li>
+			<li translate="Mon"></li>
+			<li translate="Tues"></li>
+			<li translate="Wed"></li>
+			<li translate="Thurs"></li>
+			<li translate="Fri"></li>
+			<li translate="Sat"></li>
+		</ul>
+		<div class="chose-con">
+			<ul class="status">
+				<li data-status="-1" ng-class="{active: payState==-1}"  translate="whole"></li>
+				<li data-status="0" ng-class="{active: payState==0}" translate="notPaid"></li>
+				<li data-status="1" ng-class="{active: payState==1}" translate="alreadyPaid"></li>
+				<li data-status="2" ng-class="{active: payState==2}" translate="paymentFailure"></li>
+				<li data-status="3" ng-class="{active: payState==3}" translate="alreadyAhipped"></li>
+				<li data-status="4" ng-class="{active: payState==4}" translate="cashOnDelivery"></li>
+				<li data-status="5" ng-class="{active: payState==5}" translate="canceled"></li>
+				<li data-status="6" ng-class="{active: payState==6}" translate="completed"></li>
+			</ul>
+			<ul class="classic">
+				<li data-classic="2" ng-class="{active: tag ==2}" translate="IntegrationOrder"></li>
+				<li data-classic="1" ng-class="{active: tag ==1}" translate="ProductOrder"></li>
+			</ul>
+			<div class="bg"></div>
+		</div>
+	</div>
+	<div class="calendar">
+		<div class="list" ng-repeat="monthdays in month track by $index">
+			<h5>{{year}}<span translate="year"> </span>{{$index+1}} <span translate="month"></span></h5>
+			<div ng-repeat="days in monthdays track by $index" data-month="{{$parent.$index+1}}" data-day="{{days}}" ng-class="{start:$parent.$index+1==_startMonth&&days==_startDay,end:$parent.$index+1==_endMonth&&days==_endDay}">
+				<span class="day">{{days}}</span>
+				<span class="tag" ng-if="$parent.$index+1==_startMonth&&days==_startDay" translate="start"></span>
+				<span class="tag" ng-if="$parent.$index+1==_endMonth&&days==_endDay" translate="end"></span>
+				<span class="tag"></span>
+			</div>
+		</div>
+	</div>
+</div>

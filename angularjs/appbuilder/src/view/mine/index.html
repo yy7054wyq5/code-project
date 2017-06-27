@@ -1,0 +1,120 @@
+<div class="mine-main" ng-show="dismine">
+	<div ng-if="userinfo.roleTag=='AppUser'" class="common-user">
+		<div class="banner">
+			<div class="btn">
+				<i class="set" ui-sref="appset"></i>
+				<i class="msg" ui-sref="message" ui-sref-active="active" ng-if="isPush==1"></i>
+			</div>
+			<div class="user" ui-sref="mineset">
+				<div class="img-box">
+					<img ng-src="{{userinfo.imagePath}}">
+				</div>
+				<i style="background-image:url({{userinfo.userRankIconPath}})"></i>
+				<span ng-bind-template="{{userinfo.nickname}}"></span>
+			</div>
+		</div>
+		<ul class="info">
+			<li ui-sref="myComment">
+				<span ng-bind-template="{{userinfo.commentNum}}"></span>
+				<span translate="comment"></span>
+			</li>
+			<li ui-sref="mypoint">
+				<span ng-bind-template="{{userinfo.credits}}"></span>
+				<span translate="integral"></span>
+			</li>
+			<li ui-sref="growth">
+				<span ng-bind-template="{{userinfo.growthScore}}"></span>
+				<span translate="growthValue"></span>
+			</li>
+		</ul>
+		<ul class="menu">
+			<li class="bottom" ui-sref="myOrder">
+				<i style="background-image: url(http://appbuilder.loongjoy.com/phoneweb/app/img/my_order_icon_dis.png);"></i>
+				<span translate="MyOrder"></span>
+				<a></a>
+			</li>
+			<li ng-if="app.isBranch==1" ng-click="goGuide()">
+				<i style="background-image: url(http://appbuilder.loongjoy.com/phoneweb/app/img/my_shoppingguide_icon_dis.png);"></i>
+				<span translate="MyGuide"></span>
+				<a></a>
+			</li>
+			<li class="line" ng-if="app.isBranch==1"><div></div></li>
+			<li class="bottom" ui-sref="address({tag:2})">
+				<i style="background-image: url(http://appbuilder.loongjoy.com/phoneweb/app/img/my_address_icon_dis.png);"></i>
+				<span translate="shippingAddress"></span>
+				<a></a>
+			</li>
+			<li ui-sref="myCommunity">
+				<i style="background-image: url(http://appbuilder.loongjoy.com/phoneweb/app/img/my_post_icon_dis.png);"></i>
+				<span translate="MyPost"></span>
+				<a></a>
+			</li>
+			<li class="line"><div></div></li>
+			<li ui-sref="suggest">
+				<i style="background-image: url(http://appbuilder.loongjoy.com/phoneweb/app/img/my_feedback_icon_dis.png);"></i>
+				<span translate="complaintsAndAuggestions"></span>
+				<a></a>
+			</li>
+		</ul>
+	</div>
+	<div ng-if="userinfo.roleTag=='BranchGuide'||userinfo.roleTag=='BranchAdmin'||userinfo.roleTag=='BranchManager'||userinfo.roleTag=='BranchCashier'" class="guide">
+	<!-- BranchAdmin：门店管理员 -->
+	<!-- BranchManager：分店店长 -->
+	<!-- BranchGuide：分店导购 -->
+	<!-- BranchCashier：分店收银员 -->
+		<div class="banner">
+			<div class="btn">
+				<ul class="point" ng-if="userinfo.roleTag=='BranchGuide'">
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<i class="info">
+					<img ng-src="{{userinfo.imagePath}}" ng-if="userinfo.roleTag=='BranchGuide'" ui-sref="guideinformation">
+					<img src="http://appbuilder.loongjoy.com/phoneweb/app/img/left_nor.png" ng-if="userinfo.roleTag=='BranchAdmin'||userinfo.roleTag=='BranchManager'||userinfo.roleTag=='BranchCashier'" ng-click="out()">
+				</i>
+				<i class="set" ui-sref="appset"></i>
+				<i class="msg" ui-sref="message" ng-if="isPush==1"></i>
+			</div>
+			<div class="content">
+				<span class="con1" ng-if="userinfo.roleTag=='BranchGuide'||userinfo.roleTag=='BranchManager'||userinfo.roleTag=='BranchCashier'">
+					<span ng-if="roleUpdateTime&&!startDate" translate="accumulatedIncome"></span>
+				</span>
+				<span class="con1" ng-if="startDate" translate="earningsPeriod"></span>
+				<span class="con1" ng-if="userinfo.roleTag=='BranchAdmin'&&!startDate" translate="TotalOrder"></span>
+				<!--产品订单金额-->
+				<span class="money" ng-bind-template="{{sum}}" ng-if="tag==1||!tag"></span>
+				<!--积分订单-->
+				<span class="money" ng-bind-template="0" ng-if="tag==2"></span>
+				<span class="con2" ng-if="roleUpdateTime&&!startDate" translate="RecentUpdate"></span>
+				<span class="con2" ng-if="roleUpdateTime&&!startDate" ng-bind-template="{{roleUpdateTime}}"></span>
+				<span class="con2" ng-if="startDate">{{startDate}}<span translate="to"></span>{{endDate}}</span>
+				<span ng-click="clearTime()" ng-if="startDate" class="clear-time" translate="ClearFilterDate"></span>
+			</div>
+		</div>
+		<div class="my-member" ng-hide="userinfo.roleTag=='BranchCashier'">
+			<span translate="MyMember"></span>
+			<i ui-sref="mymember"></i>
+		</div>
+		<h4>
+			<span ng-if="userinfo.roleTag=='BranchAdmin'" translate="orderDetails"></span>
+			<span ng-if="userinfo.roleTag=='BranchManager'||userinfo.roleTag=='BranchGuide'||userinfo.roleTag=='BranchCashier'" translate="IncomeDetails"></span>
+			<span ui-sref="calendar"><span translate="filter"></span><i></i></span>
+		</h4>
+		<div ng-if="records.length===0" class="no-list" translate="NoRecord"></div>
+		<ul class="list" ng-if="records.length>0">
+			<li ng-repeat="record in records">
+				<img ng-src="{{record.imagePath}}">
+				<div class="info">
+					<span class="name">{{record.nickname}}</span>
+					<span class="price" ng-if="tag==1||!tag"><span translate="OrderAmount"></span>&yen;{{record.factPrice || record.price}} </span>
+					<span class="price" ng-if="tag==2"><span translate="OrderIntegration"></span>{{record.factPrice || record.price}} </span>
+					<span class="date">{{record.createTime || record.updateTime}}</span>
+				</div>
+				<span class="detail" ng-if="userinfo.roleTag!=='BranchAdmin'">+{{record.factPrice || record.money}}</span>			
+			</li>
+		</ul>
+		<div style="width:10rem;height: 1rem;"></div>
+	</div>
+	<rfooter productlink="product" articlelink="article"></rfooter>
+</div>

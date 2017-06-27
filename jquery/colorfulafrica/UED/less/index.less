@@ -1,0 +1,346 @@
+body>.content{
+	background: url(../img/ah_ic_d_bottom.png) no-repeat bottom right;
+}
+.container.index{
+	h2{
+		position: relative;
+		z-index: 1;
+		font-size: 34px;
+		padding-left: 20px; 
+		margin-top: 30px;
+		margin-bottom: 30px;
+		i:first-child{
+			position: absolute;
+			z-index: 1;
+			display: block;
+			width: 2px;
+			height: 23px;
+			top: 9px;
+			left: 0;
+			background: #410D11;
+		}
+		i.icon{
+			display: block;
+			float: right;
+			background-image: url(../img/index.png);
+			background-position: -105px -115px;
+			width: 22px;
+			height: 20px;
+			margin-right: 10px;
+			margin-top: 9px;
+		}
+		i.icon.animation{
+			animation-name: rotation;
+			animation-duration: .7s;
+			animation-timing-function: linear;
+			animation-delay: 0;
+			animation-iteration-count: infinite;
+			animation-direction: normal;
+			animation-play-state: running;
+		}
+		a{
+			float: right;
+			display: block;
+			font-size: 16px;
+			color: #333333;
+			margin-top: 10px;
+		}
+	}
+	.floor:after{
+		.clear;
+	}
+	.floor{
+		>div{
+			float: left;
+			position: relative;
+			>img{
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+			>a{
+				display: block;
+				position: absolute;
+				bottom: 0;
+				height: 50px;
+				background: #000;
+				.gradient;
+				color: #fff;
+				overflow: hidden;
+				transition: height .8s;
+				h3{
+					font-size: 16px;
+					padding-top: 15px;
+					padding-left: 10px;
+				}
+				p{
+					font-size: 12px;
+					padding-left: 10px;
+					margin-top: 15px;
+				}
+			}
+		}
+		>div:hover{
+			>.ljoy-hover{
+				height: 244px;
+				transition: height .8s
+			}
+		}
+		>.left-item{
+			width: 255px;
+			height: 489px;
+			>a{
+				height: 140px;
+			}
+		}
+		>.left-item:hover{
+			>a{
+				height: 280px;
+			}
+		}
+		>.big-item{
+			width: 462px;
+			height: 244px;
+		}
+		>.small-item{
+			width: 230px;
+			height: 244px;
+		}
+	}
+	.floor.strategy{
+		>.strategy-item{
+			width: 270px;
+			height: 294px;
+			margin-right: 31px;
+			margin-bottom: 30px;
+			>a{
+				width: 270px;
+				height: 175px;
+				display: block;
+				position: relative;
+				>img{
+					width: 270px;
+					height: 175px;
+					display: block;
+				}
+			}
+			>.icon{
+				width: 64px;
+				height: 64px;
+				position: absolute;
+				top: 100px;
+				right: 10px;
+				color: #fff;
+				background: url(../img/floor-icon-bg.png) no-repeat;
+				>i{
+					display: block;
+					margin: 0 auto;
+					margin-top: 12px;
+				}
+				>span{
+					display: block;
+					text-align: center;
+					margin-top: 3px;
+				}
+				>i.travel-notes{
+					background-image: url(../img/index.png);
+					background-position: -129px -84px;
+					width: 18px;
+					height: 20px;
+				}
+				>i.contact{
+					background-image: url(../img/index.png);
+					background-position: -57px -115px;
+					width: 26px;
+					height: 20px;
+				}
+				>i.food{
+					background-image: url(../img/index.png);
+					background-position: -127px -115px;
+					width: 20px;
+					height: 20px;
+				}
+			}
+		}
+		>.strategy-item:hover{
+			box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
+			.info{
+				h3{
+					font-weight: 900;
+				}
+			}
+		}
+		.info{
+			padding: 10px;
+			color: #999999;
+			border: 1px solid #e0e0e0;
+			border-top: 0;
+			h3{
+				font-size: 16px;
+				padding-top: 10px;
+				height: 80px;
+				a{
+					color: #333333;
+				}
+			}
+			.classic{
+				float: left;
+			}
+			.looks{
+				float: right;
+			}
+		}
+		.info:after{
+			.clear;
+		}
+	}
+	.floor.play{
+		>div{
+			cursor: pointer;
+			width: 	270px;
+			height: 410px;
+			overflow: hidden;
+			>img{
+				width: 100%;
+				height: 100%;
+				margin: 0 auto;
+				display: block;
+				-webkit-filter: blur(2px);
+			}
+		}
+		>div.play-item{
+			margin-right: 33px;
+			.back{
+				width: 270px;
+				height: 410px;
+				background: rgba(0, 0, 0, 0.3);
+				position: absolute;
+				z-index: 2;
+				top: 0;
+				left: 0;
+			}
+			>.info{
+				position: absolute;
+				bottom: 110px;
+				width: 270px;
+				text-align: center;
+				color: #fff;
+				z-index: 3;
+				i{
+					display: block;
+					margin: 0 auto;
+					margin-bottom: 10px;
+				}
+				h3{
+					font-size: 36px;
+					margin-bottom: 10px;
+					a{
+						color: #fff;
+					}
+				}
+				span{
+					font-size: 16px;
+					display: block;
+					padding: 0 20px;
+					height: 47px;
+					overflow: hidden;
+				}
+				i.south-africa{
+					background-image: url(../img/index.png);
+					background-position: -65px -49px;
+					width: 64px;
+					height: 66px;
+				}
+				i.kenya{
+					background-image: url(../img/index.png);
+					background-position: -147px 0px;
+					width: 31px;
+					height: 66px;
+				}
+				i.egpyt{
+					background-image: url(../img/index.png);
+					background-position: 0px -49px;
+					width: 65px;
+					height: 66px;
+				}
+			}
+			>.info.other{
+				bottom: 170px;
+				h3{
+					font-size: 26px;
+				}
+			}
+		}
+		>div.play-item.active{
+			.back{
+				background: rgba(0, 0, 0, 0.2);
+			}
+			img{
+				-webkit-filter: blur(0);
+			}
+		}
+	}
+	.floor.store{
+		display: none;
+		height: 478px;
+		>a{
+			width: 369px;
+			height: 206px;
+			display: block;
+			padding-top: 20px;
+			padding-left: 20px;
+			border: 1px solid #e0e0e0;
+			margin-right: 33px;
+			margin-bottom: 33px;
+			position: relative;
+			z-index: 1;
+			float: left;
+			>img{
+				display: block;
+				float: left;
+				width: 160px;
+				height: 160px;
+			}
+			>h3{
+				float: left;
+				width: 150px;
+				font-size: 16px;
+				color: #333333;
+				margin-left: 10px;
+			}
+			>span{
+				position: absolute;
+				bottom: 20px;
+				right: 20px;
+				font-size: 24px;
+				color: #FF4926;
+			}
+		}
+		>a:hover{
+			box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
+			h3{
+				font-weight: 900;
+			}
+		}
+	}
+	.floor.store.active{
+		display: block;
+	}
+	.store-btn{
+		width: 210px;
+		height: 10px;
+		margin: 0 auto;
+		margin-top: 30px;
+		margin-bottom: 70px;
+		>li{
+			float: left;
+			height: 10px;
+			width: 54px;
+			background: #dbdbdb;
+			margin-right: 20px;
+		}
+		>li.active{
+			background: #661e24;
+		}
+	}
+}

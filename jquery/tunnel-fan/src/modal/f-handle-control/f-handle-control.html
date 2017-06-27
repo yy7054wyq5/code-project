@@ -1,0 +1,84 @@
+<!--风机：手动控制-->
+<h3>风机：手动控制</h3>
+<div class="handle-control">
+  <div class="clear" style="padding: 4px; margin-top: 20px;">
+    <div style="width: 209px; height: 315px; float: left; border: 1px solid #d9d9d9; border-right:0; margin-left: 10px; padding-top: 30px; padding-left: 10px;">
+      <div style="margin-left: 10px;">选择风机组数：</div>
+      <ul class="handle-control-left">
+        <li><i></i><span>所有右侧风机</span></li>
+        <li><i></i><span>右侧1#(RK107+649)</span></li>
+        <li><i></i><span>右侧2#(RK107+649)</span></li>
+        <li><i></i><span>右侧3#(RK107+649)</span></li>
+        <li><i></i><span>右侧4#(RK107+649)</span></li>
+        <li><i></i><span>右侧5#(RK107+649)</span></li>
+        <li><i></i><span>右侧6#(RK107+649)</span></li>
+        <li><i></i><span>右侧6#(RK107+649)</span></li>
+      </ul>
+    </div>
+    <div style="width: 224px; height: 345px; float:left; border: 1px solid #d9d9d9; padding-left: 10px;">
+      <table class="slide-table">
+        <tr>
+          <td><span class="l-radio" data-value="fan"><i></i>风速设定</span></td>
+        </tr>
+        <tr>
+          <td style="position: relative; padding: 0;">
+            <input type="text" placeholder="请输入0-10之间的数值" style="width: 174px; text-align: left; padding-left: 10px;" name="slide-bar-value"
+              data-max="10">
+            <div style="position: absolute; height: 17px; width: 1px; background: #cccccc; left: 140px; top: 7px;"></div>
+            <div class="slide-bar-finish" style="position: absolute; left: 150px; top: 8px;">完成</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="position: relative; padding: 0;">
+            <div class="slide-bar">
+              <div class="round"></div>
+              <div class="line source" style="width: 200px;"></div>
+              <div class="round"></div>
+            </div>
+            <div class="slide-bar active hide" style="position: absolute; top: 0; left: 0;">
+              <div class="round"></div>
+              <div class="line" style="width: 0;"></div>
+              <div class="round"></div>
+            </div>
+            <div class="slide-bar-txt">
+              <span></span>Hz
+            </div>
+          </td>
+        </tr>
+      </table>
+      <table class="slide-table">
+        <tr>
+          <td><span class="l-radio" data-value="fan"><i></i>频率设定</span></td>
+        </tr>
+        <tr>
+          <td style="position: relative; padding: 0;">
+            <input type="text" placeholder="请输入0-50之间的数值" style="width: 174px; text-align: left; padding-left: 10px;" name="slide-bar-value"
+              data-max="50">
+            <div style="position: absolute; height: 17px; width: 1px; background: #cccccc; left: 140px; top: 7px;"></div>
+            <div class="slide-bar-finish" style="position: absolute; left: 150px; top: 8px;">完成</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="position: relative; padding: 0;">
+            <div class="slide-bar">
+              <div class="round"></div>
+              <div class="line source" style="width: 200px;"></div>
+              <div class="round"></div>
+            </div>
+            <div class="slide-bar active hide" style="position: absolute; top: 0; left: 0;">
+              <div class="round"></div>
+              <div class="line" style="width: 0;"></div>
+              <div class="round"></div>
+            </div>
+            <div class="slide-bar-txt">
+              <span></span>Hz
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="clear" style="width: 100%;">
+      <a class="btn center w50" style=" margin-top: 10px;">确定</a>
+    </div>
+  </div>
+</div>

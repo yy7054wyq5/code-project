@@ -1,0 +1,5 @@
+<div class="addcut" total="{{total}}">
+	<span class="cut" ng-click="cutNum()">-</span>
+	<input type="text" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onafterpaste="this.value=this.value.replace(/[^\d]/g,'')" ng-model="count" required ng-keyup="inputNum()" value="{{count}}"></input>
+	<span class="add" ng-click="addNum()">+</span>
+</div>

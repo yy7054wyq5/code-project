@@ -1,0 +1,46 @@
+<div class="message-total">	
+	<div class="head">
+		<img src="img/nav_button_back_nor.png" translate-attr="{alt:'back'}"  ui-sref="mine">
+		<span translate="news"></span>
+		<p class="line"></p>
+	</div>
+	<ul>
+		<li ng-if="data.resourceType==1" ng-repeat="data in messageTotal" ng-swipe-left="scrollleft(data.resourceType)"  ng-swipe-right="scrollright(data.resourceType)" style="margin-left:{{leftWidth1}}rem"> 
+			<img src="img/product.png" alt="" ui-sref="messageList({resourceType:data.resourceType})">
+			<div class="containers" ui-sref="messageList({resourceType:data.resourceType})">
+				<div class="title">
+					<h4>{{data.title}}</h4>
+					<b ng-if="data.haveRead==0"></b>
+					<span>{{data.updateTime}}</span>
+				</div>			
+				<p class="line-campT">{{data.content}}</p>
+
+			</div>
+			<input type="button" class="btn" translate-attr="{value:'delete'}" ng-click="deleteMessage(data.resourceType)">
+		</li>
+		<li ng-if="data.resourceType==2" ng-repeat="data in messageTotal" ng-swipe-left="scrollleft(data.resourceType)"  ng-swipe-right="scrollright(data.resourceType)"  style="margin-left:{{leftWidth2}}rem">
+			<img src="img/articleList.png"  ui-sref="messageList({resourceType:data.resourceType})">
+			<div class="containers" ui-sref="messageList({resourceType:data.resourceType})">
+				<div class="title">
+					<h4>{{data.title}}</h4>
+					<b ng-if="data.haveRead==0"></b>
+					<span>{{data.updateTime}}</span>
+				</div>
+				<p class="line-campT">{{data.content}}</p>
+			</div>
+			<input type="button" class="btn" translate-attr="{value:'delete'}" ng-click="deleteMessage(data.resourceType)">
+		</li>
+		<li ng-if="data.resourceType==3" ng-repeat="data in messageTotal" ng-swipe-left="scrollleft(data.resourceType)"  ng-swipe-right="scrollright(data.resourceType)"  style="margin-left:{{leftWidth3}}rem">
+			<img src="img/system.png" alt="" ui-sref="messageList({resourceType:data.resourceType})">
+			<div class="containers" ui-sref="messageList({resourceType:data.resourceType})">
+				<div class="title">
+					<h4>{{data.title}}</h4>
+					<b ng-if="data.haveRead==0"></b>
+					<span>{{data.updateTime}}</span>
+				</div>
+				<p class="line-campT">{{data.content}}</p>
+			</div>
+			<input type="button" class="btn"  translate-attr="{value:'delete'}"   ng-click="deleteMessage(data.resourceType)">
+		</li>
+	</ul>
+</div>

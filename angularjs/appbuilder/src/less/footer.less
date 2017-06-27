@@ -1,0 +1,96 @@
+footer{
+	.border-top(#cbcbcb);
+	background: #fff;
+	position: fixed;
+	bottom: 0;
+	left:0;
+	z-index: 9;
+	width: 100%;
+	ul{
+		width: 100%;
+		.clear;
+		li{
+			float: left;
+			padding-left: 1rem;
+			height: 1.33rem;
+			margin-left: .1rem;
+			span{
+				.font32;
+				color: @btncolor;
+				line-height: .5rem;
+				display: block;
+				line-height: 1.33rem;
+				display: none;
+			}
+		}
+		li.active{
+			span{
+				display: block;
+			}
+		}
+		li:first-child{
+			background: url(../img/footer/home_nor.png) no-repeat left center;
+			background-size: 1rem;
+		}
+		li:first-child.active{
+			background: url(../img/footer/home_sel.png) no-repeat left center;
+			background-size: 1rem;
+		}
+		li:nth-child(2){
+			background: url(../img/footer/product_nor.png) no-repeat left center;
+			background-size: 1rem;
+		}
+		li:nth-child(2).active{
+			background: url(../img/footer/product_sel.png) no-repeat left center;
+			background-size: 1rem;
+		}
+		li:nth-child(3){
+			background: url(../img/footer/community_nor.png) no-repeat left center;
+			background-size: 1rem;
+		}
+		li:nth-child(3).active{
+			background: url(../img/footer/community_sel.png) no-repeat left center;
+			background-size: 1rem;
+		}
+		li:nth-child(4){
+			background: url(../img/footer/article.png) no-repeat left center;
+			background-size: 1rem;
+		}
+		li:nth-child(4).active{
+			background: url(../img/footer/article_sel.png) no-repeat left center;
+			background-size: 1rem;
+		}
+		li:last-child{
+			background: url(../img/footer/my.png) no-repeat left center;
+			background-size: 1rem;
+			float: right;
+			margin-right: .2rem;
+		}
+		li:last-child.active{
+			background: url(../img/footer/my_sel.png) no-repeat left center;
+			background-size: 1rem;
+		}
+	}
+}
+
+.footer-btn{
+	position: fixed;
+	bottom: 0;
+	z-index: 99999;
+	a{
+		display: block;
+		text-align: center;
+		width: 5rem;
+		height: 1.22rem;
+		color: #fff;
+		.block-float;
+		.font28;
+		line-height: 1.22rem;
+	}
+	.add-bus{
+		background: #f7b046;
+	}
+	.buy-now{
+		background: #ed4f44;
+	}
+}

@@ -1,0 +1,41 @@
+<rheader></rheader>
+<div class="sale-main">
+	<swipemenu discount="2" diswidth="2"></swipemenu>
+	<div class="content" ng-repeat="sale in topMenu" ng-class="{active:index==$index}">
+	<!-- /********************************************/ -->
+		<product start={{sale.promotionTimeStart}} end={{sale.promotionTimeLeft}} status={{sale.status}} summary={{sale.summary}}></product>
+	<!-- /********************************************/ -->
+		<ul class="list">
+			<li ng-repeat="product in saleMenuData[$index] || topMenu[0].products">
+				<img ng-src="{{product.imagePath}}">
+				<dl class="content" ng-if="sale.type==1" ui-sref="product-detail({id:product.productId})">
+					<dd class="title">【<span translate="sale"></span>】{{product.productName}}</dd>
+					<dd class="old-price">&yen;&nbsp;{{product.price}}</dd>
+					<dd class="new-price"><span class="num">&yen;&nbsp;{{product.promotionPrice}}</span><span class="txt">{{product.promotionValue}}折</span></dd>
+				</dl>
+				<dl class="content" ng-if="sale.type==2" ui-sref="product-detail({id:product.productId})">
+					<dd class="title">【<span translate="subtract"></span>】{{product.productName}}</dd>
+					<dd class="old-price">&yen;&nbsp;{{product.price}}</dd>
+					<dd class="new-price"><span class="num">&yen;{{product.promotionPrice}}</span><span class="txt" translate="subtract"></span></dd>
+				</dl>
+				<dl class="content" ng-if="sale.type==3" ui-sref="product-detail({id:product.productId})">
+					<dd class="title">【<span translate="give"></span>】{{product.productName}}</dd>
+					<dd class="new-price"><span class="num">&yen;&nbsp;{{product.price}}</span><span class="txt" translate="give"></span></dd>
+				</dl>
+				<div class="list-btn" ng-if="product.status==1">
+					<a ng-class="{ready:product.status==1}"><span translate="openGrab"></span>&gt;</a>
+				</div>
+				<div class="list-btn" ng-if="product.status==2">
+					<a ui-sref="product-detail({id:product.productId})"><span translate="alreadyOpenGrab"></span>&gt;</a>
+					<span><span translate="havebeenRobbed"></span>{{product.saleCount}}<span translate="piece"></span></span>
+				</div>
+				<div class="list-btn" ng-if="product.status==3">
+					<a ui-sref="product-detail({id:product.productId})" ng-class="{end:product.status==3}" translate="robbed">&gt;</a>
+					<span><span translate="havebeenRobbed"></span>{{product.saleCount}}<span translate="piece"></span></span>
+				</div>					
+			</li>
+		</ul>
+	</div>
+</div>
+<div style="height:1rem;"></div>
+<rhomefooter homelink="index.sale"></rhomefooter>

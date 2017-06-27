@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <base href="/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+  <!-- build:css(src) vendor.css-->
+  <link rel="stylesheet" type="" href="vendor/normalize.css">
+  <link rel="stylesheet" type="" href="vendor/bootstrap.min.css">
+  <link rel="stylesheet" type="" href="vendor/layer.css">
+  <link rel="stylesheet" type="" href="vendor/jquery.datetimepicker.min.css">
+  <link rel="stylesheet" type="" href="vendor/bootstrap-select.min.css">
+  <!-- endbuild -->
+  <!-- build:js(src) vendor.js-->
+  <script type="text/javascript" src="vendor/jquery.min.js"></script>
+  <script type="text/javascript" src="vendor/echarts.js"></script>
+  <script type="text/javascript" src="vendor/layer.js"></script>
+  <script type="text/javascript" src="vendor/jquery.datetimepicker.full.js"></script>
+  <script type="text/javascript" src="vendor/bootstrap-select.min.js"></script>
+  <script type="text/javascript" src="vendor/jquery.rotate.min.js"></script>
+  
+  <!-- endbuild -->
+  <!-- build:css(.tmp) app.css -->
+  <!-- inject:css -->
+  <!-- endinject -->
+  <!-- endbuild -->
+</head>
+
+<body>
+  <div class="login">
+    <div class="wrap">
+      <div class="login-header"></div>
+    </div>
+    <div class="bg">
+      <div class="wrap">
+        <div class="login-input-content">
+          <div class="title">三岔顶隧道按需营运综合节能控制系统</div>
+          <input type="text" name="username" value="" placeholder="请输入用户名">
+          <input type="text" name="password" value="" placeholder="请输入密码">
+          <div class="choose-sys">
+            您想进入：
+            <span class="l-radio" data-value="fan"><i></i>通风系统</span>
+            <span class="l-radio" data-value="light"><i></i>照明系统</span>
+          </div>
+          <div class="button">
+            <a class="btn pull-left login">登录</a>
+            <a class="btn pull-left reset">重置</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copy-right">
+      &copy;2006-2019 120.24.58.177.com 版权所有
+    </div>
+  </div>
+  <div class="index hide">
+    <div class="header">
+      <div class="wrap">
+        <img src="img/tunnel_logo.png" alt="logo">
+        <a class="sys-change"></a>
+        <div class="user">
+          <span>admin</span>
+          <i></i>
+        </div>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="crumbs">
+        <div class="line">
+          照明控制
+        </div>
+      </div>
+      <div class="content">
+        <div class="menu">
+          <div class="top">功能选项</div>
+          <ul>
+            <!--照明-->
+            <li><a class="light main">主界面</a></li>
+            <li><a class="light controll">控制模式</a></li>
+            <li><a class="light data">数据统计分析</a></li>
+            <li><a class="light one-light">单灯状态查询</a></li>
+            <li><a class="light sys">系统设置</a></li>
+            <!--通风-->
+            <li><a class="fan config">参数配置</a></li>
+            <li><a class="fan fire">火宅工况</a></li>
+            <li><a class="fan handle">手动控制</a></li>
+            <li><a class="fan time">时序控制</a></li>
+            <li><a class="fan use">能耗查询</a></li>
+          </ul>
+        </div>
+        <div class="tunnel-content">
+          <div class="status">
+            <span class="status-name">当前控制模式：</span>
+            <span class="status-txt">平时工况模式</span> &nbsp;&nbsp;
+            <span class="plan txt">执行方案：</span>
+            <span class="plan status-txt">三岔顶照明</span>
+            <span class="s-box">
+            <select id="chooseHole">
+              <option value="all">显示全洞</option>
+              <option value="left">显示左洞</option>
+              <option value="right">显示右洞</option>
+            </select>
+          </span>
+            <a class="hack light">应急照明系统</a>
+            <a class="fan fire out">退出模式</a>
+            <a class="hack fire fan normal">平时工况</a>
+          </div>
+          <div class="tunnel">
+            <div class="tunnel-left-hole">
+              <div class="dotted-line"></div>
+              <div class="fire-point one"></div>
+              <div class="tunnel-box">
+                <div class="item top"></div>
+                <div class="item bottom"></div>
+              </div>
+              <div class="fire-point second"></div>
+              <div class="tunnel-box">
+                <div class="item top"></div>
+                <div class="item bottom"></div>
+              </div>
+              <div class="fire-point third"></div>
+              <div class="tunnel-box">
+                <div class="item top"></div>
+                <div class="item bottom"></div>
+              </div>
+              <div class="fire-point four"></div>
+              <div class="tunnel-box">
+                <div class="item top"></div>
+                <div class="item bottom"></div>
+              </div>
+              <div class="fire-point five"></div>
+              <div class="tunnel-box">
+                <div class="item top"></div>
+                <div class="item bottom"></div>
+              </div>
+              <div class="fire-point six"></div>
+              <div class="tunnel-box">
+                <div class="item top"></div>
+                <div class="item bottom"></div>
+              </div>
+              <div class="fire-point seven"></div>
+              <div class="tunnel-box">
+                <div class="item top"></div>
+                <div class="item bottom"></div>
+              </div>
+              <div class="fire-point"></div>
+            </div>
+            <div class="tunnel-center">三岔顶隧道</div>
+            <div class="tunnel-right-hole">
+              <!--火灾工况模式class: fire-house-mode-->
+              <div class="hack">
+                <div class="dotted-line"></div>
+                <div class="right-hole-in">右入</div>
+                <div class="right-hole-out">右出</div>
+                <div class="fire-point one"></div>
+                <div class="tunnel-box one" data-fan-name="RK107+649#" data-fan-number="1" data-light-name="入口段1">
+                  <div class="item top active"></div>
+                  <div class="item bottom active"></div>
+                </div>
+                <div class="fire-point two"></div>
+                <div class="tunnel-box two" data-fan-name="RK107+8092#" data-fan-number="2" data-light-name="入口段2">
+                  <div class="item top active"></div>
+                  <div class="item bottom active"></div>
+                </div>
+                <div class="fire-point three"></div>
+                <div class="tunnel-box three" data-fan-name="RK107+9693#" data-fan-number="3" data-light-name="过渡段1">
+                  <div class="item top active"></div>
+                  <div class="item bottom active"></div>
+                </div>
+                <div class="fire-point four"></div>
+                <div class="tunnel-box four" data-fan-name="RK108+1294#" data-fan-number="4" data-light-name="过渡段2">
+                  <div class="item top active"></div>
+                  <div class="item bottom active"></div>
+                </div>
+                <div class="fire-point five"></div>
+                <div class="tunnel-box five" data-fan-name="RK110+1215#" data-fan-number="5" data-light-name="中间段">
+                  <div class="item top"></div>
+                  <div class="item bottom"></div>
+                </div>
+                <div class="fire-point six"></div>
+                <div class="tunnel-box six" data-fan-name="RK110+2816#" data-fan-number="6" data-light-name="出口段1">
+                  <div class="item top"></div>
+                  <div class="item bottom"></div>
+                </div>
+                <div class="fire-point seven"></div>
+                <div class="tunnel-box seven" data-fan-name="RK110+4417#" data-fan-number="7" data-light-name="出口段2">
+                  <div class="item top"></div>
+                  <div class="item bottom"></div>
+                </div>
+                <div class="fire-point eight"></div>
+              </div>
+              <div class="mode-content">
+                <!--火宅工况模式: fire-house -->
+                <ul class="fire-house-mode fire-house hide">
+                  <li class="sign-fire-point active">
+                    <i></i>
+                    <span>请标记火灾点</span>
+                    <div class="arrow"></div>
+                  </li>
+                  <li class="evacuate">
+                    <i></i>
+                    <span>安全疏散阶段</span>
+                    <span style="position: absolute; border: 1px solid #f39a00; background:#ffffe5;font-size: 12px;display: none;width: 90px;padding: 2px;left: -6px; color: #000; padding: 3px 6px; text-align: center;"
+                      class="wind-v">固定风速:0.5m/s</span>
+                    <div class="arrow"></div>
+                  </li>
+                  <li class="out-fire">
+                    <i></i>
+                    <span>灭火救援阶段</span>
+                    <span style="position: absolute; border: 1px solid #f39a00; background:#ffffe5;font-size: 12px;display: none;width: 90px;padding: 2px;left: -6px; color: #000; padding: 3px 6px; text-align: center;"
+                      class="wind-v">排烟风速:0.5m/s</span>
+                    <div class="arrow"></div>
+                  </li>
+                  <li class="out-fire-mode active">
+                    <i></i>
+                    <span>退出火灾排烟工况</span>
+                  </li>
+                </ul>
+                <!--hide-->
+                <div class="other-mode">
+                  <div class="tunnel-name">
+                    <div class="enter-one fan">RK107+649#</div>
+                    <div class="enter-two fan">RK107+8092#</div>
+                    <div class="transition-one fan">RK107+9693#</div>
+                    <div class="transition-two fan">RK108+1294#</div>
+                    <div class="other-mother-sun fan"></div>
+                    <div class="center fan">RK110+1215#</div>
+                    <div class="out-one fan">RK110+2816#</div>
+                    <div class="out-two fan">RK110+4417#</div>
+                    <div class="enter-one light">入口段1</div>
+                    <div class="enter-two light">入口段2</div>
+                    <div class="transition-one light">过渡段1</div>
+                    <div class="transition-two light">过渡段2</div>
+                    <div class="other-mother-sun light"></div>
+                    <div class="center light">中间段</div>
+                    <div class="out-one light">出口段1</div>
+                    <div class="out-two light">出口段2</div>
+                  </div>
+                  <div class="tunnel-info">
+                    <div class="wind-speed">
+                      洞内风速：<span>374</span>m/s
+                    </div>
+                    <div class="fan-rate">
+                      风机频率：<span>374</span>Hz
+                    </div>
+                    <div class="dust-thickness">
+                      粉尘浓度：<span>374</span>m<sup>-1</sup>
+                    </div>
+                    <div class="co-thickness">
+                      CO浓度：<span>12</span>cm<sup>3</sup>/m<sup>3</sup>
+                    </div>
+                    <div style="width: 50px;height: 20px;"></div>
+                    <div class="outside-bright">
+                      洞外亮度：<span>12</span>cd/m<sup>2</sup>
+                    </div>
+                    <div class="enter-one-bright">
+                      入口段1亮度：<span>80</span>cd/m<sup>2</sup>
+                    </div>
+                    <div class="car-number">
+                      车流量：<span>80</span>v/h
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="crumbs real-time">
+        <div class="line real-time">
+          实时曲线（右洞）
+        </div>
+      </div>
+      <div class="real-time-chart fan">
+        <div class="chart mb20"></div>
+        <div class="chart ml20 mb20"></div>
+        <div class="chart"></div>
+        <div class="chart ml20"></div>
+      </div>
+      <div class="real-time-chart light">
+        <div class="chart"></div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="wrap">
+        &copy;2016-2019 120.24.58.177.com 版权所有
+      </div>
+    </div>
+    <div class="all-modal-content">
+      <!-- inject:footer:html -->
+      <!-- contents of html partials will be injected here -->
+      <!-- endinject -->
+    </div>
+  </div>
+</body>
+<!-- build:js(src) app.js-->
+<!-- inject:js -->
+<!-- endinject -->
+<!--enbuild-->
+
+</html>

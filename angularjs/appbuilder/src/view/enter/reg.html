@@ -1,0 +1,19 @@
+<div class="reg-main enter">
+	<div class="top">
+		<a class="back" ui-sref="login"></a>
+		<span translate="register"></span>
+	</div>
+	<form name="regForm" ng-controller="RegController">
+		<input type="text" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onafterpaste="this.value=this.value.replace(/[^\d]/g,'')" ng-model="regMobile" translate-attr="{placeholder:'phoneNumber'}"  autofocus="autofocus" ng-minlength="11" ng-maxlength="11" maxlength="11" ng-blur="checkPhone()"></input>
+		<input type="text" translate-attr="{placeholder:'nickname'}" ng-model="regNick" ng-minlength="2" ng-maxlength="10"></input>
+		<div class="pass">
+			<input translate-attr="{placeholder:'password'}" type="{{flag ? 'text' : 'password'}}" required="required" ng-model="regPass" ng-minlength="6" ng-maxlength="12"></input>
+			<a ng-class="{active: flag}" ng-click="flag=!flag"></a>
+		</div>
+		<div class="code">
+			<input translate-attr="{placeholder:'verificationCode'}" maxlength="4" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onafterpaste="this.value=this.value.replace(/[^\d]/g,'')" required="required" ng-model="regCode" ng-minlength="4" ng-maxlength="4"></input>
+			<a ng-click="getCode()">{{getcodeword}}</a>
+		</div>
+		<div><button class="btn" ng-click="reg()" ng-disabled="!regForm.$valid" translate="register"></button></div>
+	</form>
+</div>

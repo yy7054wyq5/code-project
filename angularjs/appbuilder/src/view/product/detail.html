@@ -1,0 +1,89 @@
+<div class="detail-main">
+	<div class="header">
+		<i backpage></i>
+		<span>产品信息</span>
+		<a class="car" ng-click="goCar()"></a>
+	</div>
+	<slideimg imgdata="{{detail.albumImages}}"></slideimg>
+	<div class="detail-info">
+		<h2 ng-bind-template="{{detail.name}}"></h2>
+		<p ng-bind-template="{{detail.summary}}"></p>
+		<span class="price" ng-if="detail.needCredit"><i></i>{{detail.needCredit}}</span>
+		<span class="price" ng-hide="detail.needCredit">&yen;{{detail.promotionPrice ||detail.price}}</span>
+		<span class="old" ng-if="detail.type==2&&detail.promotionType!==3">&yen;{{detail.price}}</span>
+		<span class="point" ng-if="detail.type==3">{{detail.timeStart.substring(0,10)}}&nbsp;-&nbsp;{{detail.timeEnd.substring(0,10)}}*单用户限购{{detail.creditLimitNum}}件</span>
+	</div>
+	<div class="big-sale" ng-if="detail.type==2&&detail.promotionType==1">
+		促销
+		<span class="discount">{{detail.promotionValue}}折</span>
+		<span>&nbsp;限购{{detail.promotionLimitNum}}件</span>
+	</div>
+	<div class="big-sale" ng-if="detail.type==2&&detail.promotionType==2">
+		促销
+		<span class="discount">减价{{detail.promotionValue}}</span>
+		<span>&nbsp;限购{{detail.promotionLimitNum}}件</span>
+	</div>
+	<div class="big-sale send" ng-if="detail.type==2&&detail.promotionType==3" showsendproduct>
+		<span>促销</span>
+		<span class="discount send">满{{detail.promotionConditionNumber}}件送{{detail.promotionValueNum}}件</span>
+		<span>{{detail.valueName.length>10 ? detail.valueName.substring(0,10)+'...' : detail.valueName}}</span>
+	</div>
+	<!-- 浮动层展示被赠送产品明细 -->
+	<div class="show-send-product" ng-if="detail.type==2&&detail.promotionType==3">	
+		<div class="content">
+			<h2>促销<i ng-click="hidesendproduct()"></i></h2>
+			<span>送</span>
+			<ul>
+				<li ui-sref="product-detail({id: detail.promotionValue})">
+					<span class="product-name">{{detail.valueName}}</span>
+					<span>x{{detail.promotionValueNum}}</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="bar" ng-bind-html="chosedSize"></div>
+	<div class="conmment">
+		<h3>宝贝评价（{{detail.comments.total}}）</h3>
+		<div class="conmment-box">
+			<p ng-if="detail.comments.comments.length<=0">暂无评价</p>
+			<dl class="user-conmment" ng-if="detail.comments.comments.length>0">
+				<dd class="user-info">
+					<div class="user-img"><img ng-src="{{detail.comments.comments[0].userImagePath}}"></div>
+					<span class="user-name">{{detail.comments.comments[0].nickname}}<img ng-src="http://appbuilder.loongjoy.com/phoneweb/app/img/forum_icon_grade_1_dis.png"></span>
+					<span class="star"><i class="yellow" style="width: {{ detail.comments.comments[0].score*.4}}rem;"></i><i class="gray" style="width: {{ (5-detail.comments.comments[0].score)*.4 }}rem"></i></span>
+				</dd>
+				<dd class="user-des" ng-bind-template="{{detail.comments.comments[0].content}}"></dd>
+				<dd class="conmment-date">{{detail.comments.comments[0].updateTime}} {{detail.comments.comments[0].spec}}</dd>
+			</dl>
+			<a class="see-all-conmment" ng-if="detail.comments.comments.length>0" ui-sref="allComment( {id:detail.id} )">查看全部评价</a>
+		</div>	
+	</div>
+	<!--<div class="detail-center">
+		<div class="line">
+			<div class="txt">继续拖动，查看图文详情</div>
+		</div>
+	</div> -->
+	<div class="img-detail-box">
+		<div class="detail-btn">
+			<a ng-class="{active:!flag}" ng-click="flag=!flag">图文详情</a>
+			<i></i>
+			<a ng-class="{active:flag}" ng-click="flag=!flag">产品规格</a>
+		</div>
+		<div class="img-detail" ng-show="!flag" ng-bind-html="allDetail"></div>
+		<div class="product-size" ng-show="flag">
+			<table>
+				<tr ng-repeat="attr in detail.attributes">
+					<td ng-bind-template="{{attr.attrKey}}"></td>
+					<td ng-bind-template="{{attr.attrValue}}">12个月</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+<!-- 规格 -->
+<size maxcount="{{ detail.creditLimitInventory ? detail.creditLimitInventory : detail.promotionLimitInventory || detail.inventory }}" limitNum="{{ detail.creditLimitNum || detail.promotionLimitNum }}" specInfo="{{detail.specInfo || 0}}" specMaps="{{detail.specMaps || 0}}" price="{{detail.price}}" promotionPrice="{{detail.promotionPrice}}" imagePath="{{detail.imagePath}}" specValues={{detail.specValues}} id="{{detail.id}}" needCredit="{{detail.needCredit}}"></size>
+<!-- 规格 -->
+<div class="footer-btn">
+	<a class="add-bus" ng-click="addCar()">加入购物车</a>
+	<a class="buy-now" ng-click="buyNow()">立即购买</a>
+</div>

@@ -1,0 +1,43 @@
+<div class="community-sublist">	
+	<div class="header">
+		<i ui-sref="community"></i>
+		<span ng-bind-template="{{forumInfo.name}}"></span>
+		<a class="edit" ng-click="sendMessage()"></a>
+	</div>
+	<div class="list-title" >
+		<div class="blur" style="background-image: url({{forumInfo.backgroundPath}});"></div>
+		<div style="width:9.98rem;height:2.98rem;position:absolute;top:.01rem;left:.01rem;background:#000;opacity:.2;"></div>
+		<div class="img-box">
+			<img ng-src="{{forumInfo.imagePath}}">
+		</div>
+		<div class="list-info">
+			<span class="title" ng-bind-template="{{forumInfo.name}}" translate="dailyLifeNaggings"></span>
+			<span><span translate="post" style="display: inline;"></span>{{forumInfo.topicNum}}&nbsp;&nbsp;&nbsp;&nbsp;<span translate="Replies" style="display: inline;"> </span>{{forumInfo.topicCommentNum}}</span>
+			<span ng-bind-template="{{forumInfo.summary}}"></span>
+		</div>
+	</div>
+	<div class="list">
+		<dl ng-repeat="topics in topicsList">
+			<dd class="title" ui-sref="community-detail({ id:topics.id })">
+				<img lazy-src="{{topics.userImage}}" class="user">
+				{{topics.nickname}}
+				<img lazy-src="{{topics.iconImage}}" class="level">
+			</dd>
+			<dd class="subtiitle line-ellipsis" ui-sref="community-detail({ id:topics.id })"><span class="tag" ng-if="topics.top==1" translate="pushUp"></span>{{topics.name}}</dd>
+
+			<dd class="des line-camp" ui-sref="community-detail({ id:topics.id })" ng-if="topics.deleted===0">{{topics.detail}}</dd>
+			<dd class="des line-camp" ui-sref="community-detail({ id:topics.id })" ng-if="topics.deleted==1&&topics.commentNum!==0" style="color:#ddd;" translate="postDeleted"></dd>
+
+			<dd class="img" ng-if="topics.deleted==0">
+				<lookphoto data="topics.albumImages"></lookphoto>
+			</dd>
+			<dd class="info">
+				<span class="time" ng-bind-template="{{topics.createTime}}"></span>
+				<span class="right" ng-if="topics.deleted===0">
+					<i class="zan"></i><span ng-bind-template="{{topics.thumbNum}}"></span>
+					<i class="discuss"></i><span ng-bind-template="{{topics.commentNum}}"></span>
+				</span>
+			</dd>
+		</dl>
+	</div>
+</div>

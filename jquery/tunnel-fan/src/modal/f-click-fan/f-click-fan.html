@@ -1,0 +1,51 @@
+<!--风机：点击风机-->
+<h3>风机：点击风机</h3>
+<div class="click-fan">
+  <table style="width: 323px; margin: 0 auto; margin-top: 25px;" class="slide-table click-fan-con">
+    <tr>
+      <td>风机组号：右洞<span class="fan-number">1</span>#(<span class="fan-name">RK107+649</span>)</td>
+    </tr>
+    <tr>
+      <td>风机当前状态：<span class="fan-status">正常</span></td>
+    </tr>
+    <tr>
+      <td>风机手动控制：
+        <!--<input type="radio">正常<input type="radio">反转<input type="radio">停止-->
+        <span class="l-radio" data-value="normal"><i></i>正常</span>
+        <span class="l-radio" data-value="reversal"><i></i>反转</span>
+        <span class="l-radio" data-value="stop"><i></i>停止</span>
+      </td>
+    </tr>
+    <tr>
+      <td><span class="l-radio" data-value="must"><i></i>强制频率</span></td>
+    </tr>
+    <tr>
+      <td style="position: relative; padding: 0;">
+        <input type="text" placeholder="请输入0-50之间的数值" style="width: 174px; text-align: left; padding-left: 10px;" name="slide-bar-value"
+          data-max="50">
+        <div style="position: absolute; height: 17px; width: 1px; background: #cccccc; left: 140px; top: 7px;"></div>
+        <div class="slide-bar-finish" style="position: absolute; left: 150px; top: 8px;">完成</div>
+      </td>
+    </tr>
+    <tr>
+      <td style="position: relative; padding: 0;">
+        <div class="slide-bar">
+          <div class="round"></div>
+          <div class="line source"></div>
+          <div class="round"></div>
+        </div>
+        <div class="slide-bar active hide" style="position: absolute; top: 0; left: 0;">
+          <div class="round"></div>
+          <div class="line" style="width: 0;"></div>
+          <div class="round"></div>
+        </div>
+        <div class="slide-bar-txt">
+          <span></span>Hz
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><a class="btn center w50 sure">确定</a></td>
+    </tr>
+  </table>
+</div>

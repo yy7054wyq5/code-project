@@ -1,0 +1,3 @@
+<ul class="swipemenu" ng-swipe-left="swipeLeft()" ng-swipe-right="swipeRight()" style="margin-left: {{-sum}}rem;" ng-show="articleLevel==2||!articleLevel&&articleLevel!==0">
+	<li ng-repeat="menu in topMenu" ng-class="{active:acount == {{$index}} }" ng-click="menuActive($index,menu.id)" ng-bind-template="{{menu.name}}" data-id="{{menu.id}}" data-index="{{$index}}"></li>
+</ul>

@@ -1,0 +1,77 @@
+<!--风机：时序控制-->
+<h3>风机：时序控制</h3>
+<div class="fan-pro-edit">
+  <div class="fan-pro-edit-con" style="width: 780px; height: 530px;">
+    <span style="margin-left: 30px; margin-top: 10px; margin-bottom: 10px;">方案名称：</span>
+    <select name="" id="" style="margin-top: 10px;"></select>
+    <div>
+      <div style="width: 380px; height: 430px; float: left; border: 1px solid #d9d9d9; border-right:0; margin-left: 15px;">
+        <div style="margin-left: 10px; margin-top: 10px;">选择风机组数：</div>
+        <ul class="handle-control-left" style="width: 200px; margin-left: 50px;">
+          <li><i></i><span>所有右侧风机</span></li>
+          <li><i></i><span>右侧1#(RK107+649)</span></li>
+          <li><i></i><span>右侧2#(RK107+649)</span></li>
+          <li><i></i><span>右侧3#(RK107+649)</span></li>
+          <li><i></i><span>右侧4#(RK107+649)</span></li>
+          <li><i></i><span>右侧5#(RK107+649)</span></li>
+          <li><i></i><span>右侧6#(RK107+649)</span></li>
+          <li><i></i><span>右侧6#(RK107+649)</span></li>
+        </ul>
+        <table class="slide-table" style="width: 200px; margin-left: 50px;">
+          <tr>
+            <td><input type="radio">设置运行频率</td>
+          </tr>
+          <tr>
+            <td style="position: relative; padding: 0;">
+              <input type="text" placeholder="请输入0-50之间的数值" style="width: 174px; text-align: left; padding-left: 10px;" name="slide-bar-value"
+                data-max="50">
+              <div style="position: absolute; height: 17px; width: 1px; background: #cccccc; left: 140px; top: 7px;"></div>
+              <div class="slide-bar-finish" style="position: absolute; left: 150px; top: 8px;">完成</div>
+            </td>
+          </tr>
+          <tr>
+            <td style="position: relative; padding: 0;">
+              <div class="slide-bar">
+                <div class="round"></div>
+                <div class="line source" style="width: 160px;"></div>
+                <div class="round"></div>
+              </div>
+              <div class="slide-bar active hide" style="position: absolute; top: 0; left: 0;">
+                <div class="round"></div>
+                <div class="line" style="width: 0;"></div>
+                <div class="round"></div>
+              </div>
+              <div class="slide-bar-txt">
+                <span></span>Hz
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div style="width: 378px; height: 430px; float:left; border: 1px solid #d9d9d9;">
+        <table width="223" style="margin: 0 auto; margin-top: 34px">
+          <tr>
+            <td>开始时间：</td>
+          </tr>
+          <tr>
+            <td><input type="text" class="datetimepicker" date-time-config="{#timepicker#: false, #format#: #Y/m/d#}"></td>
+          </tr>
+          <tr>
+            <td>结束时间：</td>
+          </tr>
+          <tr>
+            <td><input type="text" class="datetimepicker" date-time-config="{#timepicker#: false, #format#: #Y/m/d#}"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="clear" style="width: 100%;">
+      <table class="center" style="width: 200px; margin-top: 20px;">
+        <tr>
+          <td><a class="btn w50 save">保存</a></td>
+          <td><a class="btn w50 cancel layui-layer-close">取消</a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

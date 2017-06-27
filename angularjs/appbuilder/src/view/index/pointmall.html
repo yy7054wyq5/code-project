@@ -1,0 +1,20 @@
+<rheader></rheader>
+<div class="pointmall-main">
+	<h2 class="bar">
+		<span translate="currentIntegration"></span>
+		<span ng-bind-template="{{userinfo.credits}}"></span>
+		<button ng-class="{active:active}" ng-click="exchange()" translate="convertible"></button>
+	</h2>
+	<div class="list">
+		<dl ui-sref="product-detail({id: point.productId})" ng-repeat="point in creditProductsList">
+			<dt><a><img lazy-src="{{point.imagePath}}"></a></dt>
+			<dd class="txt"><a ng-bind-template="{{point.productName}}"></a></dd>
+			<dd class="point"><i></i><span ng-bind-template="{{point.credit}}"></span></dd>
+		</dl>
+	</div>
+	<div class="noproduct" ng-if="creditProductsList.length==0&&active">
+		<span translate="Deficiency"></span>
+		<span translate="noConvertibleProducts"></span>
+	</div>
+<div style="height:1rem"></div>
+<rhomefooter homelink="index.pointmall"></rhomefooter>

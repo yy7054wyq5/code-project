@@ -1,0 +1,257 @@
+.container.confirm{
+	padding-bottom: 100px;
+	>div.paying{
+		>form{
+			margin: 0 auto;
+			display: block;
+		}
+		>img{
+			display: block;
+			margin: 0 auto;
+		}
+		>p{
+			text-align: center;
+		}
+	}
+	h3{
+		font-size: 16px;
+		padding: 20px 0;
+	}
+	>.line{
+		width: 44px;
+		height: 1px;
+		background: @basecolor;
+	}
+	.address-box{
+		border-bottom: 1px solid #ddd;
+		>.item{
+			width: 320px;
+			height: 178px;
+			border: 1px solid #dddddd;
+			margin-right: 110px;
+			margin-top: 40px;
+			position: relative;
+			>.address{
+				cursor: pointer;
+			}
+			>i.chose{
+				position: absolute;
+				right: -1px;
+				bottom: -1px;
+				display: none;
+			}
+		}
+		>.item.active{
+			border: 1px solid @basecolor;
+			>i.chose{
+				display: block;
+			}
+		}
+		>.item.add-address{
+			cursor: pointer;
+			background: url(/dist/img/ins_ic_t_add.png) no-repeat center;
+		}
+		>.slideup{
+			.clear;
+			width: 100%;
+			height: 40px;
+			>a{
+				cursor: pointer;
+				display: block;
+				float: right;
+				margin-right: 10px;
+				color: #333333;
+				>span{
+					margin-right: 10px;
+				}
+				>i{
+					background-image: url(/dist/img/mine_sprite.png);
+					background-position: -84px -90px;
+					width: 24px;
+					height: 13px;
+					display: block;
+					float: right;
+					margin-top: 3px;
+				}
+			}
+			>a.active{
+				>i{
+					background-image: url(../img/mine_sprite.png);
+					background-position: -60px -90px;
+					width: 24px;
+					height: 13px;
+					display: block;
+					float: right;
+					margin-top: 3px;
+				}
+			}
+		}
+	}
+	>.pay-way{
+		padding-top: 40px;
+		padding-bottom: 40px;
+		>a{
+			display: block;
+			float: left;
+			width: 102px;
+			height: 36px;
+			border: 1px solid #ddd;
+			font-size: 16px;
+			border-radius: 5px;
+			text-align: center;
+			line-height: 36px;
+			margin-right: 42px;
+			color: #333333;
+		}
+		>a.active{
+			background: @basecolor;
+			color: #fff;
+			border: 1px solid @basecolor;
+		}
+	}
+	>.pay-way:after{
+		.clear;
+	}
+	>ul.list{
+		margin-top: 20px;
+		>li{
+			border-left: 1px solid #ddd;
+			border-right: 1px solid #ddd;
+			border-bottom: 1px solid #ddd;
+			padding: 10px;
+			>div{
+				float: left;
+				width: 236px;
+				height: 96px;
+				line-height: 96px;
+				text-align: center;
+			}
+			>.product-total{
+				font-size: 20px;
+			}
+			>.product{
+				width: 430px;
+				text-align: left;
+				>img{
+					display: block;
+					float: left;
+					width: 96px;
+					height: 96px;
+				}
+				>.name{
+					width: 250px;
+					display: block;
+					float: left;
+					font-size: 14px;
+					color: #333333;
+					height: 96px;
+					margin-left: 10px;
+					td{
+						height: 96px;
+						line-height: 20px;
+						vertical-align: middle;
+					}
+				}
+				>.heavy{
+					display: block;
+					float: left;
+					height: 96px;
+					color: #999999;
+				}
+			}
+			.product:after{
+				.clear;
+			}
+		}
+		>li:after{
+			.clear;
+		}
+		>li.title{
+			border-left: 0;
+			height: 50px;
+			border-right: 0;
+			padding: 0;
+			>div.product{
+				width: 445px;
+			}
+			>div{
+				width: 236px;
+				text-align: center;
+				height: 50px;
+				line-height: 50px;
+			}
+			>.product-total{
+				font-size: 14px;
+			}
+		}
+	}
+	>.bak{
+		border-left: 1px solid #ddd;
+		border-right: 1px solid #ddd;
+		padding: 20px;
+		>div,
+		>textarea{
+			float: left;
+		}
+		>textarea{
+			border: 1px solid #ddd;
+			border-radius: 5px;
+			width: 600px;
+			height: 60px;
+			resize: none;
+		}
+		>.order-info{
+			width:335px; 
+			margin-left: 60px;
+			>div{
+				height: 30px;
+				>span:first-child{
+					float: left;
+				}
+				>span:last-child{
+					float: right;
+				}
+				>span.big{
+					font-size: 20px;
+				}
+			}
+		}
+	}
+	>.bak:after{
+		.clear;
+	}
+	>.confirm-order:after{
+		.clear;
+	}
+	>.confirm-order{
+		border: 1px solid @basecolor;
+		padding-top: 20px;
+		>div{
+			text-align: right;
+		}
+		span{
+			color: #ff4a26;
+		}
+		span.fact-price{
+			font-size: 20px;
+		}
+		>div.bottom{
+			margin-top: 20px;
+			>div,>a{
+				display: block;
+				float: right;
+				height: 60px;
+				line-height: 60px;
+			}
+			>div{
+				margin-right: 20px;
+			}
+			>a{
+				width: 170px;
+				background: @basecolor;
+				color: #fff;
+				text-align: center;
+			}
+		}
+	}
+}

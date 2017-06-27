@@ -1,0 +1,15 @@
+<div class="guide-main">
+	<div class="header">
+		<i backpage></i>
+		<span translate="selectShoppingGuide"></span>
+	</div>
+	<div class="list">
+		<dl ng-repeat="list in branchList" ng-click="set(list.id)">
+			<dd class="part" ng-bind-template="{{list.province}}"></dd>
+			<dd class="name" ng-bind-template="{{list.name}}"></dd>
+			<dd class="address" ng-bind-template="{{list.city}}{{list.area}}{{list.address}}"></dd>
+			<dd class="arrow"></dd>
+		</dl>
+	</div>
+	<selectguide></selectguide>
+</div>

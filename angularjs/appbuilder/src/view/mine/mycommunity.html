@@ -1,0 +1,31 @@
+<div class="discuz-main">
+	<div class="header">
+		<i ui-sref="mine"></i>
+		<span>我的帖子</span>
+	</div>
+	<ul class="nav">
+		<li ng-class="{active:discuzactive}" ng-click="exchange()" class="community">发布</li>
+		<li ng-class="{active:!discuzactive}" ng-click="exchange()" class="comment">评论</li>
+	</ul>
+	<div class="list" ng-if="discuzactive">
+		<dl ng-repeat="community in myCommunity">
+			<dd class="title"><img lazy-src="{{community.userImage}}" class="user">
+			{{community.nickname}}<img ng-src="{{userinfo.userRankIconPath}}" class="level"></dd>
+			<dd class="subtiitle line-ellipsis" ui-sref="community-detail( {id:community.id} )">{{community.name}}</dd>
+			<dd class="line-camp des">{{community.detail}}</dd>
+			<dd class="img">
+				<img lazy-src="{{img}}" ng-repeat="img in community.albumImages track by $index">
+			</dd>
+			<dd class="info"><span class="time" ng-bind-template="{{community.createTime}}"></span><span class="right"><i class="zan"></i><span>{{community.thumbNum}}</span><i class="discuss"></i><span>{{community.commentNum}}</span></span></dd>
+		</dl>
+	</div>
+	<ul class="article-comment-list" ng-if="!discuzactive">
+		<li ng-repeat="comment in myCommunity">
+			<h4 ng-bind-template="{{comment.resourceName}}" ui-sref="community-detail({ id:comment.resourceId })"></h4>
+			<img lazy-src="{{userinfo.imagePath}}">
+			<span class="name" ng-bind-template="{{userinfo.nickname}}"></span>
+			<span class="date pull-right" ng-bind-template="{{comment.updateTime}}"></span>
+			<div class="des" ng-bind-template="{{comment.content}}"></div>
+		</li>
+	</ul>
+</div>

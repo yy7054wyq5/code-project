@@ -1,0 +1,11 @@
+<div class="chose-bg" ng-class="{active:flag}" ng-style="style">
+<!-- set()设置chose-bg样式，高度 -->
+	<div class="guide-con" ng-click="back()" ng-swipe-left="swipeLeft()" ng-swipe-right="swipeRight()" ng-style="guideStyle">
+		<div class="list" ng-repeat="guide in guide">
+			<h5 ng-bind-template="{{guide.nickname}}"></h5>
+			<i></i>
+			<img ng-src="{{guide.imagePath}}" ng-click="setGuide(guide.id)">
+			<button ng-click="setGuide(guide.id)">选择TA</button>
+		</div>
+	</div>
+</div>

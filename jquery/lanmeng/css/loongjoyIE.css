@@ -1,0 +1,165 @@
+/*1.仅针对IE7和IE8的兼容性代码*/
+/*2.未单独标明IE7和IE8的，就是针对两个浏览器的*/
+/*3.少量的兼容性代码还是在主样式内*/
+
+/*头部搜索框 IE7*/
+.header-center .header-search input{
+  *height: 24px;
+  *width: 540px;
+  *padding: 0px;
+  *padding-left: 35px;
+  *padding-top: 7px;
+}
+/*全部商品分类*/
+.header-bottom .nav > li:first-child.dropdown>a{
+  background: #ff7e00 url(/img/home-arrow-d.png) no-repeat 205px center;
+}
+.header-bottom .nav > li:first-child.dropdown>a.active{
+  background: #ff7e00 url(/img/home-arrow-u.png) no-repeat 205px center;
+}
+
+/*底部针对IE7的定位处理*/
+.footer .container{
+  *position: relative;
+  *z-index: 1;
+  *height: 260px;
+}
+.footer .row{
+  *position: absolute;
+  *margin-left: 0;
+  *left: -20px;
+  *top: 0;
+  *width: 1130px;
+}
+.footer .col-xs-2{
+  *padding-left: 0;
+  *padding-right: 0;
+}
+.footer .col-xs-2 a{
+  *height: 14px;
+  *line-height: 14px;
+}
+
+/*下拉框中输入框的输入位置的处理*/
+.lem-drop>li.input-group>input{
+  padding-top: 8px\0;
+  *padding-top: 9px;
+  *padding-left: 0;
+  *background: url(/img/deal-glass.png) 145px 8px no-repeat;
+}
+
+/*创库tab下拉框的宽度*/
+.innovate-main .tab-content .lem-drop .dropdown-menu{
+  width: 119px;
+  min-width: 119px;
+}
+/*交易平台tab下拉框的宽度*/
+.deal-main .lem-drop.nav-bar>li.dropdown .dropdown-menu{
+  width: 119px;
+  min-width: 119px;
+}
+
+/*创库瀑布流边框*/
+.grid{
+  border:1px solid #eeeeee;
+  *width:266px;
+  *margin:4px 11px 9px 2px;
+}
+
+/*登录页按钮*/
+.login-box .detail-btn{
+  *width: 238px;
+  height: 38px;
+  *height: 18px;
+  line-height: 38px;
+  *line-height: 18px;
+  padding-top: 0;
+  *padding-top: 10px;
+  padding-bottom: 10px;
+  background: transparent url(/img/login-btn.png) no-repeat;
+}
+/*登录页输入框*/
+.reg-box table tr>td input.form-control{
+  *width: 240px;
+  *height: 23px;
+  *padding-top: 9px;
+  padding-top: 8px\0;
+}
+
+/*商城列表页，搜索按钮*/
+.store-list-right .navbar-form .btn{
+  *padding: 5px 12px;
+  *margin-top: 1px;
+  *margin-left: 5px;
+}
+
+/*创库 素材首页搜索框*/
+.nav-tabs.example li.last input{
+  border-right: 0;
+}
+/*创库 素材首页 单品*/
+.example-box{
+  width: 263px;
+  height: 250px;
+  border: 1px solid #fff;
+}
+.example-box:hover{
+  border: 1px solid #cccccc;
+}
+.example-box img{
+  width: 262px;
+  *width: 263px;
+}
+
+/*车友汇列表页*/
+.riders-list-main ul.riders-list-con li{
+  height: 224px;
+  position: relative;
+  z-index: 1;
+}
+.riders-list-main ul.riders-list-con li:hover>div.shadow{
+  display: block;
+}
+.riders-list-main ul.riders-list-con li>div.shadow{
+  position: absolute;
+  z-index: 2;
+  width: 903px;
+  height: 245px;
+  left: -14px;
+  top: -14px;
+  display: none;
+  background-image: url(/img/riders-list-lishadow.png);
+}
+.riders-list-main ul.riders-list-con li>div.riders-tab-content{
+  position: absolute;
+  z-index: 3;
+}
+
+/*执行案例列表页搜索框*/
+.example-list-main li.last.input-group .form-control{
+  border-right: 0;
+  padding-top: 1px;
+  *height:18px;
+  *padding-top: 3px;
+}
+
+/*车友汇小广告的阴影*/
+.riders-main .small-adv>.shadow{
+  width: 276px;
+  height: 233px;
+}
+.riders-main .small-adv>.shadow:hover{
+  background: url(/img/shadow-ie-adv.png) no-repeat -5px -5px;
+}
+
+/*发布需求带输入框的下拉框*/
+.business-main .lem-drop.lem-drop-input>li.dropdown .dropdown-menu{/*有IE7兼容性代码*/
+    border:1px solid #66afe9;
+    border-top:0;
+    width: 168px;
+    *width: 166px;
+}
+
+.store-list-right .navbar-form{
+  margin-top: -5px;
+}

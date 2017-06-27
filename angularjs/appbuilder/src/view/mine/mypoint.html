@@ -1,0 +1,26 @@
+<div class="mypoint-main">
+	<div class="header">
+		<i ui-sref="mine"></i>
+		<span>我的积分</span>
+	</div>
+	<div class="user-info">
+		<img ng-src="{{userinfo.imagePath}}">
+		<div class="content">
+			<span class="nicknanme" ng-bind-template="{{userinfo.nickname}}"></span>
+			<span class="point" ng-bind-template="{{userinfo.credits}}积分"></span>
+		</div>
+	</div>
+	<div class="hack"></div>
+	<h5>积分收支明细</h5>
+	<ul class="list">
+		<li ng-repeat="record in pointRecords">
+			<div class="point-detail">
+				<p>{{record.actionMsg}}</p>
+				<span>{{record.updateTime}}</span>	
+			</div>
+			<span class="point-change">
+				<span>{{ record.increaseCredit > 0 ? '+'+record.increaseCredit : record.increaseCredit}}</span>
+			</span>
+		</li>
+	</ul>
+</div>

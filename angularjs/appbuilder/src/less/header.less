@@ -1,0 +1,90 @@
+header{
+	background: @basebg;
+	.header-btn{
+		width: 8rem;
+		float: left;
+		font-size: 0;
+		a{
+			width: 2rem;
+			height: 1.2rem;
+			display: inline-block;
+			.font28;
+			line-height: 1.2rem;
+			text-align: center;
+			color: @basecolor;
+		}
+		a.active{	
+			color: @activecolor;
+			border-bottom: .08rem solid @btncolor;
+		}
+		i{
+			display: block;
+			width: 2rem;
+			height: .08rem;
+			border-bottom: .08rem solid @btncolor;
+			transition: margin-left .3s;
+		}
+	}
+	a.car{
+		width: .8rem;
+		height: .8rem;
+		float: left;
+		margin-left: 1rem;
+		margin-top: .1rem;
+		background-image: url(../img/nav_button_shoppingcart_nor.png);
+		background-repeat: no-repeat;
+		background-size: .8rem;
+	}
+}
+header:after{
+	.clear;
+}
+
+.header{
+	padding-left: .5rem;
+	padding-bottom: .1rem;
+	padding-top: .2rem;
+	background: @basebg;
+	.border-bottom(@baseborder);
+	position: fixed;
+	z-index: 9;
+	width: 10rem;
+	top: 0;
+	height: 1.2rem;
+	>i,>span,>a{
+		.block-float;
+		margin-top: -.05rem;
+		height: .9rem;
+		margin-top: -.05rem;
+	}
+	>i{
+		width: .9rem;
+		background-image: url(../img/nav_button_back_nor.png);
+		background-repeat: no-repeat;
+		background-size: .9rem;
+	}
+	>span{
+		width: 7.4rem;
+		line-height: .9rem;
+		.font32;
+		text-align: center;
+	}
+	>a.car{
+		margin-left: 0;
+		width: .9rem;
+		background-image: url(../img/nav_button_shoppingcart_nor.png);
+		background-repeat: no-repeat;
+		background-size: .9rem;
+	}
+	>a.edit{
+		margin-top: -.05rem;
+		margin-left: 0;
+		width: .9rem;
+		background-image: url(../img/forum_button_edit_nor.png);
+		background-repeat: no-repeat;
+		background-size: .9rem;
+	}
+}
+.header:after{
+	.clear;
+}

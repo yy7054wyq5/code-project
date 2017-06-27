@@ -1,0 +1,39 @@
+<div class="growth-main">
+	<div class="header">
+		<i backpage></i>
+		<span translate="currentLevel"></span>
+	</div>
+	<div class="user">
+		<div class="img-box">
+			<img ng-src="{{userinfo.imagePath}}">
+		</div>
+		<i ng-style="level={'backgroundImage':'url({{userinfo.userRankIconPath}})'}"></i>
+	</div>
+	<p class="num">
+		<span ng-bind-template="{{userGrowth}}"></span>
+		<span ng-bind-template="{{nextLevelGrowth}}" style="margin-left:0;"></span>
+	</p>
+	<div class="growth-bar">
+		<div class="bar" style="width:{{growthLength}}rem;"></div>
+	</div>
+	<div class="growth-level">
+		<span ng-repeat="rank in growth" ng-bind-template="{{rank.name}}" ng-class="{active:userLevel==$index}"></span>
+	</div>
+	<p class="note"><span translate="nextLevel"></span><span ng-bind-template="{{nextRankNeedScore}}"></span><span translate="growthValue"></span></p>
+	<div class="line"></div>
+	<div class="growth-detail">
+		<h3 translate="growthValueDetailed"></h3>
+		<ul class="list">
+			<li ng-repeat="list in creditRecordList">
+				<div class="round">
+					<div class="round-out"><div class="round-in"></div></div>
+					<div class="round-line"></div>
+				</div>
+				<div class="growth-record">
+					<p class="des" ng-bind-template="{{list.actionMsg}}"></p><span class="add-growth">+{{list.increaseCredit}}<span translate="growthValue"></span></span>
+					<span class="date" ng-bind-template="{{list.updateTime}}"></span>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>

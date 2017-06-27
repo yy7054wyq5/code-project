@@ -1,0 +1,25 @@
+input.error { border: 1px solid red; }
+label.error{
+  font-weight: 300;
+  margin-bottom: 0;
+  padding-top: 5px;
+  padding-left: 20px;
+  // border: solid 1px #dddddd;
+  font-size: 12px;
+  font-family: Arial, Verdana, "\5b8b\4f53";
+  //background: #ffebeb;
+  background: #fff;
+  padding: 10px 10px 9px 10px;
+  margin-left: 10px;
+  color: #ff0000;
+  display: none;
+}
+label.checked{
+  display: none;
+  border: transparent;
+  background: #fff;
+  // border:1px solid transparent;
+  // background: url(/img/input-gg.png)  0 5px no-repeat;
+}
+
+

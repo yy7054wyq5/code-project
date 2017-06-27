@@ -1,0 +1,158 @@
+.container.store{
+	a{
+		width: 170px;
+		height: 46px;
+		display: block;
+		color: #fff;
+		font-size: 18px;
+		background: @basecolor;
+		border-radius: 5px;
+		line-height: 46px;
+		text-align: center;
+	}
+	>div.input{
+		.clear;
+		margin: 30px 0;
+		width: 1180px;
+		>a{
+			float: right;
+			display: block;
+			border-radius: 0 3px 3px 0;
+			background-image: url(../img/pagelv1.png);
+			background-position: 0px -66px;
+			width: 54px;
+			height: 38px;
+		}
+		>input{
+			float: right;
+		}
+	}
+	>ul.recommend{
+		>li:after{
+			.clear;
+		}
+		>li{
+			margin-bottom: 30px;
+			>a.img-link{
+				width: 590px;
+				height: 322px;
+				display: block;
+				background: transparent;
+				border-radius: 0;
+				>img{
+					width: 590px;
+					height: 322px;
+					display: block;
+				}
+			}
+			>ul{
+				width: 590px;
+				padding-left: 130px;
+				>li.title{
+					font-size: 22px;
+					color: #333333;
+					margin-top: 30px;
+					>a{
+						overflow: hidden;
+						background: transparent;
+						color: #333333;
+						padding: 0;
+						width: auto;
+						text-align: left;
+					}
+				}
+				>li.content{
+					font-size: 14px;
+					color: #666666;
+					margin-top: 10px;
+					width: 340px;
+					overflow: hidden;
+				}
+				>li.price{
+					margin-top: 40px;
+					font-size: 18px;
+					>span{
+						font-size: 40px;
+						color: #333333;
+					}
+				}
+			}
+		}
+	}
+	>ul.normal{
+		>li{
+			width: 380px;
+			height: 445px;
+			float: left;
+			position: relative;
+			margin-bottom: 20px;
+			margin-right: 20px;
+			z-index: 1;
+			>a.img-link{
+				display: block;
+				width: 380px;
+				height: 380px;
+				background: transparent;
+				border-radius: 0;
+				>img{
+					width: 380px;
+					height: 380px;
+					border-radius: 3px 3px 0 0;
+				}
+			}
+			>div.info{
+				border: 1px solid #e3e6ed;
+				border-top: 0;
+				padding: 10px 0;
+				border-radius: 0 0 3px 3px;
+				>span{
+					display: block;
+					float: left;
+					width: 160px;
+					margin:0 10px;
+					font-size: 18px;
+					height: 46px;
+					overflow: hidden;
+					line-height: 46px;
+					cursor: pointer;
+					>a{
+						display: inline;
+						background: #fff;
+						color: @basecolor;
+					}
+				}
+				>a{
+					width: 168px;
+					float: right;
+					margin-right: 10px;
+				}
+			}
+			>div:after{
+			.clear;
+			}
+			>div.price{
+				position: absolute;
+				z-index: 2;
+				width: 110px;
+				height: 66px;
+				background-image: url(../img/pagelv1.png);
+				background-position: 0px 0px;
+				left: 0;
+				top: 10px;
+				color: #fff;
+				font-size: 14px;
+				padding-left: 10px;
+				padding-top: 10px;
+				>.num{
+					font-size: 22px;
+					width: 100px;
+					overflow: hidden;
+				}
+			}
+		}
+	}
+	>ul.normal:after{
+		.clear;
+	}
+}
+

@@ -1,0 +1,60 @@
+<rheader></rheader>
+<div class="find-main">
+	<i class="search" ui-sref="search"></i>
+
+	<!-- **************************************** -->
+	<div>
+		<slideimg imgdata="{{topimgs}}"></slideimg>
+	</div>
+	
+	<!-- **************************************** -->
+
+
+	<h1><img src="http://appbuilder.loongjoy.com/phoneweb/app/img/home_icon_new_dis.png"><span translate="newProducts"></span> <span>NEW</span></h1>
+	<div class="new">
+		<dl ng-repeat="new in indexdata.newProducts" ui-sref="product-detail({id: new.id})">
+			<dt><a><img lazy-src="{{new.imagePath}}"></a></dt>
+			<dd>
+				<span class="price">
+					<span class="new-price" ng-bind-template="&yen;{{new.promotionPrice||new.price}}"></span>
+					<span class="old-price" ng-if="new.promotionType==2||new.promotionType==1" ng-bind-template="&yen;{{new.price}}"></span>
+				</span>
+				<p ng-bind-template="{{new.name}}"></p>
+				<a ui-sref="product-detail({id: new.id})" translate="Rush"></a>
+			</dd>
+		</dl>
+	</div>
+
+	<!-- **************************************** -->
+	<div class="center-ads">
+		<slideimg imgdata="{{centerimgs}}"></slideimg>
+	</div>
+	<!-- **************************************** -->
+
+
+	<!-- <a class="full-adv">
+		<img lazy-src="{{centerAd[0].imagePath}}" ng-click="goDetail(centerAd[0].type,centerAd[0].resourceType,centerAd[0].resourceId)">
+	</a> -->
+	<div class="list">
+		<dl ng-repeat="hot in indexdata.hotProducts" ui-sref="product-detail({id: hot.id})">
+			<dt>
+				<a><img lazy-src="{{hot.imagePath}}"></a>
+				<i ng-if="hot.isHot==1"></i>
+				<span class="block-status" ng-if="hot.promotionStatus==1" translate="grab"></span>
+				<span class="block-status" ng-if="hot.promotionStatus==2" translate="grabAtOnce"></span>
+				<span class="block-status" ng-if="hot.promotionStatus==3" translate="robbed"></span>
+			</dt>
+			<dd class="txt"><a ng-bind-template="{{hot.name}}"></a></dd>
+			<dd class="delete" ><span ng-if="hot.promotionPrice<hot.price" ng-bind-template="{{hot.promotionPrice}}"></span></dd>
+			<dd>&yen;<span ng-bind-template="{{hot.price}}"></span><span class="sale"> <span translate="Sold"></span> {{hot.saleCount}} <span translate="piece"></span></span></dd>
+			<!-- promotionType: "1", //促销类型 1:打折 2减价  3满送 -->
+			<dd class="icon" ng-if="hot.type==2">
+				<img src="http://appbuilder.loongjoy.com/phoneweb/app/img/search_jian.png" ng-if="hot.promotionType==2">
+				<img src="http://appbuilder.loongjoy.com/phoneweb/app/img/search_zhe.png" ng-if="hot.promotionType==1">
+				<img src="http://appbuilder.loongjoy.com/phoneweb/app/img/search_man.png" ng-if="hot.promotionType==3">
+			</dd>
+		</dl>
+	</div>
+</div>
+<div style="height:1rem"></div>
+<rhomefooter homelink="index.find"></rhomefooter>

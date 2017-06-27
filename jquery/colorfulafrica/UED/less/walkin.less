@@ -1,0 +1,85 @@
+.container.walkin{
+	.tab.country{
+		.input{
+			>input{
+				border: 1px solid #e3e6ed;
+			}
+		}
+	}
+	.tab.category{
+		margin-top: 20px;
+	}
+	.list{
+		margin-top: 30px;
+		>li{
+			margin-bottom: 20px;
+			>a{
+				color: #333333;
+				img{
+					display: block;
+					float: left;
+				}
+				ul{
+					float: left;
+					width: 860px;
+					padding-left: 30px;
+					>li.title{
+						color: #6B151B;
+						font-size: 24px;
+						margin-top: 25px;
+						width: 860px;
+						overflow: hidden;
+					}
+					>li.content{
+						font-size: 16px;
+						color: #999999;
+						margin-top: 20px;
+						width: 550px;
+						height: 68px;
+						overflow: hidden;
+					}
+					>li.info{
+						>i,
+						>span{
+							display: block;
+							float: left;
+						}
+						>i{
+							margin-top: 20px;
+						}
+						>i.comment{
+							margin-left: 110px;
+						}
+						>span.love-person,
+						>span.comment-person{
+							margin-top: 20px;
+							margin-left: 10px;
+						}
+						>span.price{
+							float: right;
+							>span{
+								font-size: 36px;
+								color: #333333;
+								margin: 0 10px;
+							}
+						}
+					}
+					>li.info:after{
+						.clear;
+					}
+				}
+			}
+		}
+		>li:after{
+			.clear;
+		}
+	}
+	.loading-more{
+		margin-bottom: 80px;
+	}
+	.partner-item{
+		>ul{
+			width: 730px;
+		}
+	}
+}

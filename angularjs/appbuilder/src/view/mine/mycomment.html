@@ -1,0 +1,46 @@
+<div class="comment-main">
+	<div class="header">
+		<i ui-sref="mine"></i>
+		<span>我的评论</span>
+	</div>
+	<ul class="nav">
+		<li ng-class="{active:commentactive}" ng-click="exchange()" class="product">产品</li>
+		<li ng-class="{active:!commentactive}" ng-click="exchange()" class="article">文章</li>
+	</ul>
+	<ul class="list" ng-if="commentactive">
+		<li ng-repeat="comment in myProductComment">
+			<h4 class="product-title">
+				<img lazy-src="{{comment.imagePath}}">
+				<p ng-bind-template="{{comment.name}}" ui-sref="product-detail({id:comment.productId})"></p>
+			</h4>
+			<dl class="user-conmment">
+				<dd class="user-info">
+					<div class="user-img"><img lazy-src="{{userinfo.imagePath}}"></div>
+					<span class="user-name">{{userinfo.nickname}}<img ng-src="{{userinfo.userRankIconPath}}"></span>
+					<span class="star"><i class="yellow" style="width: {{ 2*.4}}rem;"></i><i class="gray" style="width: {{ (5-2)*.4 }}rem"></i></span>
+				</dd>
+				<dd class="user-des" ng-bind-template="{{comment.content}}"></dd>
+				<dd class="conmment-date" ng-bind-template="{{comment.updateTime}}"></dd>
+				<dd class="seller" ng-if="comment.reply">
+					<span class="name">商户回复：</span>
+					<span class="date" ng-bind-template="{{comment.reply.updateTime}}"></span>
+					<div ng-bind-template="{{comment.reply.content}}"></div>
+				</dd>
+			</dl>
+		</li>
+	</ul>
+	<ul class="article-comment-list" ng-if="!commentactive">
+		<li ng-repeat="comment in myArticleComment">
+			<h4 ng-bind-template="{{comment.resourceName}}" ui-sref="article-detail({id:comment.resourceId})"></h4>
+			<img lazy-src="{{userinfo.imagePath}}">
+			<span class="name" ng-bind-template="{{userinfo.nickname}}"></span>
+			<span class="date pull-right" ng-bind-template="{{comment.updateTime}}"></span>
+			<div class="des" ng-bind-template="{{comment.content}}"></div>
+			<div class="seller" ng-if="comment.reply">
+				<span class="name">作者回复：</span>
+				<span class="date" ng-bind-template="{{comment.reply.updateTime}}"></span>
+				<div ng-bind-template="{{comment.reply.content}}"></div>
+			</div>
+		</li>
+	</ul>
+</div>

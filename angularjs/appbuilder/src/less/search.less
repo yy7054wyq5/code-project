@@ -1,0 +1,339 @@
+.search-main{
+	background: @basebg;
+	.top{
+		position: fixed;
+		top: 0;
+		width: 10rem;
+		z-index: 9;
+		input{
+			width: 7rem;
+			margin-left: 1rem;
+			margin-right: .2rem;
+			border: 0;
+			height: .7rem;
+			.font28;
+			background: @basebg;
+			.border-bottom(#cbcbcb);
+		}
+		span{
+			color: @basecolor;
+		}
+	}
+	.menu{
+		background: #fff;
+		height: 1.2rem;
+		.border-bottom(@baseborder); 
+		position: fixed;
+		z-index: 9;
+		width: 10rem;
+		top: 1.2rem;
+		li{
+			.font28;
+			.block-float;
+			width: 2rem;
+			text-align: left;
+			padding-left: .5rem;
+			padding-top: .3rem;
+			position: relative;	
+			height: 1.2rem;
+		}
+		li.active{
+			color: @activecolor;	
+		}
+		li:nth-child(2){
+			position:relative;
+			b{
+				font-weight:normal;
+				width: 2rem;
+				height: .9rem;
+				display: inline-block;
+			}
+			b.up{
+				background: url(../img/search_up.png) no-repeat 1.1rem .2rem;
+				background-size: .3rem .3rem;
+			}
+			b.down{
+				background: url(../img/search_down.png) no-repeat 1.1rem .2rem;
+				background-size: .3rem .2rem;
+			}
+			ul{
+				position:absolute;
+				top:1.2rem;
+				left:0;
+				width:10rem;
+				background-color:#fff;
+				li{
+					width:100%;
+					border-top:1px solid #ddd;
+					color: #000;
+				}
+				li:first-child{
+					border:0;
+				}
+			}
+			.block{display:block;}
+			.none{display:none;}
+			div{
+				position:absolute;
+				top:4.8rem;
+				left:0;
+				width:10rem;
+				background-color: #000;
+				opacity: 0.6;
+			}
+		}
+		
+		li.up{
+			background: url(../img/searchfor_button_high_nor.png) no-repeat 1.6rem .3rem;
+			background-size: .24rem .5rem;
+		}
+		li.up.active{
+			background: url(../img/searchfor_button_high_sel.png) no-repeat 1.6rem .3rem;
+			background-size: .24rem .5rem;
+		}
+		li.down{
+			background: url(../img/searchfor_button_low_nor.png) no-repeat 1.6rem .3rem;
+			background-size: .24rem .5rem;
+		}
+		li.down.active{
+			background: url(../img/searchfor_button_low_sel.png) no-repeat 1.6rem .3rem;
+			background-size: .24rem .5rem;
+		}
+		li.nopadding{
+			text-align: center;
+			padding-left: 0;
+			background: url();
+		}
+		.menu-line{
+			width: 2.1rem;
+			height: .05rem;
+			position: absolute;
+			padding-top: 0;
+			top: 1.1rem;
+			background: @activecolor;
+			transition: left .3s;
+		}
+		li:last-child.blockbtn{
+			width: 1.5rem;
+			height: .8rem;
+			margin-top: .2rem;
+			margin-left: .3rem;
+			background-image: url(../img/searchfor_button_tile_nor.png);
+			background-repeat: no-repeat;
+			background-position: .35rem center;
+			background-size: 1rem;
+			border-left: .02rem solid  @baseborder;
+		}
+		li:last-child.listbtn{
+			width: 1.5rem;
+			height: .8rem;
+			margin-top: .2rem;
+			margin-left: .3rem;
+			background-image: url(../img/searchfor_button_list_nor.png);
+			background-repeat: no-repeat;
+			background-position: .35rem center;
+			background-size: 1rem;
+			border-left: .02rem solid  @baseborder;
+		}
+	}
+	.menu:after{
+		.clear;
+	}
+	
+	.list{
+		li{
+			>i.hot-icon{
+				position: absolute;
+				width: 1rem;
+				height: 1rem;
+				background: url(../img/home_icon_hot_dis.png) no-repeat;
+				background-size: 1rem;
+				left: 0;
+				top: 0;
+				z-index: 3;
+			}
+			span.old-price-list{
+				color: @salecolor;
+				text-decoration: line-through;
+				.font20;
+			}
+			// >i.new-icon{
+			// 	position: absolute;
+			// 	width: 1rem;
+			// 	height: 1rem;
+			// 	background: url(../img/home_icon_new_dis.png) no-repeat;
+			// 	background-size: 1rem;
+			// 	left: 0;
+			// 	top: 0;
+			// 	z-index: 2;
+			// }
+		}
+	}
+
+	.list.blockdis{
+		li{
+			position: relative;
+			.list-btn{
+				display: none;
+			}
+			.block-status{
+				.block-status;
+			}
+			>i.promotion-icon{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 1.3rem;
+				height: 1.3rem;
+				>img{
+					width: 1.3rem;
+					height: 1.3rem;
+				}
+			}
+			>span{
+				>img{
+					width: .5rem;
+					height: .4rem;
+				}
+			}
+			.price{
+				.txt{
+					display: none;
+				}
+			}
+		}
+	}
+	.list.listdis{
+		li{
+			position: relative;
+			.block-status{
+				display: none;
+			}
+			.list-btn{
+				position: absolute;
+				z-index: 1;
+				bottom: 0;
+				right: .5rem;
+				.font20;
+				color: @btncolor;
+				text-align: center;
+				a{
+					display: block;
+					background: @btncolor;
+					color: #fff;
+					border-radius: .2rem;
+					padding: .2rem;
+					margin-bottom: .1rem;
+				}
+				a.ready{
+					background: #c8c8c8;
+				}
+				a.end{
+					background: #c8c8c8;
+				}
+			}
+			>i.promotion-icon{
+				display: none;
+			}
+			>span{
+				>img{
+					width: .5rem;
+					height: .4rem;
+				}
+			}
+
+		}
+	}
+	.list.listdis{
+		margin-top: 2.4rem;
+		li{
+			margin-top: .2rem;
+			background: #fff;
+			padding: .2rem;
+			z-index: 1;
+			height: 2.95rem;
+			img{
+				width: 2.56rem;
+				height: 2.56rem;
+				.block-float;
+			}
+			p{
+				.block-float;
+				.font24;
+				width: 6.7rem;
+				height: 1rem;
+				margin-left: .25rem;
+				overflow: hidden;
+			}
+			.price{
+				.block-float;
+				.font36;
+				margin-left: .25rem;
+				color: @pricecolor;
+				margin-top: .5rem;
+				>img{
+					width: .5rem;
+					height: .5rem;
+				}
+				span.txt{
+					background: #f7b046;
+					.font24;
+					padding: .05rem;
+					border-radius: .05rem;
+					margin-left: .1rem;
+					margin-top: .05rem;
+				}
+			}
+			.sale{
+				position: absolute;
+				color: @salecolor;
+				left: 3rem;
+				top: 1.4rem;
+				z-index: 2;
+				.font24;
+			}
+		}
+	}
+	.list.blockdis{
+		margin-top: 2.4rem;
+		background: @basebg;
+		li{
+			width: 4.72rem;
+			.block-float;
+			margin-left: .2rem;
+			margin-top: .2rem;
+			background: #fff;
+			padding-bottom: .2rem;
+			img{
+				width: 4.72rem;
+				height: 4.72rem;
+			}
+			p{
+				padding-top: .1rem;
+				padding-bottom: .1rem;
+				padding-left: .2rem;
+				padding-right: .1rem;
+				background: #fff;
+				color: #666666;
+				.font20;
+				overflow: hidden;
+				height: 1.1rem;
+				margin-bottom: .1rem;
+			}
+			.price{
+				.font20;
+				color: @basecolor;
+				margin-left: .2rem;
+			}
+			.sale{
+				.font20;
+				float: right;
+				margin-right: .2rem;
+				color: @salecolor;
+			}
+		}
+	}
+	.list.blockdis:after{
+		.clear;
+	}
+}

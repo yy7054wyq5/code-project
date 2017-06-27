@@ -1,0 +1,20 @@
+<div class="chose-bg" ng-style="style" ng-class="{active:flagPart}" >
+	<div class="chose-part">
+		<p><span>请上下滑动列表选择地区</span><button ng-click="sure()">确定</button></p>
+		<div class="pro" id="pro">
+			<ul>
+				<li ng-repeat="pro in prodata" ng-bind-template="{{pro.value}}" data-id={{pro.id}} ng-click="chosePro(pro.value,pro.id,$index)" ng-class="{active:proindex==$index}"></li>
+			</ul>
+		</div>
+		<div class="city" id="city">
+			<ul>
+				<li ng-repeat="city in citydata" ng-bind-template="{{city.value}}" data-id={{city.id}} ng-click="choseCity(city.value,city.id,$index)" ng-class="{active:cityindex==$index}"></li>
+			</ul>
+		</div>
+		<div class="area" id="area">
+			<ul>
+				<li ng-repeat="area in areadata" ng-bind-template="{{area.value}}" data-id={{area.id}} ng-click="choseArea(area.value,area.id,$index)" ng-class="{active:areaindex==$index}"></li>
+			</ul>
+		</div>
+	</div>
+</div>

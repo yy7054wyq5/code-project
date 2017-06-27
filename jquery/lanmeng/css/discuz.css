@@ -1,0 +1,110 @@
+/* -----------------底部-----------------*/
+a:hover
+{
+    text-decoration: none;
+
+    color: #ff6000;
+}
+.line
+{
+    clear: both;
+
+    height: 1px;
+    margin-bottom: 20px;
+
+    border-top: 1px solid #cdcdcd;
+}
+.footer
+{
+    margin-top: -10px;
+    padding-top: 20px;
+    padding-right: 50px;
+    padding-left: 50px;
+
+    color: #707070;
+    border: 1px solid #cdcdcd;
+    border-top: 0;
+    background-color: #fff;
+}
+.col
+{
+    float: left;
+
+    width: 20%;
+    margin-bottom: 20px;
+}
+.col span,
+.col a,
+.col img
+{
+    display: block;
+
+    margin-bottom: 10px;
+
+    text-align: center;
+}
+.col img
+{
+    margin-left: 62px;
+}
+.col span
+{
+    font-family: 'microsoft yahei';
+    font-size: 14px;
+    font-weight: 900;
+
+    margin-bottom: 10px;
+
+    color: #877070;
+}
+.col a
+{
+    font-family: Arial, Verdana, '\5b8b\4f53';
+    font-size: 12px;
+    line-height: 12px;
+
+    margin-bottom: 10px;
+}
+.footer table
+{
+    font-size: 12px;
+
+    width: 456px;
+    margin: 0 auto;
+
+    text-align: center;
+}
+.footer  table td
+{
+    padding-bottom: 8px;
+}
+.footer  table td a
+{
+    margin-right: 15px;
+    margin-left: 15px;
+
+    color: #246cc1;
+}
+.footer .font12 a,
+.footer .font12
+{
+    line-height: 12px;
+
+    color: #246cc1;
+}
+.footer .font12 a
+{
+    margin-right: 10px;
+    margin-left: 5px;
+}
+.footer .font12 td
+{
+    padding-bottom: 14px;
+}
+.footer .font12 a:hover
+{
+    color: #ff6000;
+}
+#wp #ct{
+    min-height: 250px;
+}

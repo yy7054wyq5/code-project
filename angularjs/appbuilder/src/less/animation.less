@@ -1,0 +1,19 @@
+/* leaving animations ----------------------------------------- */
+@keyframes slideOutLeft {
+  from   { transform:translateX(0%); }
+  to     { transform: translateX(-50%); }
+}
+  
+/* entering animations --------------------------------------- */
+@keyframes slideInRight {
+  from   { transform:translateX(50%); }
+  to     { transform: translateX(0); }
+}
+  
+.ng-enter{  z-index: 8888; }
+.ng-leave{ z-index: 9999; }
+
+
+.page-animation.ng-enter { animation:slideInRight 0.5s; }
+.page-animation.ng-leave { animation:slideOutLeft 0.5s; }
+  

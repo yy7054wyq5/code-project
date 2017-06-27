@@ -1,0 +1,17 @@
+@basecolor: #6b151c;
+
+@footercolor: #b1a6a6;
+//IE背景透明
+@iebgcolor: #7f000000;
+.gradientforie{
+	filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=@iebgcolor,endColorstr=@iebgcolor);
+}
+.gradient{
+	background: linear-gradient(to top, rgba(0,0,0,.8), rgba(0,0,0,.01));
+	filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=@iebgcolor,endColorstr=@iebgcolor);
+}
+.clear{
+	clear: both;
+	content: '';
+	display: table;
+}

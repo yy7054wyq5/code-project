@@ -1,0 +1,52 @@
+<!--照明：点击单灯-->
+<h3>照明：点击单灯</h3>
+<div class="click-light">
+  <table class="slide-table" style="width: 230px; margin: 0 auto; margin-top: 20px;">
+    <tr>
+      <td>回路编号：<span class="light-name"></span></td>
+    </tr>
+    <tr>
+      <td>当前亮度：37.5cd/m<sup>2</sup></td>
+    </tr>
+    <tr>
+      <td>控制方式：远程控制</td>
+    </tr>
+    <tr>
+      <td>照明范围：
+        <!--<input type="radio">执行&nbsp;&nbsp;&nbsp;<input type="radio">不执行-->
+        <span class="l-radio" data-value="do"><i></i>执行</span>
+        <span class="l-radio" data-value="do_not"><i></i>不执行</span>
+      </td>
+    </tr>
+    <tr>
+      <td style="position: relative; padding: 0;">
+        <input type="text" placeholder="请输入0-50之间的数值" style="width: 174px; text-align: left; padding-left: 10px;" name="slide-bar-value"
+          data-max="50">
+        <div style="position: absolute; height: 17px; width: 1px; background: #cccccc; left: 140px; top: 7px;"></div>
+        <div class="slide-bar-finish" style="position: absolute; left: 150px; top: 8px;">完成</div>
+      </td>
+    </tr>
+    <tr>
+      <td style="position: relative; padding: 0;">
+        <div class="slide-bar">
+          <div class="round"></div>
+          <div class="line source" style="width: 200px;"></div>
+          <div class="round"></div>
+        </div>
+        <div class="slide-bar active hide" style="position: absolute; top: 0; left: 0;">
+          <div class="round"></div>
+          <div class="line" style="width: 0;"></div>
+          <div class="round"></div>
+        </div>
+        <div class="slide-bar-txt">
+          <span></span>Hz
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a class="btn center w50">确定</a>
+      </td>
+    </tr>
+  </table>
+</div>

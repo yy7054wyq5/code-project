@@ -1,0 +1,18 @@
+<div class="header">
+	<i ui-sref="index.subshop"></i>
+	<span translate="convenienceSupermarket"></span>
+	<a class="car" ng-click="goCar()"></a>
+</div>
+<div class="subshop-detail">
+	<dl>
+		<dd class="part" ng-bind-template="{{detail.province}}"></dd>
+		<dd class="name" ng-bind-template="{{detail.name}}"></dd>
+		<dd class="address" ng-bind-template="{{detail.city}}{{detail.area}}{{detail.address}}"></dd>
+	</dl>
+	<a class="tel" ng-bind-template="{{detail.telephone}}" href="tel:{{detail.telephone}}"></a>
+	<input type="hidden" name="addressLng" value="{{detail.addressLng}}">
+	<input type="hidden" name="addressLat" value="{{detail.addressLat}}">
+</div>
+<div class="up"><i mapupbtn></i></div>
+<map></map>
+<div class="geo" translate="path"></div>

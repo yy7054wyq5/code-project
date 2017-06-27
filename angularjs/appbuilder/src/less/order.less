@@ -1,0 +1,322 @@
+.myorder-main,
+.order-detail-main{
+	background: @basebg;
+	.address{
+		margin-top: 1.2rem;
+		background: #fff;
+		>p{
+			.block-float;
+			.font28;
+			color: @basecolor;
+			width: 9rem;
+			min-height: 1.5rem;
+			height: auto;
+			overflow: hidden;
+			padding: .2rem 0 .3rem .5rem;
+			>span{
+				display: block;
+				float: left;
+				width: 3rem;
+			}
+			>.auto{
+				width: 9rem;
+			}
+			>.detail{
+				width: 100%;
+				.font20;
+			}
+		}
+		>p:after{
+			.clear;
+		}
+		.icon{
+			.block-right;
+			width: 1rem;
+			height: auto;
+			padding: 0;
+			i{
+			width: .3rem;
+			height: .5rem;
+			background-size: .2rem .4rem; 
+			display: block;
+			margin-top: .5rem;
+			margin-left: .3rem;
+			background: url(../img/branches_icon_more_nor.png) no-repeat center;
+			}	
+		}
+	}
+	.address:after{
+		.clear;
+	}
+	>.no-order{
+		margin-top: 1.3rem;
+		padding-top: .2rem;
+		text-align: center;
+		background: #fff;
+		.font28;
+	}
+	>.list{
+		margin-top: 1.3rem;
+		padding-top: .2rem;
+		background: @basebg;
+		>li{
+			background: #fff;
+			margin-bottom: .2rem;
+			padding-bottom: .2rem;
+			>.title{
+				color: @salecolor;
+				padding: .2rem .4rem;
+				.font20;
+				// .border-bottom(@baseborder);
+				>span{
+					color: @activecolor;
+					float: right;
+				}
+			}
+			>.detail{
+				padding: .2rem .4rem;
+				background: #fcfcfc;
+				padding-top: .2rem;
+				// .border-bottom(@baseborder);
+				>img{
+					width: 2.13rem;
+					height: 2.13rem;
+					.block-float;
+					margin-top: .1rem;
+				}
+				>.product{
+					width: 7rem;
+					padding-left: .2rem;
+					float: left;
+					>.product-title{
+						color: @basecolor;
+						.font24;
+					}
+					>.product-size{
+						color: @salecolor;
+						.font24;
+						margin-top: .1rem;
+					}
+					>.product-count{
+						.font32;
+						color: @salecolor;
+						text-align: right;
+						>img{
+							width: .5rem;
+						}
+						>span{
+							color: @basecolor;
+						}
+					}
+				}
+			}
+			>.detail:after{
+				.clear;
+			}
+			>.total{
+				float: left;
+				width: 100%;
+				text-align: right;
+				margin-top: .2rem;
+				>img{
+					width: .5rem;
+				}
+				>span{
+					.font28;
+				}
+			}
+			>button{
+				float: right;
+				margin-top: .2rem;
+				margin-right: .2rem;
+				padding: .2rem .3rem;
+				.font24;
+				text-align: center;
+				border-radius: .1rem;
+			}
+			>button.get{
+				background: @activecolor;
+				color: #fff;
+			}
+			>button.discuz{
+				background: #fff;
+				.border(@baseborder);
+				color: @salecolor;
+			}
+		}
+		>li:after{
+			.clear;
+		}
+	}
+}
+
+.order-detail-main{
+	.list{
+		img{
+			width: .6rem;
+		}
+	}
+	.msg{
+		background: #fff;
+		.font28;
+		color: @basecolor;
+		padding: .2rem;
+		.border-bottom(@baseborder);
+		span{
+			span{
+				color: @salecolor;
+			}
+		}
+		>.content{
+			margin-top: .2rem;
+			color: @salecolor;
+			.font24;
+		}
+	}
+	.total{
+		text-align: right;
+		background: #fff;
+		padding: .1rem .2rem;
+		.font{
+			.font28;
+			>img{
+				width: .6rem;
+			}
+		}
+		span{
+			color: @activecolor;
+		}
+	}
+	.hack{
+		height: 1.3rem;
+		width: 10rem;
+	}
+	.bottom{
+		position: fixed;
+		z-index: 2;
+		bottom: 0;
+		background: #fff;
+		height: 1.3rem;
+		width: 10rem;
+		text-align: right;
+		.border-top(@baseborder);
+		button{
+			display: inline-block;
+			margin-top: .2rem;
+			margin-right: .2rem;
+			padding: .2rem .3rem;
+			line-height: .5rem;
+			.font24;
+			text-align: center;
+			border-radius: .1rem;
+		}
+		button.cancel{
+			background: #fff;
+			.border(@salecolor);
+		}
+		button.repay{
+			background: @activecolor;
+			color: #fff;
+		}
+		button.take{
+			background: @activecolor;
+			color: #fff;
+		}
+		button.evaluate{
+			color: @basecolor;
+			.border(@salecolor);
+			background: #fff;
+		}
+	}	
+}
+
+.take-comments-main{
+	>ul.list{
+		background: @basebg;
+		margin-top: 1.2rem;
+		>li:after{
+			.clear;
+		}
+		>li{
+			background: #fff;
+			padding-top: .2rem;
+			margin-bottom: .2rem;
+			>img{
+				display: block;
+				float: left;
+				width: 1.6rem;
+				height: 1.6rem;
+				margin-left: .2rem;
+			}
+			>textarea{
+				float: left;
+				display: block;
+				width: 8rem;
+				height: 4.72rem;
+				border: 0;
+				resize: none;
+				font-size: .4rem;
+				outline: none;
+				margin-left: .2rem;
+			}
+			>div:after{
+				.clear;
+			}
+			>div{
+				float: left;
+				width: 10rem;
+				height: 1.33rem;
+				line-height: 1.33rem;
+				.border-top(@baseborder);
+				.border-bottom(@baseborder);
+				padding-left: .2rem;
+				.font28;
+				>span{
+					display: block;
+					float: left;
+				}
+				>div.star-bg{
+					width: 3rem;
+					float: right;
+					margin-top: .28rem;
+					margin-right: .2rem;
+					height: .6rem;
+					background: url(../img/star_nor.png) repeat-x left center;
+					background-size: .6rem;
+					position: relative;
+					z-index: 1;
+					>div.star{
+						position: absolute;
+						z-index: 2;
+						height: .6rem;
+						background: url(../img/star_sel.png) repeat-x left center;
+						background-size: .6rem;
+					}
+					>ul:after{
+						.clear;
+					}
+					>ul{
+						position: absolute;
+						z-index: 3;
+						>li{
+							float: left;
+							width: .6rem;
+							height: .6rem;
+						}
+					}
+				}
+			}
+		}
+	}
+	>button{
+		position: fixed;
+		bottom: 0;
+		z-index: 999;
+		width: 10rem;
+		height: 1.2rem;
+		background: @activecolor;
+		line-height: 1.2rem;
+		color: #fff;
+		.font32;
+	}
+}

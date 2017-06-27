@@ -1,0 +1,32 @@
+<div class="List">
+	<ul class="title">
+		<li ng-if="resourceType==1"><img src="img/nav_button_back_nor.png" alt="返回" ui-sref="message">产品</li>
+		<li ng-if="resourceType==2"><img src="img/nav_button_back_nor.png" alt="返回" ui-sref="message">文章</li>
+		<li ng-if="resourceType==3"><img src="img/nav_button_back_nor.png" alt="返回" ui-sref="message">系统</li>
+	</ul>
+	<ul class="detail">		
+		<li ng-repeat="list in messageList" ng-if="list.resourceType==1" ui-sref="product-detail({id:list.resourceId})"> 
+			<p class="time">{{list.updateTime}}</p>
+			<img ng-src="{{list.imagePath}}" alt="">
+			<div class="product">
+			 	<h3>{{list.title}}</h3>
+				<p class="line-campT content">{{list.content}}</p> 	
+			 </div>			
+		</li>
+		<li ng-repeat="list in messageList" ng-if="list.resourceType==2" ui-sref="article-detail({id:list.resourceId})"> 
+			<p class="time">{{list.updateTime}}</p>
+			<img ng-src="{{list.imagePath}}" alt="">
+			<div class="product">
+			 	<h3>{{list.title}}</h3>
+				<p class="line-campT content">{{list.content}}</p> 	
+			 </div>			
+		</li>
+		<li ng-repeat="list in messageList" class="detail" ng-if="list.resourceType==3" >
+			 <p class="time">{{list.updateTime}}</p>
+			 <div>
+			 	<h3>{{list.title}}</h3>
+				<p class="content">{{list.content}}</p> 	
+			 </div>			
+		</li>
+	</ul>
+</div>

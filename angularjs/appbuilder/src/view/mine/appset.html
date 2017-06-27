@@ -1,0 +1,17 @@
+<div class="appset-main">
+	<div class="header">
+		<i ui-sref="mine"></i>
+		<span translate="setUp"></span>
+		<!-- <i class="share"></i> -->
+	</div>
+	<ul class="list">
+		<li ui-sref="aboutus"><span translate="aboutStore"></span><i></i></li>
+		<li ng-click="removeAppCache()"><span translate="wipeCache"></span><i ></i><span ng-bind-template="{{appCacheSize.size}}K"></span></li>
+	</ul>
+	<div class="hack"></div>
+	<div class="code-con">
+		<img src="{{appInfo.wxQrcodePath}}" ng-if="appInfo.wxQrcodePath">
+		<span><span translate="currentVersion"></span>{{appInfo.versionName}}</span>
+		<a translate="quicklyDownload" ng-if="appInfo.wxQrcodePath"></a>
+	</div>
+</div>

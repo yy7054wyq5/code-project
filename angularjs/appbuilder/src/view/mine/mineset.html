@@ -1,0 +1,21 @@
+<div class="mine-main">
+	<div class="setting">
+		<div class="header">
+			<i ui-sref="mine"></i>
+			<span>个人设置</span>
+		</div>
+		<ul class="info">
+			<li>我的资料（点击相应信息即可修改）</li>
+			<li class="headdraw">
+				<span>头像</span>
+				<div class="img-box"><img ng-src="{{userinfo.imagePath}}" ngf-select="uploadFiles($files,$invalidFiles)" ngf-accept="'image/*'" ngf-max-size="2MB"></div>
+			</li>
+			<li>昵称<span class="pull-right canClick" ng-bind-template="{{userinfo.nickname}}" ng-click="showInput()"></span>
+				<input type="text" ng-show="nickInput==1" class="nickname" ng-mouseleave="hideInput()" ng-model="newNick" placeholder="请输入2-10位昵称" maxlength="10" minlength="2">
+			</li>
+			<li ng-repeat="data in ranks" ng-if="userinfo.userRankId==data.id">当前等级<span class="pull-right" ui-sref="growth">{{data.name}}</span></li>
+			<li ui-sref="reset({reurl:mineset})"><span >修改密码</span></li>
+			<li ng-click="out()">注销</li>
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,110 @@
+<!--照明：编辑计划-->
+<h3>照明：编辑计划</h3>
+<div class="edit-light-plan">
+  <div class="edit-light-plan-con">
+    <span style="margin-left: 20px; margin-top: 20px;color: #999999">方案名称：</span>
+    <input type="text" style="margin-top: 10px;">
+    <div class="clear">
+      <div style="width: 368px; height: 428px; border: 1px solid #d9d9d9; border-right:0; float: left; margin-left: 10px;">
+        <div style="margin-left: 20px;margin-top: 10px;">入口段加强照明设置</div>
+        <div style="color: #999999;margin-left: 20px;margin-top: 5px;">(入口段1，入口段2，过渡段1，过渡段2)</div>
+        <table class="slide-table" style="width: 230px; margin: 0 auto; margin-top: 20px;">
+          <tr>
+            <td>入口段加强亮度：</td>
+          </tr>
+          <tr>
+            <td style="position: relative; padding: 0;">
+              <input type="text" placeholder="请输入0-50之间的数值" style="width: 174px; text-align: left; padding-left: 10px;" name="slide-bar-value" data-max="50">
+              <div style="position: absolute; height: 17px; width: 1px; background: #cccccc; left: 140px; top: 7px;"></div>
+              <div class="slide-bar-finish" style="position: absolute; left: 150px; top: 8px;">完成</div>
+            </td>
+          </tr>
+          <tr>
+            <td style="position: relative; padding: 0;">
+              <div class="slide-bar">
+                <div class="round"></div>
+                <div class="line source" style="width: 200px;"></div>
+                <div class="round"></div>
+              </div>
+              <div class="slide-bar active hide" style="position: absolute; top: 0; left: 0;">
+                <div class="round"></div>
+                <div class="line" style="width: 0;"></div>
+                <div class="round"></div>
+              </div>
+              <div class="slide-bar-txt">
+                <span></span>cd/m<sup>2</sup>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>开始时间：</td>
+          </tr>
+          <tr>
+            <td><input type="text" class="datetimepicker" date-time-config="{#timepicker#: false, #format#: #Y/m/d#}"></td>
+          </tr>
+          <tr>
+            <td>结束时间：</td>
+          </tr>
+          <tr>
+            <td><input type="text" class="datetimepicker" date-time-config="{#timepicker#: false, #format#: #Y/m/d#}"></td>
+          </tr>
+        </table>
+      </div>
+      <div style="width: 368px; height: 428px; border: 1px solid #d9d9d9; border-top:0;border-bottom: 0; float: left">
+        <div style="width: 378px; height: 428px; border: 1px solid #d9d9d9; border-left:0; float: left">
+          <div style="margin-left: 20px;margin-top: 10px;">基本及出口段照明设置</div>
+          <div style="color: #999999;margin-left: 20px;margin-top: 5px;">(基本照明段、出口段1、出口段2)</div>
+          <table class="slide-table" style="width: 230px; margin: 0 auto; margin-top: 20px;">
+            <tr>
+              <td>出口段亮度：</td>
+            </tr>
+            <tr>
+              <td style="position: relative; padding: 0;">
+                <input type="text" placeholder="请输入0-50之间的数值" style="width: 174px; text-align: left; padding-left: 10px;" name="slide-bar-value" data-max="50">
+                <div style="position: absolute; height: 17px; width: 1px; background: #cccccc; left: 140px; top: 7px;"></div>
+                <div class="slide-bar-finish" style="position: absolute; left: 150px; top: 8px;">完成</div>
+              </td>
+            </tr>
+            <tr>
+              <td style="position: relative; padding: 0;">
+                <div class="slide-bar">
+                  <div class="round"></div>
+                  <div class="line source" style="width: 200px;"></div>
+                  <div class="round"></div>
+                </div>
+                <div class="slide-bar active hide" style="position: absolute; top: 0; left: 0;">
+                  <div class="round"></div>
+                  <div class="line" style="width: 0;"></div>
+                  <div class="round"></div>
+                </div>
+                <div class="slide-bar-txt">
+                  <span></span>cd/m<sup>2</sup>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>开始时间：</td>
+            </tr>
+            <tr>
+              <td><input type="text" class="datetimepicker" date-time-config="{#timepicker#: false, #format#: #Y/m/d#}"></td>
+            </tr>
+            <tr>
+              <td>结束时间：</td>
+            </tr>
+            <tr>
+              <td><input type="text" class="datetimepicker" date-time-config="{#timepicker#: false, #format#: #Y/m/d#}"></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <table class="clear" style="width: 240px; margin: 0 auto; margin-top: 20px;">
+      <tr>
+        <td>
+          <a class="btn w50 pull-left sure">确定</a>
+          <a class="btn cancel layui-layer-close pull-left">取消</a>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="appBuilder" ng-controller="BaseController" scroll>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta content="no" name="apple-mobile-web-app-capable">
+<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<title ng-bind="apptitle"></title>
+<link rel="dns-prefetch" href="http://www.baidu.com" />
+<link rel="dns-prefetch" href="http://appbuilder.loongjoy.com" />
+<!-- build:css({node_modules,.}) css/vendor.css -->
+<link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.min.css">
+<!-- endbuild -->
+
+<!-- build:css({src,.}) css/appbuilder.css -->
+<!-- inject:css -->
+<!-- endinject -->
+<!-- endbuild -->
+
+<!-- build:js({node_modules,.}) js/vendor.js -->
+<script type="text/javascript" src="jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="angular/angular.min.js"></script>
+<script type="text/javascript" src="angular-ui-router/release/angular-ui-router.min.js"></script>
+<script type="text/javascript" src="angular-translate/dist/angular-translate.min.js"></script>
+<script type="text/javascript" src="angular-touch/angular-touch.min.js"></script>
+<script type="text/javascript" src="angular-animate/angular-animate.min.js"></script>
+<script type="text/javascript" src="angular-cookies/angular-cookies.min.js"></script>
+<script type="text/javascript" src="ng-file-upload/dist/ng-file-upload.min.js"></script>
+<!-- endbuild -->
+
+<script src="http://api.map.baidu.com/api?v=2.0&ak=qYEBZwdKQxosmqZq4Cwttvqw" type="text/javascript"></script>
+
+</head>
+<body>
+<div class="wrap">
+	<div ui-view></div>
+	<div gotop></div>
+</div>
+<img src="http://appbuilder.loongjoy.com/phoneweb/app/img/Loading_app.gif" class="loading-hack">
+<!-- loading图 -->
+</body>
+</html>
+<!-- build:js({src,.}) js/appbuilder.js -->
+<!-- inject:js -->
+<!-- endinject -->
+<!-- inject:partials -->
+<!-- endinject -->
+<!-- endbuild -->
+
+

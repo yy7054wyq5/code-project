@@ -1,0 +1,12 @@
+<rheader></rheader>
+<div class="subshop-main">
+	<div class="list">
+		<dl ui-sref="subshop-detail( {id:list.id} )" ng-repeat="list in subshopList">
+			<dd class="part" ng-bind-template="{{list.province}}"></dd>
+			<dd class="name" ng-bind-template="{{list.name}}"></dd>
+			<dd class="address" ng-bind-template="{{list.city}}{{list.area}}{{list.address}}"></dd>
+			<dd class="arrow"></dd>
+		</dl>
+	</div>
+</div>
+<rhomefooter homelink="index.subshop"></rhomefooter>

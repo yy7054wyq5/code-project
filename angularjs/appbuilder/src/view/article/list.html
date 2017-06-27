@@ -1,0 +1,18 @@
+<div class="article-main list">
+	<div class="header">
+		<i ui-sref="article"></i>
+		<span ng-if="listName" ng-bind-template="{{listName}}"></span>
+		<span ng-if="!listName" ng-bind-template="{{'articleList' | translate}}"></span>
+	</div>
+	<ul class="list" ng-class="{active:listData.length>0}">
+		<li ng-repeat="list in listData" ui-sref="article-detail({id:list.id})">
+			<img ng-src="{{list.imagePath}}">
+			<dl class="info">
+				<dd class="title line-ellipsis" ng-bind-template="{{list.name}}"></dd>
+				<dd class="des line-campT" ng-bind-template="{{list.summary}}"></dd>
+				<dd class="date" ng-bind-template="{{list.updateTime.substring(0,10)}}"></dd>
+			</dl>
+		</li>
+	</ul>
+</div>
+<rfooter productlink="product" articlelink="article-list"></rfooter>

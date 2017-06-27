@@ -1,0 +1,69 @@
+<div class="order-detail-main">
+	<div class="header">
+		<i backpage></i>
+		<span>订单详情</span>
+	</div>
+	<div class="address">
+		<p>
+			<span class="name" ng-bind-template="{{order.info.consignee}}"></span>
+			<span class="mobile" ng-bind-template="{{order.info.mobile}}"></span>
+			<span class="detail" ng-bind-template="{{order.info.province}}{{order.info.city}}{{order.info.area}}{{order.info.detail}}"></span>
+		</p>
+	</div>
+	<ul class="list" style="margin-top:0;">
+		<li>
+			<div class="title">订单编号：{{order.info.id}}
+				<span class="status" ng-if="order.info.payState==0">未支付</span>
+				<span class="status" ng-if="order.info.payState==1">已支付</span>
+				<span class="status" ng-if="order.info.payState==2">支付失败</span>
+				<span class="status" ng-if="order.info.payState==3">已发货</span>
+				<span class="status" ng-if="order.info.payState==4">货到付款</span>
+				<span class="status" ng-if="order.info.payState==5">已取消</span>
+				<span class="status" ng-if="order.info.payState==6">已完成</span>
+			</div>
+			<div class="detail" ng-repeat="detail in order.details">
+				<img lazy-src="{{detail.imagePath}}">
+				<dl class="product">
+					<dd class="product-title">{{detail.name}}</dd>
+					<dd class="product-size">{{detail.spec}}</dd>
+					<!-- 单个产品价格 -->
+					<dd class="product-count" ng-if="order.info.type==1"><span>&yen;{{detail.price}}</span>x{{detail.number}}</dd>
+					<dd class="product-count" ng-if="order.info.type==2"><span><img src="http://appbuilder.loongjoy.com/phoneweb/app/img/integral_product_icon.png">{{detail.price}}</span>x{{detail.number}}</dd>
+					<!-- 单个产品价格 -->
+				</dl>
+			</div>
+		</li>
+	</ul>
+	<div class="msg">
+		<span>留言备注：<span class="con" ng-bind-template="{{order.info.remark||'无备注'}}"></span></span>
+		<!--public static $payStateUnpaid = 0; //未支付
+		 public static  $payStatePaid = 1; //已支付
+		 public static  $payStateFail = 2; //支付失败
+		 public static  $payStateShipped = 3; //已发货
+		 public static  $payStateCashOnDelivery = 4; //货到付款cash on delivery
+		 public static  $payStateCanceled = 5; //已取消
+		 public static  $payStateFinished = 6; //已完成
+		 public static  $payStateExpired = 7; //已过期 -->
+		<ul class="content" ng-if="order.info.payState==3||order.info.payState==6||order.info.payState==4||order.info.payState==1||order.info.payState==0">
+			<li ng-if="order.info.payState==3||order.info.payState==6">物流方式：<span ng-bind="order.info.ShippingCompanyName"></span></li>
+			<li ng-if="(order.info.payState==3&&order.info.shippingCompanyId!=0)||(order.info.payState==6&&order.info.shippingCompanyId!=0)">物流单号：<span ng-bind="order.info.shippingCode"></span></li>
+			<li ng-if="(order.info.payState==3&&order.info.shippingCompanyId==0)||(order.info.payState==6&&order.info.shippingCompanyId==0)"><span ng-bind-template="导购{{order.info.guideNickname}}正在配送，电话{{order.info.guideMobile}}"></span></li>
+			<li>使用积分数：{{order.info.spendCredit*number}}</li>
+			<li>本次消费累计积分：{{order.info.earnCredit}}</li>
+			<li>下单时间：<span ng-bind-template="{{order.info.updateTime}}"></span></li>
+		</ul>
+	</div>
+	<!-- 总价格 -->
+	<div class="total" ng-if="order.info.type==1">总金额：<span class="font">&yen;</span><span>&nbsp;{{order.info.factPrice}}</span>（含运费：&yen;{{order.info.shippingPrice}}）</div>
+	<div class="total" ng-if="order.info.type==2">总金额：<span class="font"><img src="http://appbuilder.loongjoy.com/phoneweb/app/img/integral_product_icon.png"></span><span>&nbsp;{{order.info.factPrice}}</span>（含运费：&yen;{{order.info.shippingPrice}}）</div>
+	<!-- 总价格 -->
+	<div class="hack"></div>
+	<div class="bottom">
+		<button class="take" ng-if="order.info.payState==3&&!orderComfirm" ng-click="takeGoods(order.info.id)">确认收货</button>
+		<button class="delete" ng-if="order.info.payState==5" ng-click="deleteGoods(order.info.id)" >删除</button>
+		<button class="evaluate" ng-if="order.info.payState==6&&haveComment=='false'" ng-click="takeComments(order.info.id)">立即评价</button>
+		<button class="cancel" ng-click="cancelOrder(order.info.id)" ng-if="order.info.payState==0||order.info.payState==2">取消订单</button>
+		<button class="repay" ng-click="repay(order.info.id,order.info.payType)" ng-if="order.info.payState==0||order.info.payState==2">重新支付</button>
+
+	</div>
+</div>

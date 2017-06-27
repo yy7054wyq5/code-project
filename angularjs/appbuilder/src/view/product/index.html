@@ -1,0 +1,66 @@
+<div class="product-main">
+	<div class="header">
+		<span>品类</span>
+		<a class="car" ng-click="goCar()"></a>
+	</div>
+	
+	<!-- 一级分类 -->
+	<div class="list" ng-show="productLevel==1">
+		<swipemenu discount="5" diswidth="2"></swipemenu>
+		<div ng-style="hackStyle"></div>
+		<dl ng-repeat="product in productList" data-id="{{product.id}}">
+			<dt>
+				<a ui-sref="product-detail({ id:product.id })"><img lazy-src="{{product.imagePath}}"></a>
+				<span class="block-status" ng-if="product.promotionStatus==1">即将开抢</span>
+				<span class="block-status" ng-if="product.promotionStatus==2">马上抢</span>
+				<span class="block-status" ng-if="product.promotionStatus==3">已抢光</span>
+				<i ng-if="product.type==2&&product.promotionType==1" class="promotion-icon"><img src="http://appbuilder.loongjoy.com/phoneweb/app/img/search_zhe.png"></i>
+				<i ng-if="product.type==2&&product.promotionType==2" class="promotion-icon"><img src="http://appbuilder.loongjoy.com/phoneweb/app/img/search_jian.png"></i>
+				<i ng-if="product.type==2&&product.promotionType==3" class="promotion-icon"><img src="http://appbuilder.loongjoy.com/phoneweb/app/img/search_man.png"></i>
+				<i class="hot" ng-if="product.isHot==1"></i>
+			</dt>
+			<dd class="txt"><a ui-sref="product-detail({ id:product.id })" ng-bind-template="{{product.name}}"></a></dd>
+			<dd class="delete"><span ng-if="product.promotionPrice<product.price">&yen;&nbsp;{{product.price}}</span></dd>
+			<dd>&yen;<span>{{product.promotionPrice||product.price}}</span><span class="sale" ng-bind-template="已售{{product.saleCount}}件"></span></dd>
+		</dl>
+	</div>
+	
+	<!-- 二级分类 -->
+	<div class="list3" ng-show="productLevel==2">
+		<div class="list-left">
+			<ul class="menu">
+				<li ng-repeat="category in categoryTop" ng-class="{active:index==$index}" ng-click="menuActive($index,category.id)" ng-bind-template="{{category.name}}"></li>
+			</ul>
+		</div>
+		<div class="list-right">
+			<div class="dl-body" ng-show="index==$index" ng-repeat="category in categoryTop">
+				<dl ui-sref="product-list( {id:subcategory.id,name:subcategory.name} )" ng-repeat="subcategory in category.children || categorychildren[$index]">
+					<dt><img ng-src="{{subcategory.imagePath}}"></dt>
+					<dd>{{subcategory.name}}</dd>
+				</dl>
+			</div>	
+		</div>
+	</div>
+
+	<!-- 三级分类 -->
+	<div class="list3" ng-show="productLevel==3">
+		<ul class="menu list-left">
+			<li ng-repeat="category in categoryTop" ng-class="{active:index==$index}" ng-click="menuActive($index,category.id)" ng-bind-template="{{category.name}}"></li>
+		</ul>
+		<div class="list-right">
+
+			<div class="dl-body" ng-show="index==$index" ng-repeat="category in categoryTop">
+				<div ng-repeat="subcategory in category.children || categorychildren[$index]">
+					<h3 ng-bind-template="{{subcategory.name}}"></h3>
+					<dl ui-sref="product-list( {id:product.id,name:product.name} )" ng-repeat="product in subcategory.children">
+						<dt><img ng-src="{{product.imagePath}}"></dt>
+						<dd>{{product.name}}</dd>
+					</dl>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<rfooter productlink="product" articlelink="article"></rfooter>

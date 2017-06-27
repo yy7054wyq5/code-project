@@ -1,0 +1,263 @@
+.noproduct{
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	display: none;
+}
+.car-header{
+	background: #fafafa;
+	.content.car{
+		background: #fafafa;
+		margin: 0 auto;
+		height: 80px;
+		>a.logo{
+			margin-top: 14px;
+			display: block;
+			float: left;
+			i{
+				display: block;
+			}
+		}
+		>span{
+			font-size: 26px;
+			line-height: 80px;
+			margin-left: 55px;
+		}
+		>.header-btn{
+			padding-top: 28px;
+			font-size: 14px;
+			a{
+				color: #333333;
+			}
+			span{
+				float: left;
+				font-size: 18px;
+				margin-right: 20px;
+			}
+		}
+	}
+}
+.container.car{
+	input{
+		border: 1px solid #dddddd;
+	}
+	h3{
+		width: 150px;
+		border-bottom: 1px solid @basecolor;
+		font-size: 14px;
+		margin-top: 40px;
+		text-align: center;
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+	}
+	table.head{
+		width: 1180px;
+		thead{
+			border-top: 1px solid #ddd;
+			td{
+				height: 60px;
+				background: #fafafa;
+				vertical-align: middle;
+			}
+		}
+	}
+	ul{
+		margin-top: 20px;
+		// li:hover{
+		// 	border: 1px solid @basecolor;
+		// }
+		li.active{
+			border: 1px solid @basecolor;
+			i.chose{
+				display: block;
+			}
+		}
+		li{
+			border: 1px solid #dddddd;
+			margin-bottom: 10px;
+			position: relative;
+			padding: 10px;
+			table{
+				width: 100%;
+				tbody{
+					background: #fafafa;
+					td{
+						vertical-align: middle;
+						i.delete{
+							display: block;
+							margin-left: 25px;
+						}
+					}
+					td.product-perprice{
+						padding-left: 15px;
+					}
+					td.product:after{
+						.clear;
+					}
+					td.product{
+						>img{
+							display: block;
+							width: 96px;
+							height: 96px;
+							float: left;
+						}
+						>.name{
+							cursor: pointer;
+							height: 96px;
+							width: 270px;
+							padding-left: 10px;
+							display: block;
+							float: left;
+							font-size: 14px;
+							color: #333333;
+							>table{
+								width: 250px;
+								tbody{
+									border: 0;
+									td{
+										vertical-align: middle;
+										height: 96px;
+									}
+								}
+							}
+						}
+						>.heavy{
+							height: 96px;
+							display: block;
+							width: 100px;
+							float: left;
+							color: #a1a1a1;
+							>table{
+								width: 100px;
+								tbody{
+									border: 0;
+									td{
+										vertical-align: middle;
+										height: 96px;
+									}
+								}
+							}
+						}
+					}
+					td.num{
+						>input,
+						>span{
+							display: block;
+							float: left;
+						}
+						input{
+							width: 70px;
+							height: 70px;
+							border: 1px solid @basecolor;
+							margin-right: 5px;
+							text-align: center;
+						}
+						span{
+							width: 30px;
+							height: 30px;
+							line-height: 30px;
+							text-align: center;
+							border: 1px solid @basecolor;
+							font-size: 14px;
+							cursor: pointer;
+						}
+						span.cut{
+							margin-top: 10px;
+						}
+					}
+					td.num:after{
+						.clear;
+					}
+					td.product-total{
+						text-align: center;
+						span{
+							font-size: 20px;
+						}
+					}
+				}
+			}
+		}
+		i.chose{
+			position: absolute;
+			z-index: 1;
+			bottom: -1px;
+			right: -1px;
+			display: none;
+		}
+	}
+}
+.car-bottom{
+	background: #fafafa;
+	border-bottom: 1px solid #dddddd;
+	height: 60px;
+	margin-top: 20px; 
+	margin-bottom: 20px;
+	>.chosed-product{
+		margin-left: 20px;
+		float: left;
+		.car-num{
+			line-height: 60px;
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+	}
+	>.bottom-btn{
+		width: 200px;
+		float: right;
+		padding-top: 20px;
+		i{
+			display: block;
+			float: left;
+			cursor: pointer;
+		}
+		span{
+			display: block;
+			float: left;
+			margin-left: 50px;
+		}
+		input{
+			display: block;
+			float: left;
+			margin-left: 20px;
+		}
+	}
+	>.bottom-btn:after{
+		.clear;
+	}
+}
+.car-bottom:after{
+	.clear;
+}
+
+.car-total{
+	float: right;
+	padding-bottom: 50px;
+	margin-top: 40px;
+	>span{
+		float: left;
+		display: block;
+		margin-top: 25px;
+		margin-right: 20px;
+		>span{
+			font-size: 20px;
+		}
+	}
+	>span.car-price{
+		color: #ff4a26;
+		margin-top: 20px;
+	}
+	>a{
+		background: #6b151c;
+		display: block;
+		float: left;
+		width: 135px;
+		height: 60px;
+		line-height: 60px;
+		text-align: center;
+		color: #fff;
+		font-size: 18px;
+	}
+}
+.car-total:after{
+	.clear;
+}

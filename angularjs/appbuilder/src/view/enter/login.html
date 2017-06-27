@@ -1,0 +1,12 @@
+<div class="login-main enter">
+	<div class="top">
+		<a class="back" ui-sref="index.find"></a>
+		<span translate="Login"></span>
+	</div>
+	<form name="loginForm" ng-controller="LoginController">
+		<input type="text" translate-attr="{placeholder:'phoneNumber'}"  class="mobile" ng-model="loginMobile" required autofocus="autofocus" ng-maxlength="11" ng-minlength="11" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onafterpaste="this.value=this.value.replace(/[^\d]/g,'')" maxlength="11"></input>
+		<input type="password" translate-attr="{placeholder:'password'}"  class="password"  type="password" ng-model="loginPassword" required="required" ng-minlength="6" ng-maxlength="12"></input>
+		<div><button class="btn" ng-click="login()" ng-disabled="!loginForm.$valid" translate="Login"></button></div>
+	</form>
+	<div class="entry-btn"><a ui-sref="reg" translate="register"></a><a ui-sref="forget" translate="forgetPassword"></a></div>
+</div>

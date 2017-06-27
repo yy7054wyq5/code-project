@@ -1,0 +1,45 @@
+<div class="article-main">
+	<div class="header" ng-if="articleLevel==0">
+		<span translate="articleCenter"></span>
+	</div>
+	<!-- 顶级菜单 -->
+
+	<swipenavmenu discount={{navMenu.length}} diswidth="2"></swipenavmenu>
+
+	<!-- 一级、二级菜单 -->
+	<swipemenu discount="5" diswidth="2"></swipemenu>
+	<ul class="list" ng-if="articleLevel==1||articleLevel==2" ng-style="listStyle">
+		<li ng-repeat="article in MenuArticleList" ng-click="goArticle(article.id)">
+			<img ng-src="{{article.imagePath}}">
+			<dl class="info">
+				<dd class="title" ng-bind-template="{{article.name}}"></dd>
+				<dd class="des" ng-bind-template="{{article.summary}}"></dd>
+				<dd class="date" ng-bind-template="{{article.updateTime}}"></dd>
+			</dl>
+		</li>
+	</ul>
+	<!-- 0级菜单 -->
+	<ul class="list" ng-if="articleLevel===0" ng-style="listStyle">
+		<li ng-repeat="article in MenuArticleList" ui-sref="article-detail({id: article.id})">
+			<img ng-src="{{article.imagePath}}">
+			<dl class="info">
+				<dd class="title" ng-bind-template="{{article.name}}"></dd>
+				<dd class="des" ng-bind-template="{{article.summary}}"></dd>
+				<dd class="date" ng-bind-template="{{article.updateTime}}"></dd>
+			</dl>
+		</li>
+	</ul>
+	<div style="height:1.2rem" ng-if="articleLevel==3"></div>
+
+	<!-- 三级菜单 -->
+	<div ng-if="navdata.length===0" class="no-content" translate="noContent"></div>
+	<div class="third-menu" ng-if="articleLevel==3" ng-repeat="thirdmenu in navdata||navMenu[0].children">
+		<div class="title" style="background-image: url({{thirdmenu.imagePath}});"></div>
+		<div class="name" ng-bind-template="{{thirdmenu.name}}" ></div>
+		<div class="shade"></div>
+		<span ng-repeat="children in thirdmenu.children" ng-bind-template="{{children.name}}" ui-sref="article-list( {id:children.id,name:children.name})"></span>
+	</div>
+
+
+</div>
+<rfooter productlink="product" articlelink="article"></rfooter>

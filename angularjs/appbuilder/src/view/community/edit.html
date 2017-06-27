@@ -1,0 +1,23 @@
+<div class="community-edit">
+	<div class="header">
+		<i backpage></i>
+		<span translate="PUBLISHPOST"></span>
+		<button ng-click="sub()" translate="issue"></button>
+	</div>
+	<div class="edit-con">
+		<div class="title">
+			<textarea type="text" style="overflow-y:visible;min-height:2rem;" translate-attr="{placeholder:'editorPostTitle'}" ng-model="title"></textarea>
+		</div>
+		<div class="des"><textarea translate-attr="{placeholder:'enterPostContent'}" ng-model="des"></textarea></div>
+		<div class="photo">
+			<div class="button uploader" ngf-select="uploadFiles($files,$invalidFiles)" ngf-accept="'image/*'" ngf-max-size="2MB"></div>
+			<img src="http://appbuilder.loongjoy.com/phoneweb/app/img/forum_posts_button_upload_nor.png">
+			<span ng-hide="hidespan" translate="addToPicture"></span>
+			<div ng-repeat="img in thumb" class="img-queue" data-id="{{img.id}}">
+				<span ng-bind-template="{{img.imgName}}"></span>
+				<img ng-src="{{img.imagePath}}">
+				<i ng-click="removeItem(img.id)"></i>
+			</div>
+		</div>
+	</div>
+</div>

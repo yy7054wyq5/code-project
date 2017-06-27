@@ -1,0 +1,10 @@
+<header>
+	<div class="header-btn">
+		<a ui-sref="index.find" href="" ui-sref-active="active">发现</a>
+		<a ui-sref="index.sale" href="" ui-sref-active="active" ng-if="isPromotionProduct==1">促销</a>
+		<a ui-sref="index.subshop" href="" ui-sref-active="active">分店</a>
+		<a ui-sref="index.pointmall" href="" ui-sref-active="active" ng-if="isCreditProduct==1">积分商城</a>
+		<!-- <headerline></headerline> -->
+	</div>
+	<a class="car" ng-click="goCar()"></a>
+</header>

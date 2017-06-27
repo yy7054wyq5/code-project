@@ -1,0 +1,19 @@
+<div class="community-main">
+	<div class="header">
+	<span translate="forum"></span>
+	</div>
+	<ul class="list">
+		<li ui-sref="community-sublist( {id:community.id} )" ng-repeat="community in communityList" data-id="{{community.id}}">
+			<img ng-src="{{community.imagePath}}">
+			<dl>
+				<dd class="title" ng-bind-template="{{community.name}}"></dd>
+				<dd class="description" ng-bind-template="{{community.summary}}"></dd>
+				<dd class="info">
+					<img ng-src="{{member.userImagePath}}" ng-repeat="member in community.members">
+					<span>{{community.memberNum}}<span translate="personParticipate"></span></span>
+				</dd>
+			</dl>
+		</li>
+	</ul>
+</div>
+<rfooter productlink="product" articlelink="article"></rfooter>

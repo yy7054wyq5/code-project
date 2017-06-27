@@ -1,0 +1,23 @@
+<div class="plus-address-main">
+	<!-- 新增收货地址 -->
+	<form name="addressForm">
+		<div class="plus-add" ng-style="style">
+			<div class="header">
+				<i backpage></i>
+				<span ng-bind-template="{{title||'新增收货地址' }}"></span>
+			</div>
+			<ul class="list1">
+				<li><span>姓名</span><input placeholder="请输入收货人姓名" ng-model="name" required></input></li>
+				<li><span>电话</span><input placeholder="请输入收货人联系电话" ng-model="mobile" required maxlength="11"></input></li>
+			</ul>
+			<ul class="list2">
+				<li><span>所在地区</span><div class="input-div" ng-click="set(1)"><span ng-bind-template="{{proName || '请选择省市'}}" data-id="{{proID}}"></span><span ng-bind-template="{{cityName}}" data-id="{{cityID}}"></span><span ng-bind-template="{{areaName}}" data-id="{{areaID}}"></span></div></li>
+				<li><span>详细地址</span><input placeholder="请输入详细地址" ng-model="detailPart" required></input></li>
+				<li><span>邮编</span><input placeholder="请输入邮编" ng-model="postCode" ></input></li>
+			</ul>
+			<button ng-click="saveAdd()" class="btn" ng-disabled="!addressForm.$valid">保存</button>
+		</div>	
+	</form>
+	<!-- 选择省市 -->
+	<chosepart></chosepart>
+</div>

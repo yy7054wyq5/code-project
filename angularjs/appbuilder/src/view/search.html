@@ -1,0 +1,60 @@
+<div class="search-main">
+	<div class="top">
+		<a class="back" ui-sref="index.find"></a>
+		<input placeholder="{{'enterSearchContent' | translate}}" ng-model="keyword"></input>
+		<span ng-click="searchKey()">&nbsp;&nbsp;搜索</span>
+	</div>
+	<ul class="menu">
+		<li class="menu-line" style="left:{{movevalue}}rem"></li>
+		<!-- <li ng-click="menuActive(0)" ng-class="{active:movevalue==0}" class="nopadding">综合</li> -->
+		<li ng-class="{active:movevalue==0}">
+			<b ng-class="{up:ml,down:!ml}" class="product" ng-click="menuActive(0)">{{distype}}</b>
+			<ul class="classic" ng-if="ml">
+				<li ng-click="classic(1)">产品</li>
+				<li ng-click="classic(3)">积分</li>
+				<li ng-click="classic(2)">促销</li>
+			</ul>
+		</li>
+		<li ng-click="menuActive(2)" ng-class="{active:movevalue==2,down:classnum2==0,up:classnum2==1}" data-id="updateTime">时间</li>
+		<li ng-click="menuActive(4)" ng-class="{active:movevalue==4,down:classnum3==0,up:classnum3==1}" data-id="saleCount">销量</li>
+		<li ng-click="menuActive(6)" ng-class="{active:movevalue==6,down:classnum4==0,up:classnum4==1}" data-id="price">价格</li>
+		<li ng-click="dis=!dis" ng-class="{listbtn:!dis,blockbtn:dis}"></li>
+	</ul>
+	<ul class="list" ng-class="{listdis:!dis,blockdis:dis}">
+		<li id="nocss" ng-if="searchList.length===0">没有相应的搜索结果</li>
+		<li ng-repeat="data in searchList" ui-sref="product-detail( {id:data.id} )">
+			<i ng-if="data.isHot==1&&data.type==1" class="hot-icon"></i>
+			<i ng-if="data.isNew==1&&data.type==1" class="new-icon"></i>
+			<img lazy-src="{{data.imagePath}}">
+			<span class="block-status" ng-if="data.promotionStatus==1">即将开抢</span>
+			<span class="block-status" ng-if="data.promotionStatus==2">马上抢</span>
+			<span class="block-status" ng-if="data.promotionStatus==3">已抢光</span>
+			<p>{{data.name}}</p>
+			<span class="price" ng-if="data.type==1" ng-bind-template="&yen;{{data.price}}"></span>
+			<span class="price" ng-if="data.type==2">
+				<span class="old-price-list" ng-bind-template="&yen;{{data.price}}" ng-if="data.type==2&&data.promotionType==2 || data.type==2&&data.promotionType==1"></span>
+				&yen;{{data.promotionPrice}}
+				<span class="txt" ng-if="data.promotionType==1">折</span>
+				<span class="txt" ng-if="data.promotionType==2">减</span>
+				<span class="txt" ng-if="data.promotionType==3">满</span>
+			</span>
+			<span class="price" ng-if="data.type==3"><img src="http://appbuilder.loongjoy.com/phoneweb/app/img/my_integral_icon_2.png">{{data.needCredit}}</span>
+			<span class="sale" ng-bind-template="已售{{data.saleCount}}件"></span>
+			<span class="list-btn">
+				<a class="ready" ng-if="data.promotionStatus==1">即将开抢</a>
+				<a ng-if="data.promotionStatus==2">马上抢</a>
+				<a class="end" ng-if="data.promotionStatus==3">已抢光</a>
+				<span ng-if="data.promotionStatus==2" ng-bind-template="已抢{{data.promotionSaleCount}}件"></span>
+			</span>
+			<!-- data.type==1为普通产品 -->
+			<!-- data.type==2为促销产品 -->
+			<!-- data.type==3为积分产品 -->
+			<!-- promotionStatus==1 促销未开始 -->
+			<!-- promotionStatus==2 促销已开始 -->
+			<!-- promotionStatus==3 促销已结束 -->
+			<i ng-if="data.type==2&&data.promotionType==1" class="promotion-icon"><img src="http://appbuilder.loongjoy.com/phoneweb/app/img/search_zhe.png"></i>
+			<i ng-if="data.type==2&&data.promotionType==2" class="promotion-icon"><img src="http://appbuilder.loongjoy.com/phoneweb/app/img/search_jian.png"></i>
+			<i ng-if="data.type==2&&data.promotionType==3" class="promotion-icon"><img src="http://appbuilder.loongjoy.com/phoneweb/app/img/search_man.png"></i>
+		</li>
+	</ul>
+</div>

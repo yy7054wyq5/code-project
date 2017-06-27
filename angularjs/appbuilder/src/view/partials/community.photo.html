@@ -1,0 +1,10 @@
+<div id="photo-show" ng-click="$ctrl.hidePhoto()" ng-swipe-left="$ctrl.runleft()" ng-swipe-right="$ctrl.runright()" style="left: {{$ctrl._move_val}}rem;height:{{$ctrl._photo_height}}px;line-height:{{$ctrl._photo_height}}px;width:{{$ctrl._photo_width}}px;display:{{$ctrl.isShow}};">
+	<div ng-repeat="img in $ctrl.data track by $index">
+		<img lazy-src="{{img}}" style="max-height: {{$ctrl.imgMaxHeight}}px;">
+		<span class="photo-btn">
+			<span class="currentIndex" ng-bind-template="{{$index+1}}"></span>/
+			<span class="totalImg" ng-bind-template="{{$ctrl.max}}"></span>
+		</span>
+	</div>
+</div>
+<img lazy-src="{{img}}" ng-repeat="img in $ctrl.data track by $index" ng-click="$ctrl.showPhoto($index)">

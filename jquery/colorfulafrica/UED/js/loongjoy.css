@@ -1,0 +1,1253 @@
+.gradientforie {
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#7f000000 0, endColorstr=#7f000000 0);
+}
+.gradient {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.01));
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#7f000000 0, endColorstr=#7f000000 0);
+}
+.clear {
+  clear: both;
+  content: '';
+  display: table;
+}
+.pager {
+  padding-bottom: 8px;
+  float: left;
+}
+.pager > a,
+.pager > span {
+  display: block;
+  float: left;
+  height: 32px;
+  *height: 30px;
+  line-height: 30px;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: 12px;
+  background: #fbe7db;
+  border: solid 1px #e07729;
+  color: #ff6000;
+  margin-left: 5px;
+}
+.pager > input {
+  display: block;
+  text-align: center;
+  float: left;
+  border: solid 1px #e07729;
+  width: 30px;
+  height: 30px;
+  line-height: 22px;
+  padding-top: 2px;
+  *height: 23px;
+  margin-left: 5px;
+}
+.pager > a.btn {
+  border-radius: 0;
+  *padding-top: 7px;
+  *height: 14px;
+  background: #e6e6e6;
+}
+.pager > span {
+  border: 0;
+  background: transparent;
+  line-height: 30px;
+  padding-left: 0;
+  padding-right: 0;
+}
+.pager > a:hover,
+.pager > a.active {
+  background: #fff;
+}
+/*白色翻页*/
+.pager.white {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  float: none;
+}
+.pager.white > a {
+  background: #fff;
+  color: #7d7d7d;
+  height: 30px;
+  *height: 8px;
+  line-height: 8px;
+  *line-height: 8px;
+  border: solid 1px #c2c2c2;
+  border-radius: 3px;
+  padding: 10px;
+}
+.pager.white > a.page-up.nopage,
+.pager.white > a.page-down.nopage {
+  display: none;
+  border: 1px solid #e6e6e6;
+  color: #e6e6e6;
+  background: #fff;
+  cursor: auto;
+}
+.pager.white > a:hover,
+.pager.white > a.active {
+  color: #6b151c;
+  background: #fff;
+  border: 1px solid #6b151c;
+}
+.pager.white > input {
+  border: solid 1px #c2c2c2;
+}
+.pager.white > a.btn {
+  border-radius: 0;
+  *padding-top: 7px;
+  *height: 14px;
+  background: #fff;
+}
+.pager.white > a.btn:hover {
+  border: solid 1px #c2c2c2;
+  background-color: #e6e6e6;
+}
+.pager.white > span {
+  color: #7d7d7d;
+}
+.loading {
+  position: fixed;
+  width: 50px;
+  z-index: 999999;
+}
+.imgbtncss > a {
+  position: absolute;
+  z-index: 999;
+  width: 40px;
+  height: 100px;
+  display: none;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.01));
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#7f000000 0, endColorstr=#7f000000 0);
+  background: rgba(0, 0, 0, 0.5);
+}
+.imgbtncss > a i {
+  width: 13px;
+  height: 35px;
+  display: block;
+  margin-top: 34px;
+  margin-left: 14px;
+}
+.imgbtncss .left-btn {
+  left: 0;
+  border-radius: 0 5px 5px 0;
+}
+.imgbtncss .left-btn i {
+  background-image: url(../img/index.png);
+  background-position: -129px -49px;
+}
+.imgbtncss .right-btn {
+  right: 0;
+  border-radius: 5px 0 0 5px;
+}
+.imgbtncss .right-btn i {
+  background-image: url(../img/index.png);
+  background-position: -178px 0px;
+}
+/*父容器必须为想对定位*/
+.img-slide-container:hover .img-btn a {
+  display: block;
+}
+.img-con {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+}
+.img-con > div.item {
+  position: absolute;
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+  filter: progid:DXImageTransform.Microsoft.Blur(pixelradius=1);
+  -webkit-filter: blur(1px);
+  overflow: hidden;
+  top: 0;
+}
+.img-con > div.item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.img-con > div.item span {
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  z-index: 4;
+  display: block;
+  height: 100px;
+  line-height: 100px;
+  padding-left: 12px;
+  width: 100%;
+  color: #fff;
+  font-size: 24px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.01));
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#7f000000 0, endColorstr=#7f000000 0);
+}
+.img-con > div.item.active {
+  filter: progid:DXImageTransform.Microsoft.Blur(pixelradius=0);
+  -webkit-filter: blur(0);
+}
+.img-con.swipe:hover a {
+  display: block;
+}
+.img-btn {
+  position: relative;
+  margin: 0 auto;
+  z-index: 2;
+}
+.img-btn .number {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  z-index: 4;
+  color: #fff;
+  font-size: 22px;
+}
+.img-btn .number span.index {
+  font-size: 38px;
+}
+.img-btn > a {
+  position: absolute;
+  z-index: 999;
+  width: 40px;
+  height: 100px;
+  display: none;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.01));
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#7f000000 0, endColorstr=#7f000000 0);
+  background: rgba(0, 0, 0, 0.5);
+}
+.img-btn > a i {
+  width: 13px;
+  height: 35px;
+  display: block;
+  margin-top: 34px;
+  margin-left: 14px;
+}
+.img-btn .left-btn {
+  left: 0;
+  border-radius: 0 5px 5px 0;
+}
+.img-btn .left-btn i {
+  background-image: url(../img/index.png);
+  background-position: -129px -49px;
+}
+.img-btn .right-btn {
+  right: 0;
+  border-radius: 5px 0 0 5px;
+}
+.img-btn .right-btn i {
+  background-image: url(../img/index.png);
+  background-position: -178px 0px;
+}
+div.thumb {
+  width: 1180px;
+  height: 84px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: margin-left 0.3s;
+}
+div.thumb > ul {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  height: 84px;
+}
+div.thumb > ul > li {
+  float: left;
+  width: 99px;
+  height: 84px;
+  padding-right: 16px;
+  cursor: pointer;
+}
+div.thumb > ul > li > img {
+  width: 84px;
+  display: block;
+  height: 84px;
+}
+div.thumb > ul > li.active > img {
+  border: 2px solid #6e1b21;
+  width: 84px;
+  height: 84px;
+}
+div.thumb > ul:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+.img-con.swipe {
+  width: 1180px;
+  margin: 0 auto;
+  position: relative;
+  height: 270px;
+  overflow: hidden;
+  margin-top: 30px;
+}
+.img-con.swipe .img-con-center {
+  position: absolute;
+  z-index: 1;
+  transition: left .3s;
+}
+.img-con.swipe .img-con-center div.item {
+  cursor: pointer;
+  float: left;
+  width: 400px;
+  padding-right: 20px;
+  height: 270px;
+  position: relative;
+}
+.img-con.swipe .img-con-center div.item img {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  border-radius: 5px;
+  width: 380px;
+  height: 270px;
+}
+.img-con.swipe .img-con-center div.item span {
+  position: absolute;
+  border-radius: 5px;
+  z-index: 2;
+  width: 380px;
+  height: 270px;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  display: block;
+  line-height: 270px;
+  overflow: hidden;
+  font-size: 24px;
+  color: #fff;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.01));
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#7f000000 0, endColorstr=#7f000000 0);
+}
+.img-con.swipe > a {
+  position: absolute;
+  z-index: 999;
+  width: 40px;
+  height: 100px;
+  display: none;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.01));
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#7f000000 0, endColorstr=#7f000000 0);
+  background: rgba(0, 0, 0, 0.5);
+}
+.img-con.swipe > a i {
+  width: 13px;
+  height: 35px;
+  display: block;
+  margin-top: 34px;
+  margin-left: 14px;
+}
+.img-con.swipe .left-btn {
+  left: 0;
+  border-radius: 0 5px 5px 0;
+}
+.img-con.swipe .left-btn i {
+  background-image: url(../img/index.png);
+  background-position: -129px -49px;
+}
+.img-con.swipe .right-btn {
+  right: 0;
+  border-radius: 5px 0 0 5px;
+}
+.img-con.swipe .right-btn i {
+  background-image: url(../img/index.png);
+  background-position: -178px 0px;
+}
+.img-con.swipe > a {
+  top: 85px;
+}
+.modal-wrap {
+  width: 100%;
+  background: url(/dist/img/layerbg.png);
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+}
+.lz-msg {
+  position: fixed;
+  z-index: 999999;
+  background: url(/dist/img/layerbg.png);
+  display: block;
+  color: #fff;
+  padding: 15px;
+  border-radius: 3px;
+}
+.lz-tips {
+  text-align: center;
+  font-size: 14px;
+  width: 330px;
+}
+.lz-tips p {
+  margin-top: 40px;
+  display: block;
+  text-align: center;
+}
+.lz-tips a {
+  display: block;
+  float: left;
+  text-align: center;
+  padding: 10px 20px;
+  margin-left: 60px;
+  margin-top: 50px;
+  background: #999999;
+  border-radius: 5px;
+  color: #fff;
+}
+.lz-tips a.sure {
+  background: #6b151c;
+}
+.lz-tips:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+i.modal-x {
+  background-image: url(../img/modal.png);
+  background-position: -143px -67px;
+  width: 17px;
+  height: 17px;
+}
+i.modal-x:hover {
+  background-image: url(../img/modal.png);
+  background-position: 0px -99px;
+  width: 17px;
+  height: 17px;
+}
+.lz-modal {
+  width: 530px;
+  padding-bottom: 20px;
+  background: #fff;
+  border-radius: 3px;
+  transition: transform .3s;
+}
+.lz-modal a.modal-btn {
+  background: #6b151c;
+  width: 130px;
+  height: 40px;
+  display: block;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  border-radius: 5px;
+}
+.lz-modal div.modal-input {
+  height: 40px;
+  border: 1px solid #e0e0e0;
+  border-radius: 3px;
+  line-height: 40px;
+  margin-top: 30px;
+  position: relative;
+}
+.lz-modal div.modal-input > input {
+  border: 0;
+  width: 100%;
+  height: 36px;
+  padding-left: 20px;
+}
+.lz-modal div.modal-input > span {
+  position: absolute;
+  z-index: 1;
+  height: 40px;
+  left: 20px;
+  color: #999999;
+  top: 0;
+}
+.lz-modal div.modal-input > select {
+  width: 100%;
+  border: 0;
+  height: 37px;
+  padding-left: 18px;
+  color: #999999;
+}
+.lz-modal a.forgetpass {
+  display: block;
+  text-align: right;
+  color: #333333;
+  margin-top: 10px;
+}
+.lz-modal > i.modal-x {
+  cursor: pointer;
+  display: block;
+  float: right;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+.lz-modal > span.title {
+  float: left;
+  font-size: 16px;
+  display: block;
+  margin-left: 70px;
+  margin-top: 15px;
+}
+.lz-modal > div.clear {
+  clear: both;
+  content: '';
+  display: table;
+}
+.lz-modal > div.modal-tab {
+  width: 390px;
+  margin: 0 auto;
+}
+.lz-modal > div.modal-tab > a {
+  display: block;
+  color: #6b151c;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: center;
+  float: left;
+  width: 195px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+}
+.lz-modal > div.modal-tab > a.active {
+  border-bottom: 1px solid #6b151c;
+}
+.lz-modal > div.modal-tab:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+.lz-modal > div.con {
+  width: 390px;
+  margin: 0 auto;
+  display: none;
+  padding-top: 10px;
+}
+.lz-modal > div.con > .login-btn:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+.lz-modal > div.con > .login-btn > div.modal-input {
+  width: 105px;
+  height: 40px;
+  float: left;
+  margin-top: 0;
+}
+.lz-modal > div.con > .login-btn > div.web-captcha {
+  float: left;
+  width: 80px;
+  height: 40px;
+  line-height: 40px;
+  background: #c7c7c7;
+  border-radius: 5px;
+  margin-left: 20px;
+  text-align: center;
+}
+.lz-modal > div.con > .login-btn > a {
+  float: left;
+  display: block;
+  color: #333333;
+}
+.lz-modal > div.con > .login-btn > a.modal-btn {
+  color: #fff;
+  float: right;
+}
+.lz-modal > div.con > .tips {
+  text-align: center;
+  color: #666666;
+  margin-top: 25px;
+}
+.lz-modal > div.con > a.thirdparty-btn {
+  display: block;
+  float: left;
+  border: 1px solid #6b151c;
+  width: 120px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  color: #6b151c;
+  border-radius: 5px;
+  margin-left: 50px;
+  margin-top: 30px;
+}
+.lz-modal > div.con > a.thirdparty-btn > i,
+.lz-modal > div.con > a.thirdparty-btn > span {
+  display: block;
+  float: left;
+}
+.lz-modal > div.con > a.thirdparty-btn > i {
+  margin-top: 10px;
+  margin-left: 15px;
+}
+.lz-modal > div.con > a.thirdparty-btn > span {
+  margin-left: 10px;
+}
+.lz-modal > div.con > a.thirdparty-btn:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+.lz-modal > div.con > a.qq > i {
+  background-image: url(../img/modal.png);
+  background-position: -99px -67px;
+  width: 22px;
+  height: 22px;
+}
+.lz-modal > div.con > a.wechat > i {
+  background-image: url(../img/modal.png);
+  background-position: -121px -67px;
+  width: 22px;
+  height: 22px;
+}
+.lz-modal > div.con.reg > div.modal-input {
+  margin-top: 20px;
+}
+.lz-modal > div.con.active {
+  display: block;
+}
+.lz-modal > div.con.finish-info > .user-photo:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+.lz-modal > div.con.finish-info > .user-photo > img {
+  width: 110px;
+  height: 110px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  display: block;
+  float: left;
+}
+.lz-modal > div.con.finish-info > .user-photo > #photo {
+  display: block;
+  float: left;
+  margin-top: 90px;
+  margin-left: -90px;
+}
+.lz-modal > div.con.finish-info > .user-photo > #headupload {
+  width: 84px;
+  height: 20px;
+  opacity: 0;
+  display: block;
+  float: left;
+  margin-top: 90px;
+  margin-left: 20px;
+}
+.lz-modal > div.con.finish-info > div.modal-input {
+  margin-top: 20px;
+}
+.lz-modal > div.con.finish-info > div.modal-input.part {
+  float: left;
+  width: 30%;
+  margin-right: 5%;
+}
+.lz-modal > div.con.finish-info > a.sex {
+  float: left;
+  width: 110px;
+  height: 40px;
+  padding-top: 10px;
+  margin-top: 20px;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  padding-left: 30px;
+}
+.lz-modal > div.con.finish-info > a.sex > i {
+  display: block;
+  float: left;
+}
+.lz-modal > div.con.finish-info > a.sex > span {
+  display: block;
+  float: left;
+  margin-left: 10px;
+  color: #333333;
+}
+.lz-modal > div.con.finish-info > a.sex.active {
+  border: 1px solid #6b151c;
+}
+.lz-modal > div.con.finish-info > a.sex.active > span {
+  color: #6b151c;
+}
+.lz-modal > div.con.finish-info > a.sex:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+.lz-modal > div.con.finish-info > a.sex.man > i {
+  background-image: url(../img/mine_sprite.png);
+  background-position: -90px -60px;
+  width: 20px;
+  height: 20px;
+}
+.lz-modal > div.con.finish-info > a.sex.woman {
+  margin-left: 20px;
+}
+.lz-modal > div.con.finish-info > a.sex.woman > i {
+  background-image: url(../img/mine_sprite.png);
+  background-position: 0px -90px;
+  width: 20px;
+  height: 20px;
+}
+.lz-modal > div.con.finish-info > a.modal-btn {
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.lz-modal table {
+  width: 745px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.lz-modal table tr td:first-child {
+  color: #666666;
+}
+.lz-modal table tr td {
+  padding: 5px 0;
+}
+.lz-modal table tr td select,
+.lz-modal table tr td input {
+  border: 1px solid #6b151c;
+  height: 38px;
+  line-height: 38px;
+  border-radius: 5px;
+  padding-left: 20px;
+}
+.lz-modal table tr td select {
+  float: left;
+  width: 160px;
+  margin-right: 10px;
+}
+.lz-modal table tr td a.address-btn {
+  width: 128px;
+  height: 40px;
+  background: #6b151c;
+  color: #fff;
+  line-height: 40px;
+  text-align: center;
+  display: block;
+  border-radius: 5px;
+}
+.noproduct {
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  display: none;
+}
+.car-header {
+  background: #fafafa;
+}
+.car-header .content.car {
+  background: #fafafa;
+  margin: 0 auto;
+  height: 80px;
+}
+.car-header .content.car > a.logo {
+  margin-top: 14px;
+  display: block;
+  float: left;
+}
+.car-header .content.car > a.logo i {
+  display: block;
+}
+.car-header .content.car > span {
+  font-size: 26px;
+  line-height: 80px;
+  margin-left: 55px;
+}
+.car-header .content.car > .header-btn {
+  padding-top: 28px;
+  font-size: 14px;
+}
+.car-header .content.car > .header-btn a {
+  color: #333333;
+}
+.car-header .content.car > .header-btn span {
+  float: left;
+  font-size: 18px;
+  margin-right: 20px;
+}
+.container.car input {
+  border: 1px solid #dddddd;
+}
+.container.car h3 {
+  width: 150px;
+  border-bottom: 1px solid #6b151c;
+  font-size: 14px;
+  margin-top: 40px;
+  text-align: center;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+.container.car table.head {
+  width: 1180px;
+}
+.container.car table.head thead {
+  border-top: 1px solid #ddd;
+}
+.container.car table.head thead td {
+  height: 60px;
+  background: #fafafa;
+  vertical-align: middle;
+}
+.container.car ul {
+  margin-top: 20px;
+}
+.container.car ul li.active {
+  border: 1px solid #6b151c;
+}
+.container.car ul li.active i.chose {
+  display: block;
+}
+.container.car ul li {
+  border: 1px solid #dddddd;
+  margin-bottom: 10px;
+  position: relative;
+  padding: 10px;
+}
+.container.car ul li table {
+  width: 100%;
+}
+.container.car ul li table tbody {
+  background: #fafafa;
+}
+.container.car ul li table tbody td {
+  vertical-align: middle;
+}
+.container.car ul li table tbody td i.delete {
+  display: block;
+  margin-left: 25px;
+}
+.container.car ul li table tbody td.product-perprice {
+  padding-left: 15px;
+}
+.container.car ul li table tbody td.product:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+.container.car ul li table tbody td.product > img {
+  display: block;
+  width: 96px;
+  height: 96px;
+  float: left;
+}
+.container.car ul li table tbody td.product > .name {
+  cursor: pointer;
+  height: 96px;
+  width: 270px;
+  padding-left: 10px;
+  display: block;
+  float: left;
+  font-size: 14px;
+  color: #333333;
+}
+.container.car ul li table tbody td.product > .name > table {
+  width: 250px;
+}
+.container.car ul li table tbody td.product > .name > table tbody {
+  border: 0;
+}
+.container.car ul li table tbody td.product > .name > table tbody td {
+  vertical-align: middle;
+  height: 96px;
+}
+.container.car ul li table tbody td.product > .heavy {
+  height: 96px;
+  display: block;
+  width: 100px;
+  float: left;
+  color: #a1a1a1;
+}
+.container.car ul li table tbody td.product > .heavy > table {
+  width: 100px;
+}
+.container.car ul li table tbody td.product > .heavy > table tbody {
+  border: 0;
+}
+.container.car ul li table tbody td.product > .heavy > table tbody td {
+  vertical-align: middle;
+  height: 96px;
+}
+.container.car ul li table tbody td.num > input,
+.container.car ul li table tbody td.num > span {
+  display: block;
+  float: left;
+}
+.container.car ul li table tbody td.num input {
+  width: 70px;
+  height: 70px;
+  border: 1px solid #6b151c;
+  margin-right: 5px;
+  text-align: center;
+}
+.container.car ul li table tbody td.num span {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border: 1px solid #6b151c;
+  font-size: 14px;
+  cursor: pointer;
+}
+.container.car ul li table tbody td.num span.cut {
+  margin-top: 10px;
+}
+.container.car ul li table tbody td.num:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+.container.car ul li table tbody td.product-total {
+  text-align: center;
+}
+.container.car ul li table tbody td.product-total span {
+  font-size: 20px;
+}
+.container.car ul i.chose {
+  position: absolute;
+  z-index: 1;
+  bottom: -1px;
+  right: -1px;
+  display: none;
+}
+.car-bottom {
+  background: #fafafa;
+  border-bottom: 1px solid #dddddd;
+  height: 60px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.car-bottom > .chosed-product {
+  margin-left: 20px;
+  float: left;
+}
+.car-bottom > .chosed-product .car-num {
+  line-height: 60px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.car-bottom > .bottom-btn {
+  width: 200px;
+  float: right;
+  padding-top: 20px;
+}
+.car-bottom > .bottom-btn i {
+  display: block;
+  float: left;
+  cursor: pointer;
+}
+.car-bottom > .bottom-btn span {
+  display: block;
+  float: left;
+  margin-left: 50px;
+}
+.car-bottom > .bottom-btn input {
+  display: block;
+  float: left;
+  margin-left: 20px;
+}
+.car-bottom > .bottom-btn:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+.car-bottom:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+.car-total {
+  float: right;
+  padding-bottom: 50px;
+  margin-top: 40px;
+}
+.car-total > span {
+  float: left;
+  display: block;
+  margin-top: 25px;
+  margin-right: 20px;
+}
+.car-total > span > span {
+  font-size: 20px;
+}
+.car-total > span.car-price {
+  color: #ff4a26;
+  margin-top: 20px;
+}
+.car-total > a {
+  background: #6b151c;
+  display: block;
+  float: left;
+  width: 135px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+}
+.car-total:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+.container.confirm {
+  padding-bottom: 100px;
+}
+.container.confirm > div.paying > form {
+  margin: 0 auto;
+  display: block;
+}
+.container.confirm > div.paying > img {
+  display: block;
+  margin: 0 auto;
+}
+.container.confirm > div.paying > p {
+  text-align: center;
+}
+.container.confirm h3 {
+  font-size: 16px;
+  padding: 20px 0;
+}
+.container.confirm > .line {
+  width: 44px;
+  height: 1px;
+  background: #6b151c;
+}
+.container.confirm .address-box {
+  border-bottom: 1px solid #ddd;
+}
+.container.confirm .address-box > .item {
+  width: 320px;
+  height: 178px;
+  border: 1px solid #dddddd;
+  margin-right: 110px;
+  margin-top: 40px;
+  position: relative;
+}
+.container.confirm .address-box > .item > .address {
+  cursor: pointer;
+}
+.container.confirm .address-box > .item > i.chose {
+  position: absolute;
+  right: -1px;
+  bottom: -1px;
+  display: none;
+}
+.container.confirm .address-box > .item.active {
+  border: 1px solid #6b151c;
+}
+.container.confirm .address-box > .item.active > i.chose {
+  display: block;
+}
+.container.confirm .address-box > .item.add-address {
+  cursor: pointer;
+  background: url(/dist/img/ins_ic_t_add.png) no-repeat center;
+}
+.container.confirm .address-box > .slideup {
+  clear: both;
+  content: '';
+  display: table;
+  width: 100%;
+  height: 40px;
+}
+.container.confirm .address-box > .slideup > a {
+  cursor: pointer;
+  display: block;
+  float: right;
+  margin-right: 10px;
+  color: #333333;
+}
+.container.confirm .address-box > .slideup > a > span {
+  margin-right: 10px;
+}
+.container.confirm .address-box > .slideup > a > i {
+  background-image: url(/dist/img/mine_sprite.png);
+  background-position: -84px -90px;
+  width: 24px;
+  height: 13px;
+  display: block;
+  float: right;
+  margin-top: 3px;
+}
+.container.confirm .address-box > .slideup > a.active > i {
+  background-image: url(../img/mine_sprite.png);
+  background-position: -60px -90px;
+  width: 24px;
+  height: 13px;
+  display: block;
+  float: right;
+  margin-top: 3px;
+}
+.container.confirm > .pay-way {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.container.confirm > .pay-way > a {
+  display: block;
+  float: left;
+  width: 102px;
+  height: 36px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 36px;
+  margin-right: 42px;
+  color: #333333;
+}
+.container.confirm > .pay-way > a.active {
+  background: #6b151c;
+  color: #fff;
+  border: 1px solid #6b151c;
+}
+.container.confirm > .pay-way:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+.container.confirm > ul.list {
+  margin-top: 20px;
+}
+.container.confirm > ul.list > li {
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
+.container.confirm > ul.list > li > div {
+  float: left;
+  width: 236px;
+  height: 96px;
+  line-height: 96px;
+  text-align: center;
+}
+.container.confirm > ul.list > li > .product-total {
+  font-size: 20px;
+}
+.container.confirm > ul.list > li > .product {
+  width: 430px;
+  text-align: left;
+}
+.container.confirm > ul.list > li > .product > img {
+  display: block;
+  float: left;
+  width: 96px;
+  height: 96px;
+}
+.container.confirm > ul.list > li > .product > .name {
+  width: 250px;
+  display: block;
+  float: left;
+  font-size: 14px;
+  color: #333333;
+  height: 96px;
+  margin-left: 10px;
+}
+.container.confirm > ul.list > li > .product > .name td {
+  height: 96px;
+  line-height: 20px;
+  vertical-align: middle;
+}
+.container.confirm > ul.list > li > .product > .heavy {
+  display: block;
+  float: left;
+  height: 96px;
+  color: #999999;
+}
+.container.confirm > ul.list > li .product:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+.container.confirm > ul.list > li:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+.container.confirm > ul.list > li.title {
+  border-left: 0;
+  height: 50px;
+  border-right: 0;
+  padding: 0;
+}
+.container.confirm > ul.list > li.title > div.product {
+  width: 445px;
+}
+.container.confirm > ul.list > li.title > div {
+  width: 236px;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+}
+.container.confirm > ul.list > li.title > .product-total {
+  font-size: 14px;
+}
+.container.confirm > .bak {
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  padding: 20px;
+}
+.container.confirm > .bak > div,
+.container.confirm > .bak > textarea {
+  float: left;
+}
+.container.confirm > .bak > textarea {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 600px;
+  height: 60px;
+  resize: none;
+}
+.container.confirm > .bak > .order-info {
+  width: 335px;
+  margin-left: 60px;
+}
+.container.confirm > .bak > .order-info > div {
+  height: 30px;
+}
+.container.confirm > .bak > .order-info > div > span:first-child {
+  float: left;
+}
+.container.confirm > .bak > .order-info > div > span:last-child {
+  float: right;
+}
+.container.confirm > .bak > .order-info > div > span.big {
+  font-size: 20px;
+}
+.container.confirm > .bak:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+.container.confirm > .confirm-order:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+.container.confirm > .confirm-order {
+  border: 1px solid #6b151c;
+  padding-top: 20px;
+}
+.container.confirm > .confirm-order > div {
+  text-align: right;
+}
+.container.confirm > .confirm-order span {
+  color: #ff4a26;
+}
+.container.confirm > .confirm-order span.fact-price {
+  font-size: 20px;
+}
+.container.confirm > .confirm-order > div.bottom {
+  margin-top: 20px;
+}
+.container.confirm > .confirm-order > div.bottom > div,
+.container.confirm > .confirm-order > div.bottom > a {
+  display: block;
+  float: right;
+  height: 60px;
+  line-height: 60px;
+}
+.container.confirm > .confirm-order > div.bottom > div {
+  margin-right: 20px;
+}
+.container.confirm > .confirm-order > div.bottom > a {
+  width: 170px;
+  background: #6b151c;
+  color: #fff;
+  text-align: center;
+}

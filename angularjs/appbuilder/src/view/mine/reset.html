@@ -1,0 +1,11 @@
+<div class="reset-main enter">
+	<div class="top">
+		<a class="back" ui-sref="mineset"></a>
+		<span>重设密码</span>
+	</div>
+	<form name="resetForm">
+		<input type="password" placeholder="请输入旧密码" class="mobile" ng-model="resetOldpassword" ng-maxlength="12" ng-minlength="6" required></input>
+		<input type="password" placeholder="请输入6-12位新密码" class="password" ng-model="resetPassword" ng-maxlength="12" ng-minlength="6" required></input>
+		<button class="btn" ng-click="reset()" ng-disabled="!resetForm.$valid">确认修改</button>
+	</form>
+</div>

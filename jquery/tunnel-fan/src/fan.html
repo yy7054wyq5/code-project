@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+  <link rel="stylesheet" type="" href="vendor/normalize.css">
+  <link rel="stylesheet" type="" href="vendor/bootstrap.min.css">
+  <script type="text/javascript" src="vendor/jquery.min.js"></script>
+  <script type="text/javascript" src="vendor/bootstrap.min.js"></script>
+  <script type="text/javascript" src="vendor/echarts.js"></script>
+  <!-- inject:css -->
+  <!-- endinject -->
+</head>
+
+<body id="fan">
+  <div class="header">
+    <div class="wrap">
+      <img src="img/tunnel_logo.png" alt="logo">
+      <!--访问照明：visit-light-->
+      <!--访问风机：visit-wind-->
+      <a class="sys-change visit-light"></a>
+      <div class="user">
+        <span>admin</span>
+        <i></i>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="crumbs">
+      <div class="line">
+        通风控制
+      </div>
+    </div>
+    <div class="content">
+      <div class="menu">
+        <div class="top">功能选项</div>
+        <ul>
+          <li><a class="config">参数配置</a></li>
+          <li><a class="fire">火宅工况</a></li>
+          <li><a class="handle">手动控制</a></li>
+          <li><a class="time">时序控制</a></li>
+          <li><a class="use">能耗查询</a></li>
+        </ul>
+      </div>
+      <div class="tunnel-content">
+        <div class="status">
+          <span>当前状态：</span>
+          <span class="status-txt">火宅工况模式</span> &nbsp;&nbsp;
+          <a>退出模式</a>
+          <a class="hack">平时工况</a>
+        </div>
+        <div class="tunnel">
+          <div class="tunnel-left-hole">
+            <div class="dotted-line"></div>
+            <div class="fire-point one"></div>
+            <div class="tunnel-box">
+              <div class="item top"></div>
+              <div class="item bottom"></div>
+            </div>
+            <div class="fire-point second"></div>
+            <div class="tunnel-box">
+              <div class="item top"></div>
+              <div class="item bottom"></div>
+            </div>
+            <div class="fire-point third"></div>
+            <div class="tunnel-box">
+              <div class="item top"></div>
+              <div class="item bottom"></div>
+            </div>
+            <div class="fire-point four"></div>
+            <div class="tunnel-box">
+              <div class="item top"></div>
+              <div class="item bottom"></div>
+            </div>
+            <div class="fire-point five"></div>
+            <div class="tunnel-box">
+              <div class="item top"></div>
+              <div class="item bottom"></div>
+            </div>
+            <div class="fire-point six"></div>
+            <div class="tunnel-box">
+              <div class="item top"></div>
+              <div class="item bottom"></div>
+            </div>
+            <div class="fire-point seven"></div>
+            <div class="tunnel-box">
+              <div class="item top"></div>
+              <div class="item bottom"></div>
+            </div>
+            <div class="fire-point eight"></div>
+          </div>
+          <div class="tunnel-center">三岔顶隧道右洞</div>
+          <div class="tunnel-right-hole fire-house-mode">
+            <!--火灾工况模式class: fire-house-mode-->
+            <div class="hack">
+              <div class="dotted-line"></div>
+              <div class="right-hole-in">右入</div>
+              <div class="right-hole-out">右出</div>
+              <div class="fire-point one"></div>
+              <div class="tunnel-box">
+                <div class="item top active"></div>
+                <div class="item bottom active"></div>
+              </div>
+              <div class="fire-point two"></div>
+              <div class="tunnel-box">
+                <div class="item top"></div>
+                <div class="item bottom"></div>
+              </div>
+              <div class="fire-point three"></div>
+              <div class="tunnel-box">
+                <div class="item top"></div>
+                <div class="item bottom"></div>
+              </div>
+              <div class="fire-point four"></div>
+              <div class="tunnel-box">
+                <div class="item top"></div>
+                <div class="item bottom"></div>
+              </div>
+              <div class="fire-point five"></div>
+              <div class="tunnel-box">
+                <div class="item top"></div>
+                <div class="item bottom"></div>
+              </div>
+              <div class="fire-point six"></div>
+              <div class="tunnel-box">
+                <div class="item top"></div>
+                <div class="item bottom"></div>
+              </div>
+              <div class="fire-point seven"></div>
+              <div class="tunnel-box">
+                <div class="item top"></div>
+                <div class="item bottom"></div>
+              </div>
+              <div class="fire-point eight"></div>
+            </div>
+            <div class="mode-content">
+              <!--火宅工况模式: fire-house -->
+              <ul class="fire-house-mode fire-house hide">
+                <li class="sign-fire-point active">
+                  <i></i>
+                  <span>请标记火灾点</span>
+                  <div class="arrow"></div>
+                </li>
+                <li class="evacuate">
+                  <i></i>
+                  <span>安全疏散阶段</span>
+                  <div class="arrow"></div>
+                </li>
+                <li class="out-fire">
+                  <i></i>
+                  <span>灭火救援阶段</span>
+                  <div class="arrow"></div>
+                </li>
+                <li class="out-fire-mode">
+                  <i></i>
+                  <span>退出火灾排烟工况</span>
+                </li>
+              </ul>
+              <!--hide-->
+              <div class="other-mode">
+                <div class="tunnel-name">
+                  <div>RK108+1294#</div>
+                  <div>RK108+1294#</div>
+                  <div>RK108+1294#</div>
+                  <div>RK108+1294#</div>
+                  <div class="other-mother-sun"></div>
+                  <div>RK108+1294#</div>
+                  <div>RK108+1294#</div>
+                  <div>RK108+1294#</div>
+                </div>
+                <div class="tunnel-info">
+                  <div class="wind-speed">
+                    洞内风速：<span>374</span>m/s
+                  </div>
+                  <div class="fan-rate">
+                    风机频率：<span>374</span>Hz
+                  </div>
+                  <div class="dust-thickness">
+                    粉尘浓度：<span>374</span>m<sup>-1</sup>
+                  </div>
+                  <div class="co-thickness">
+                    CO浓度：<span>12</span>cm<sup>3</sup>/m<sup>3</sup>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="crumbs">
+      <div class="line real-time">
+        实时曲线（右洞）
+      </div>
+    </div>
+    <div class="real-time-chart">
+      <div class="chart mb20"></div>
+      <div class="chart ml20 mb20"></div>
+      <div class="chart"></div>
+      <div class="chart ml20"></div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="wrap">
+      &copy;2016-2019 120.24.58.177.com 版权所有
+    </div>
+  </div>
+</body>
+<!-- inject:js -->
+<!-- endinject -->
+
+</html>

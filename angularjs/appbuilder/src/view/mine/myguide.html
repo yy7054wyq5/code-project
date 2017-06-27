@@ -1,0 +1,21 @@
+<div class="guide-main myguide" pageback>
+	<div class="header">
+		<i ui-sref="mine"></i>
+		<span ui-sref="choseguide" ng-bind-template="{{guideInfo.branchName}}"><i></i></span>
+	</div>
+	<div class="banner">
+		<a href="tel:{{guideInfo.mobile}}">
+			<img ng-src="{{guideInfo.guideImagePath}}">
+		</a>
+		<i></i>
+		<div class="guide-info">
+			<div class="name">{{guideInfo.nickname}}</div>
+			<div class="txt">点击头像可以咨询我</div>
+		</div>
+		<a ng-click="set(guideInfo.branchId)" class="change-guide">更换导购</a>
+	</div>
+	<ul class="list">
+		<li ng-repeat="problem in problemsData" ui-sref="problemdetail( {id:problem.id} )"><span ng-bind-template="{{problem.name}}"></span><i></i></li>
+	</ul>
+	<selectguide></selectguide>
+</div>

@@ -1,0 +1,81 @@
+.enter input{
+	width: 9.19rem;
+	height: 1.09rem;
+	border-radius: 3px;
+	.border(@baseborder);
+	.block-center;
+	.font28;
+	margin-top: .53rem;
+}
+.enter button{
+	width: 9.19rem;
+	height: 1.09rem;
+	color: #fff;
+	background: @btncolor;
+	.font28;
+	.block-center;
+	margin-top: .53rem;
+}
+.reg-main ,
+.login-main,
+.forget-main,
+.reset-main{
+	button:hover,button:focus,button.focus
+	{
+		color: #fff;
+	}
+}
+.reg-main,
+.forget-main,
+.reset-main{
+	input{
+		padding-left: .4rem;
+	}
+}
+.code{
+	.border(@baseborder); 
+	width: 9.19rem;
+	height: 1.09rem;
+	.block-center;
+	margin-top: .53rem;
+	border-radius: 3px;
+	input{
+		border: 0;
+		width: 6.4rem;
+		display: inline-block;
+		margin-top: 0;
+		height: 1rem;
+	}
+	a{
+		display: inline-block;
+		.font28;
+		color: @btncolor;
+	}
+}
+.entry-btn{
+	width: 3.5rem;
+	.block-center;
+	margin-top: 7rem;
+	color: @salecolor;
+	.font28;
+	a{
+		color: @salecolor;
+		float: left;
+	}
+	a:last-child{
+		float: right;
+	}
+}
+
+.login-main{
+	input.mobile{
+		background: url(../img/login_icon_user_dis.png) no-repeat .33rem center;
+		background-size: .48rem;
+		padding-left: 1rem;
+	}
+	input.password{
+		background: url(../img/login_icon_password_dis.png) no-repeat .33rem center;
+		background-size: .48rem;
+		padding-left: 1rem;
+	}
+}

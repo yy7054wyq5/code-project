@@ -1,0 +1,84 @@
+<!--风机：火灾工况-->
+<h3>风机：火灾工况</h3>
+<div class="fire-condition">
+  <table class="fire-condition-table">
+    <tr>
+      <td>是否进入火宅工况？请选择控制模式</td>
+    </tr>
+    <tr>
+      <td>
+        <div class="choose" data-type="1">
+          普通火灾工况(变频)
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="choose" data-type="2">
+          普通火灾工况(直启)
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="choose" data-type="3">
+          零风速模式
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a class="btn center w50">确定</a>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<!--灭火救援模式-->
+<div class="cut-fire-mode">
+  <table class="slide-table cut-fire-mode" style="width: 320px; margin: 0 auto; margin-top: 20px;">
+    <tr>
+      <td style="padding: 10px 0;">灭火救援模式：</td>
+    </tr>
+    <tr>
+      <td style="position: relative; padding: 10px 0;">
+        设定风速值：
+        <input type="text" placeholder="请输入0-10之间的数值" style="width: 174px; text-align: left; padding-left: 10px;" name="slide-bar-value" data-max="10">
+        <div style="position: absolute; height: 17px; width: 1px; background: #cccccc; left: 225px; top: 17px;"></div>
+        <div class="slide-bar-finish" style="position: absolute; left: 235px; top: 18px;">完成</div>
+      </td>
+    </tr>
+    <tr>
+      <td style="position: relative; padding: 0;">
+        <div class="slide-bar">
+          <div class="round"></div>
+          <div class="line source" style="width: 285px;"></div>
+          <div class="round"></div>
+        </div>
+        <div class="slide-bar active hide" style="position: absolute; top: 0; left: 0;">
+          <div class="round"></div>
+          <div class="line" style="width: 0;"></div>
+          <div class="round"></div>
+        </div>
+        <div class="slide-bar-txt">
+          <span></span>m/s
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="handle-control-left">
+          <li class="isOk">
+            <i></i>
+            <span>根据排风灭火规定排烟风速应在2~3m/s</span>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a class="btn center w50">确定</a>
+      </td>
+    </tr>
+  </table>
+</div>

@@ -1,0 +1,78 @@
+<div class="confirm-main">
+	<div class="header">
+		<i backpage></i>
+		<span translate="placeOrder"></span>
+	</div>
+	<div class="address" ng-click="goAddress()">
+		<p>
+			<span ng-if="!consignee" class="auto" translate="sendAddress"></span>
+			<span class="name" ng-bind-template="{{consignee.consignee}}"></span>
+			<span class="mobile" ng-bind-template="{{consignee.mobile}}"></span>
+			<span class="detail" ng-bind-template="{{consignee.province}}{{consignee.city}}{{consignee.area}}{{consignee.detail}}"></span>
+		</p>
+		<span class="icon"><i></i></span>
+	</div>
+	<ul class="list">
+		<li ng-repeat="list in order.products">
+			<img ng-src="{{list.imagePath}}">
+			<dl>
+				<dd  class="name" ng-bind-template="{{list.name}}"></dd>
+				<dd class="list-size" ng-bind-template="{{list.specStr}}"></dd>
+				<dd class="price" ng-hide="list.mallNeedCredits">{{list.promotionPrice||list.price}}<span>x{{list.number}}</span></dd>
+				<dd class="price" ng-if="list.mallNeedCredits"><img src="http://appbuilder.loongjoy.com/phoneweb/app/img/integral_product_icon.png">{{list.mallNeedCredits}}<span>x{{list.number}}</span></dd>
+			</dl>
+		</li>
+		<li ng-repeat="gift in order.gift">
+			<img ng-src="{{gift.imagePath}}">
+			<dl>
+				<dd class="name" ng-bind-template="{{gift.name}}"></dd>
+				<dd class="list-size" ng-bind-template="{{gift.specStr}}"></dd>
+				<dd class="price">{{gift.sourcePrice}}x{{gift.number}}</dd>
+			</dl>
+		</li>
+	</ul>
+	<div class="spend-credit" ng-if="order.currency=='RMB'&&spendCredits>0">
+		<span><span translate="available"></span>{{spendCredits}}&nbsp;<span translate="integralDeductible"></span>&yen;{{toMoney}}</span>
+		<span class="button" ng-class="{active: tomoneyflag}" ng-click="toCash()"><i></i></span>
+	</div>
+	<div class="pay-type" ng-if="order.currency=='RMB'" ng-click="set()">
+		<span translate="paymentMethod"></span>
+		<span class="icon"><i></i></span>
+		<span class="chosed" ng-bind-template="{{payWay}}"></span>
+	</div>
+	<div class="send-way">
+		<span class="way" translate="shippingMethod"></span>
+		<span class="chosed" ng-bind-template="{{sendway}}"></span>
+	</div>
+	<div class="confirm-total"><span translate="inAll"></span>&nbsp;{{productsTotalNum | number}}&nbsp;<span translate="pieceProduct"></span><span translate="Total"></span>
+		<span>
+			<span ng-if="order.currency=='RMB'">&yen;</span>
+			<span ng-if="order.currency!=='RMB'"><img src="http://appbuilder.loongjoy.com/phoneweb/app/img/integral_product_icon.png"></span>
+			{{totalPrice}}
+		</span>
+		（<span translate="freight"></span>&yen;{{shippingfee||0}}）
+	</div>
+	<div class="msg">
+		<span><span translate="messageRemarks"></span><input type="" name="" translate-attr="{ placeholder:'optionalInformation'}" ng-model="remark"></span>             
+	</div>
+	<div class="hack"></div>
+	<div class="bottom">
+		<span>
+			<span translate="Total"></span>
+			<span ng-if="order.currency=='RMB'">&yen;</span>
+			<span ng-if="order.currency!=='RMB'"><img src="http://appbuilder.loongjoy.com/phoneweb/app/img/integral_product_icon.png"></span>
+			{{totalPrice}}
+		</span>
+		<button ng-click="sendOrder()" translate="placeOrder"></button>
+	</div>
+	<div class="chose-bg" ng-style="style" ng-class="{active:flag}" ng-click="set()">
+		<div class="con">
+			<div><i ng-click="set()"></i><span translate="selectPaymentMethod"></span></div>
+			<ul>
+				<!-- <li class="alipay" ng-class="{active:paytype==1}" ng-click="pay(1)" ng-hide="wx">支付宝支付<i></i></li> -->
+				<li class="wechat" ng-class="{active:paytype==2}" ng-click="pay(2)" ng-if="wx"><span translate="weChatPayment"></span><i></i></li>
+				<li class="cash" ng-class="{active:paytype==3}" ng-click="pay(3)"><span translate="cashOnDelivery"></span><i></i></li>
+			</ul>
+		</div>
+	</div>
+</div>

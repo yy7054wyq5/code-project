@@ -1,0 +1,22 @@
+<div class="address-main">
+	<div class="header">
+		<i backpage></i>
+		<span translate="shippingAddress"></span>
+	</div>
+	<ul class="list">
+		<li ng-repeat="add in address" data-id="{{add.id}}" ng-swipe-left="scrollleft($index)" ng-swipe-right="scrollright($index)">
+			<p ng-click="handleAddress($index,add.id)">
+				<span class="name">{{add.consignee}}</span>
+				<span class="mobile">{{add.mobile}}</span>
+				<span class="address">{{add.province}}{{add.city}}{{add.area}}{{add.detail}}</span>
+			</p>
+			<i ng-click="handleAddress($index,add.id)"></i>
+			<button ng-click="deleteAdd(add.id)" translate="delete"></button>
+		</li>
+	</ul>
+	 <div style="height:1.8rem;width:10rem;"></div>
+	 <div class="place"> 
+		<button ng-click="plusadd()">+&nbsp;<span translate="addAddress"></span></button>
+	</div> 
+	<!-- ui-sref="plus-address" -->
+</div>

@@ -1,0 +1,18 @@
+<div class="forget-main enter">
+	<div class="top">
+		<a class="back" ui-sref="login"></a>
+		<span translate="forgetPassword"></span>
+	</div>
+	<form name="forgetForm" ng-controller="ForgetController">
+		<input   translate-attr="{placeholder:'phoneNumber'}" ng-model="forgetMobile" required="required" autofocus="autofocus" ng-maxlength="11" ng-minlength="11" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onafterpaste="this.value=this.value.replace(/[^\d]/g,'')" maxlength="11" ng-blur="checkPhone()"></input>
+		<div class="pass">
+			<input translate-attr="{placeholder:'newPassword'}" type="{{flag ? 'text' : 'password'}}" value={{password}} ng-model="forgetPass" required="required" ng-minlength="6" ng-maxlength="12"></input>
+			<a ng-class="{active: flag}" ng-click="flag=!flag"></a>
+			</div>
+		<div class="code">
+			<input translate-attr="{placeholder:'verificationCode'}"  maxlength="4" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onafterpaste="this.value=this.value.replace(/[^\d]/g,'')" ng-model="forgetCode" required="required" ng-minlength="4" ng-maxlength="4"></input>
+			<a ng-click="getCode()" ng-bind-template="{{getcodeword}}"></a>
+		</div>
+		<div><button class="btn" ng-click="forget()" ng-disabled="!forgetForm.$valid" translate="Determine"></button></div>
+	</form>
+</div>

@@ -1,0 +1,54 @@
+<div class="community-main detail">
+	<div class="header">
+		<i backpage></i>
+		<span translate="noteDetail"></span>
+	</div>
+	<div class="con">
+		<div class="author">
+			<img class="author-head" ng-src="{{detail.userImagePath}}">
+			<div class="author-detail">
+				<span class="name" ng-bind-template="{{detail.nickname}}"></span>
+				<img class="author-level" ng-src="{{detail.iconImagePath}}">
+				<p class="date" ng-bind-template="{{detail.updateTime}}"></p>
+			</div>
+			
+		</div>
+
+		<h3><span class="tag" ng-if="detail.top==1" translate="pushUp"></span>{{detail.name}}</h3>
+		<div class="word">
+			<p ng-bind-template="{{detail.detail}}" ng-if="detail.deleted===0"></p>
+			<p ng-if="detail.deleted==1" style="color:#ddd;" translate="postDeleted"></p>
+			<img ng-repeat="img in detail.albumImages track by $index" lazy-src="{{img}}" ng-if="detail.deleted===0">
+		</div>
+		<div class="operation" ng-if="detail.deleted===0">
+			<span ng-bind-template="{{detail.commentNum}}"></span>
+			<button class="comment-num"></button>
+			<span ng-bind-template="{{detail.thumbNum}}"></span>
+			<button class="zan" ng-click="clickZan(detail.id)" ng-class="{active:zan}"></button>
+		</div>
+		<div class="tips" ng-if="thumbs.length>0&&detail.deleted===0"><span ng-bind="thumbs"></span></div>
+	</div>
+	<div class="no-conment" ng-if="detail.commentCount===0" translate="noComment"></div>
+	<div class="conment" ng-if="detail.commentCount>0">
+		<!-- <div class="tag">全部评论</div> -->
+		<!-- <div ng-if="discomment==0" class="loading-comment"><img src="http://appbuilder.loongjoy.com/phoneweb/app/img/loading.gif"></div> -->
+		<ul>
+			<li ng-repeat="conment in comments">
+				<img ng-src="{{conment.userImagePath}}">
+				<span class="name" ng-bind-template="{{conment.nickname}}"></span>
+				<span class="date pull-right" ng-bind-template="{{conment.updateTime}}"></span>
+				<div class="des" ng-bind-template="{{conment.content}}"></div>
+				<div class="seller" ng-if="conment.reply">
+					<span class="name" translate="merchantReply"></span>
+					<span class="date" ng-bind-template="{{conment.reply.updateTime}}"></span>
+					<div ng-bind-template="{{conment.reply.content}}"></div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div style="height:1.5rem;width:10rem;"></div>
+	<div class="send" ng-if="detail.deleted===0">
+		<textarea translate-attr="{placeholder:'commentOnIt'}" maxlength="200" class="txa"></textarea>
+		<a ng-click="sendConment(detail.id)" translate="sendOut"></a>
+	</div>
+</div>

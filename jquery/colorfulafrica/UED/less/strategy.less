@@ -1,0 +1,406 @@
+.dianzan{
+	cursor: pointer;
+}
+
+.header {
+	.content{
+		>.container.strategy{
+			>ul.tab-con.active{
+				display: block;
+			}
+			>ul.tab-con{
+				display: none;
+				>li{
+					margin-bottom: 50px;
+					.clear;
+					>a.img-link{
+						float: left;
+						width: 240px;
+						height: 172px;
+						display: block;
+						>img{
+							width: 240px;
+							height: 172px;
+						}
+					}
+					>ul{
+						float: left;
+						width: 940px;
+						padding-left: 100px;
+						>li.strategy-info{
+							height: 20px;
+							>img{
+								display: block;
+								float: left;
+								width: 60px;
+								height: 60px;
+								border-radius: 60px;
+								margin-top: -20px;
+							}
+							>span{
+								display: block;
+								float: left;
+								margin-left: 10px;
+							}
+							>span.user-name{
+								color: #333333;
+							}
+							>span.user-place{
+								color: #999999;
+								a{
+									color: #999999;
+									text-decoration: underline;
+								}
+							}
+							>i{
+								display: block;
+								font-style: normal;
+								float: right;
+							}
+							>i.love{
+
+							}
+							>i.comment{
+		
+							}
+							>span.user-comment{
+								float: right;
+								color: #999999;
+								>strong{
+									color: #333333;
+									font-weight: 300;
+								}
+							}
+							>span.user-collect{
+								float: right;
+								margin-right: 20px;
+								color: #999999;
+								>strong{
+									color: #333333;
+									font-weight: 300;
+								}
+							}
+						}
+						>li.strategy-title{
+							cursor: pointer;
+							.clear;
+							margin-top: 40px;
+							font-size: 18px;
+							overflow: hidden;
+							height: 25px;
+							>a{
+								color: #6B151B;
+							}
+						}
+						>li.strategy-con{
+							overflow: hidden;
+							font-size: 14px;
+							margin-top: 20px;
+							color: #999999;
+							height: 40px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.container.food{
+	.list:after{
+		.clear;
+	}
+	.list{
+		margin-top: 20px;
+		>li:hover{
+			>.detail{
+				height: 120px;
+				transition: height .3s;
+			}
+		}
+		>li{
+			float: left;
+			width: 380px;
+			margin-right: 20px;
+			height: 420px;
+			margin-bottom: 20px;
+			position: relative;
+			z-index: 1;
+			>.detail{
+				position: absolute;
+				z-index: 2;
+				height: 60px;
+				width: 380px;
+				bottom: 41px;
+				left: 0;
+				color: #fff;
+				overflow: hidden;
+				.gradient;
+				>h3{
+					cursor: pointer;
+					font-size: 26px;
+					height: 60px;
+					line-height: 60px;
+					padding: 0 10px;
+					>a{
+						color: #fff;
+					}
+				}
+				>p{
+					width: 380px;
+					height: 40px;
+					overflow: hidden;
+					display: block;
+					padding: 0 10px 0 10px;
+				}
+			}
+			>img{
+				display: block;
+				width: 380px;
+				height: 380px;
+				border-radius: 3px 3px 0 0;
+			}
+			>.info{
+				border: 1px solid #e3e6ed;
+				border-radius: 0 0 3px 3px;
+				border-top: 0;
+				padding: 10px;
+				>i,
+				>span{
+					display: block;
+					float: left;
+				}
+				>span{
+					margin-left: 10px;
+				}
+				>i.zan{
+					margin-left: 10px;
+				}
+				>i.comment{
+					float: right;
+				}
+				>span.comment-person{
+					float: right;
+					margin-right: 10px;
+				}
+			}
+			>.info:after{
+				.clear;
+			}
+		}
+	}
+}
+
+.banner.partner{
+	h1{
+		font-size: 28px;
+		color: #6B151B;
+		margin-bottom: 20px;
+		margin-top: 0;
+	}
+	.tab-partner:after{
+		.clear;
+	}
+	.tab-partner{
+		>a{
+			display: block;
+			width: 235px;
+			height: 46px;
+			line-height: 46px;
+			text-align: center;
+			background: #fff;
+			color: #603134;
+			float: left;
+			margin-right: 1px;
+		}
+		>a.active{
+			color: #fff;
+			background: #4f0f14;
+		}
+	}
+	.list.active{
+		display: block;
+	}
+	.list{
+		display: none;
+		>li{
+			background: #fff;
+			height: 392px;
+			margin-top: 12px;
+			>img{
+				display: block;
+				width: 688px;
+				height: 392px;
+			}
+			>.info{
+				height: 392px;
+				width: 492px;
+				background: #fafafa;
+				h2{
+					width: 312px;
+					font-size: 30px;
+					color: #6B151B;
+					margin-top: 130px;
+					text-align: center;
+				}
+				a{
+					display: block;
+					width: 140px;
+					height: 40px;
+					line-height: 40px;
+					border: 1px solid #323232;
+					border-radius: 3px;
+					color: #494949;
+					text-align: center;
+					margin: 0 auto;
+					margin-top: 65px;
+				}
+			}
+		}
+	}
+}
+
+.car-header.strategy{
+	>.content.car{
+		.header-btn{
+			padding-top: 0;
+			>a{
+				width: 135px;
+				display: block;
+				height: 80px;
+				line-height: 80px;
+			}
+			>a.draft{
+				text-align: right;
+				>span{
+					float: none;
+					display: inline;
+					color: #999999;
+					margin-right: 0;
+				}
+			}
+			>a.save{
+				background: #6b151c;
+				text-align: center;
+				color: #fff;
+			}
+		}
+	}
+}
+
+.strategy-edit-con{
+	width: 980px;
+	margin: 0 auto;
+	a{
+		width: 106px;
+		height: 36px;
+		display: block;
+		border-radius: 5px;
+		text-align: center;
+		color: @basecolor;
+		border: 1px solid @basecolor;
+		line-height: 36px;
+	}
+	a.selected,
+	a.active{
+		background: @basecolor;
+		color: #fff;
+	}
+	.strategy-input{
+		margin-top: 100px;
+		width: 100%;
+		border-bottom: 1px solid @basecolor;
+		>input{
+			font-size: 24px;
+			color: @basecolor;
+			width: 95%;
+			border: 0;
+			height: 43px;
+			line-height: 43px;
+		}
+		>input.des{
+			font-size: 16px;
+		}
+	}
+	.chose-con{
+		margin-top: 50px;
+		width: 49%;
+		float: left;
+		>.chose-title{
+			float: left;
+			width: 63px;
+			height: 36px;
+			line-height: 36px;
+		}
+		>a.selected{
+			float: left;
+		}
+		>i{
+			display: block;
+			float: right;
+			margin-right: 10px;
+			margin-top: 10px;
+		}
+	}
+	.con{
+		.clear;
+		display: none;
+		padding-top: 30px;
+		>a{
+			float: left;
+			margin-right: 10px;
+			margin-bottom: 10px;
+		}
+	}
+	.add-tag{
+		margin-top: 30px;
+		width: 100%;
+		>input{
+			width: 520px;
+			border: 1px solid #ddd;
+		}
+	}
+	.hack{
+		width: 100%;
+		height: 30px;
+	}
+	.add-cover{
+		height: 100px;
+		margin-top: 10px;
+		>span{
+			display: block;
+			float: left;
+			height: 30px;
+			line-height: 30px;
+		}
+		>#cover{
+			float: left;
+			text-align: center;
+			color: #fff;
+			line-height: 30px;
+			border-radius: 5px;
+			background: @basecolor;
+			a{
+				border: 0;
+			}
+		}
+		>#upcover{
+			float: left;
+			margin-left: -100px;
+			opacity: 0;
+		}
+		.img-box{
+			padding-top: 20px;
+			display: none;
+			width: 980px;
+			height: 400px;
+			img{
+				width: 980px;
+				height: 400px;
+			}
+		}
+	}
+	.add-cover:after{
+		.clear;
+	}
+}

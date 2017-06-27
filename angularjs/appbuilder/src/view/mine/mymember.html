@@ -1,0 +1,16 @@
+<div class="mymember-main">
+	<div class="header">
+		<i backpage></i>
+		<span>我的会员</span>
+	</div>
+	<h3 ng-bind-template="会员总数（{{totalMembers}}）"></h3>
+	<ul class="list">
+		<li ng-repeat="member in members">
+			<img lazy-src="{{member.imagePath}}">
+			<div class="info">
+				<span class="name" ng-bind="member.nickname"></span>
+				<span class="phone" data-phone="{{member.mobile}}" phonenumber></span>
+			</div>
+		</li>
+	</ul>
+</div>

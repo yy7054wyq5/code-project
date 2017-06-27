@@ -1,0 +1,23 @@
+<div class="size">
+	<div class="content">
+		<img ng-src="{{imagepath}}">
+		<div class="size-top">
+			<i></i>
+			<span class="price" ng-hide="needcredit">&yen;{{newprice}}</span>
+			<span class="price" ng-if="needcredit"><i></i>{{needcredit}}</span>
+			<span class="max-count">库存<span>{{maxcount}}</span>件<span ng-if="limitnum">&nbsp;限购{{limitnum}}件</span></span>	
+		</div>
+		<div class="size-container">
+			<div class="size-box" ng-repeat="spec in specInfo">
+				<p ng-bind-template="{{spec.specName}}" spec-id="{{spec.specId}}"></p>
+				<a ng-repeat="values in spec.specValues" ng-bind-template="{{values.specValueName}}" value-id="{{values.specValueId}}" ng-class="{active:{{values.specValueId}}=={{specValues[$parent.$index]}} }"></a>
+			</div>
+			<div class="count-box" data-id="{{productID}}">
+				<p>数量</p>
+				<!-- 加减按钮 -->
+				<addcut maxcount="{{maxcount}}" limitnum="{{limitnum}}" count="{{count||1}}"></addcut>
+				<!-- 加减按钮 -->
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,29 @@
+<div class="suggest-main">
+	<div class="header">
+		<i ui-sref="mine"></i>
+		<span>投诉建议</span>
+	</div>
+	<div style="height:1rem; width:10rem;"></div>
+	<ul class="msg-con" ng-repeat="suggest in msg">
+		<li class="mine">
+			<img src="{{userinfo.imagePath}}">
+			<div class="msg">
+				<div class="content">{{suggest.content}}</div>
+				<div class="date">{{suggest.updateTime}}</div>
+			</div>
+		</li>
+		<li class="other" ng-if="suggest.reply.content">
+			<img src="http://appbuilder.loongjoy.com/phoneweb/app/img/photo_2.png">
+			<div class="msg">
+				<div class="content">{{suggest.reply.content}}</div>
+				<div class="date">{{suggest.reply.updateTime}}</div>
+			</div>
+		</li>
+	</ul>
+	<div style="height:1.15rem; width:10rem; "></div>
+	<div class="suggest-input">
+		<textarea placeholder="输入你想反馈的内容（限2-200字）" ng-model="content" maxlength="200" minlength="2">
+		</textarea>
+		<button ng-click="suggest()">发送</button>
+	</div>
+</div>

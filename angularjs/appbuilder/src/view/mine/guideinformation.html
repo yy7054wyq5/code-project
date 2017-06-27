@@ -1,0 +1,19 @@
+<div class="guideinformation-main">
+	<div class="header">
+		<i backpage></i>
+		<span translate="information"></span>
+	</div>
+	<div class="content">
+		<h3 translate="myInformation"></h3>
+		<ul class="list">
+			<li class="pic"><span translate="portrait"></span><img ng-src="{{userinfo.imagePath}}" ngf-select="uploadFiles($files,$invalidFiles)" ngf-accept="'image/*'" ngf-max-size="2MB"></li>
+			<li class="name">
+				<span translate="name"></span>
+				<input type="text" ng-show="nickInput==1" class="nickname" ng-mouseleave="hideInput()" ng-model="newNick" translate-attr="{placeholder:'nickname'}" maxlength="10" minlength="2">
+				<span ng-bind-template="{{userinfo.nickname}}" ng-click="showInput()"></span>
+			</li>
+			<li class="phone"><span translate="CellphoneNumber"></span><span ng-bind="{{userinfo.mobile}}"></span></li>
+		</ul>
+		<button ng-click="out()" translate="exitAccount"></button>
+	</div>
+</div>

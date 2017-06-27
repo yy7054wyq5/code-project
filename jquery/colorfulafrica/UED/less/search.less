@@ -1,0 +1,155 @@
+.wrap{
+	background: #fff;
+}
+.container.search{
+	padding-bottom: 100px;
+	background: #fff;
+	.search-con:after{
+		.clear;
+	}
+	.search-con{
+		width: 610px;
+		margin: 0 auto;
+		margin-top: 34px;
+		>input{
+			height: 38px;
+			border: 1px solid #dddddd;
+			border-right: 0;
+			float: left;
+			width: 555px;
+			padding-left: 10px;
+			border-radius: 5px 0 0 5px;
+		}
+		>a{
+			float: left;
+			display: block;
+			text-align: center;
+			background: @basecolor;
+			color: #fff;
+			line-height: 38px;
+			width: 54px;
+			height: 38px;
+		}
+	}
+	.search-tab:after{
+		.clear;
+	}
+	.search-tab{
+		margin-top: 30px;
+		margin-bottom: 20px;
+		border-bottom: 1px solid #ddd;
+		>a{
+			padding: 10px 20px;
+			float: left;
+			color: #333333;
+			display: block;
+			text-align: center;
+			font-size: 16px;
+			border-bottom: 1px solid #ddd;
+			margin-bottom: -1px;
+			>span{
+				color: #999999;
+			}
+		}
+		>a.active{
+			border-bottom: 1px solid @basecolor;
+		}
+	}
+	div.con{
+		margin-top: 20px;
+		>h2{
+			font-size: 22px;
+			color: @basecolor;
+			margin-bottom: 20px;
+		}
+		>ul{
+			border-bottom: 1px solid #ddd;
+			li:after{
+				.clear;
+			}
+			li{
+				margin-bottom: 10px;
+				>img{
+					float: left;
+					width: 320px;
+					height: 230px;
+				}
+				>a{
+					float: left;
+					display: block;
+					width: 750px;
+					margin-left: 75px;
+					>h5{
+						color: @basecolor;
+						height: 44px;
+						overflow: hidden;
+						font-size: 20px;
+						overflow: hidden;
+						margin-top: 60px;
+					}
+					>p{
+						color: #999999;
+						margin-top: 20px;
+						height: 60px;
+						overflow: hidden;
+					}
+				}
+			}
+		}
+	}
+	div.con.strategy{
+		>ul{
+			li{
+				>img{
+					width: 240px;
+					height: 172px;
+				}
+				>a{
+					width: 830px;
+					>h5{
+						margin-top: 30px;
+					}
+				}
+			}
+		}
+	}
+	div.con:after{
+		.clear;
+	}
+	div.con{
+		>dl{
+			float: left;
+			margin-right: 10px;
+			>dt{
+				img{
+					width: 172px;
+					height: 127px;
+				}
+			}
+			>dd{
+				text-align: center;
+				margin-top: 10px;
+				>a{
+					color: #333333;
+				}
+			}
+		}
+	}
+	div.con.store{
+		>dl{
+			>dt{
+				img{
+					width: 160px;
+					height: 160px;
+				}
+			}
+			>dd.price{
+				margin-top: 10px;
+				color: #ff4a26;
+				text-align: right;
+				font-size: 20px;
+				padding-bottom: 10px;
+			}
+		}
+	}
+}

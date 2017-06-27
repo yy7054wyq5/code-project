@@ -1,0 +1,450 @@
+.container.weather-module{
+	padding: 100px 90px;
+	>div{
+		color: #fff;
+		a{
+			color: #fff;
+		}
+	}
+	.chose-weather{
+		background: rgba(0, 0, 0, 0.5);
+		.gradientforie;
+		border-radius: 5px;
+		width: 360px;
+		height: 230px;
+		padding: 30px;
+		float: left;
+		.city{
+			margin-top: 10px;
+			span{
+				display: block;
+				float: left;
+				font-size: 12px;
+			}
+			span.name{
+				font-size: 30px;
+			}
+			span.line{
+				width: 1px;
+				height: 30px;
+				background: #fff;
+				margin: 8px 10px 0 10px;
+			}
+			span.date{
+				width: 60px;
+				margin-top: 5px;
+			}
+			span.week{
+				margin-left: 5px;
+				margin-top: 6px;
+			}
+		}
+		.city:after{
+			.clear;
+		}
+		.weather:after{
+			.clear;
+		}
+		.weather{
+			margin-top: 40px;
+			margin-left: 10px;
+			i{
+				float: left;
+				display: block;
+			}
+			div{
+				margin-left: 30px;
+				float: left;
+				p:first-child{
+					font-size: 18px;
+				}
+				p:last-child{
+					font-size: 34px;
+					font-weight: 300;
+				}
+			}
+		}
+	}
+	.user-chose:after{
+		.clear;
+	}
+	.user-chose{
+		border-radius: 5px;
+		width: 455px;
+		height: 230px;
+		overflow: hidden;
+		float: right;
+		>ul{
+			background: transparent;
+			float: left;
+			>li.active{
+				background: rgba(0, 0, 0, 0.5);
+				.gradientforie;
+			}
+			>li{
+				width: 92px;
+				cursor: pointer;
+				font-size: 18px;
+				text-align: center;
+				line-height: 46px;
+				height: 46px;
+			}
+		}
+		>div{
+			background: rgba(0, 0, 0, 0.5);
+			.gradientforie;
+			width: 362px;
+			height: 230px;
+			float: left;
+			padding: 20px;
+			display: none;
+			overflow-y: auto; 
+			>a{
+				display: block;
+				float: left;
+				margin: 0 10px 10px 15px;
+			}
+		}
+		>div.active{
+			display: block;
+		}
+		>div:after{
+			.clear;
+		}
+	}
+	.hack{
+		background: transparent;
+		width: 100%;
+		height: 70px;
+		.clear;
+	}
+	ul.week-weather:after{
+		.clear;
+	}
+	ul.week-weather{
+		li{
+			color: #fff;
+			height: 280px;
+			width: 142px;
+			background: rgba(0, 0, 0, 0.5);
+			.gradientforie;
+			float: left;
+			margin-right: 1px;
+			padding: 24px 25px 0 25px;
+			div{
+				text-align: center;
+			}
+			div.date{
+				font-size: 14px;
+			}
+			i{
+				display: block;
+				margin-top: 40px;
+				margin-left: 32px;
+			}
+			div.des{
+				margin-top: 34px;
+				height: 40px;
+			}
+			div.degrees{
+				margin-top: 60px;
+			}
+		}
+		li:last-child{
+			margin-right: 0;
+		}
+	}
+}
+
+
+.header-btn{
+	a.weather{
+		display: block;
+		width: 27px;
+		height: 27px;
+		i{
+			display: block;
+			width: 27px;
+			height: 27px;
+		}
+	}
+}
+
+.header{
+	div.weather{
+		i{
+			display: block;
+			top: 5px;
+			left: 90px;
+			cursor: pointer;
+			position: absolute;
+		}
+	}
+}
+
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.weather_icon_baoxue {
+  background-image: url(../img/weather_large_icon.png);
+  background-position: -58px 0px;
+  width: 58px;
+  height: 58px;
+}
+.weather_icon_bingbao {
+  background-image: url(../img/weather_large_icon.png);
+  background-position: -174px 0px;
+  width: 58px;
+  height: 58px;
+}
+.weather_icon_dafeng {
+  background-image: url(../img/weather_large_icon.png);
+  background-position: 0px -58px;
+  width: 58px;
+  height: 58px;
+}
+.weather_icon_dayu {
+  background-image: url(../img/weather_large_icon.png);
+  background-position: -58px -58px;
+  width: 58px;
+  height: 58px;
+}
+.weather_icon_duoyun {
+  background-image: url(../img/weather_large_icon.png);
+  background-position: -116px 0px;
+  width: 58px;
+  height: 58px;
+}
+.weather_icon_leizhenyu {
+  background-image: url(../img/weather_large_icon.png);
+  background-position: -116px -58px;
+  width: 58px;
+  height: 58px;
+}
+.weather_icon_qing {
+  background-image: url(../img/weather_large_icon.png);
+  background-position: 0px -116px;
+  width: 58px;
+  height: 58px;
+}
+.weather_icon_shachenbao {
+  background-image: url(../img/weather_large_icon.png);
+  background-position: -58px -116px;
+  width: 58px;
+  height: 58px;
+}
+.weather_icon_shuangdong {
+  background-image: url(../img/weather_large_icon.png);
+  background-position: -116px -116px;
+  width: 58px;
+  height: 58px;
+}
+.weather_icon_taifeng {
+  background-image: url(../img/weather_large_icon.png);
+  background-position: 0px 0px;
+  width: 58px;
+  height: 58px;
+}
+.weather_icon_wu {
+  background-image: url(../img/weather_large_icon.png);
+  background-position: -174px -58px;
+  width: 58px;
+  height: 58px;
+}
+.weather_icon_xiaoxue {
+  background-image: url(../img/weather_large_icon.png);
+  background-position: -174px -116px;
+  width: 58px;
+  height: 58px;
+}
+.weather_icon_xiaoyu {
+  background-image: url(../img/weather_large_icon.png);
+  background-position: 0px -174px;
+  width: 58px;
+  height: 58px;
+}
+.weather_icon_ying {
+  background-image: url(../img/weather_large_icon.png);
+  background-position: -58px -174px;
+  width: 58px;
+  height: 58px;
+}
+.weather_icon_yujiaxue {
+  background-image: url(../img/weather_large_icon.png);
+  background-position: -116px -174px;
+  width: 58px;
+  height: 58px;
+}
+.weather_icon_zhenxue {
+  background-image: url(../img/weather_large_icon.png);
+  background-position: -174px -174px;
+  width: 58px;
+  height: 58px;
+}
+.weather_icon_zhenyu {
+  background-image: url(../img/weather_large_icon.png);
+  background-position: -232px 0px;
+  width: 58px;
+  height: 58px;
+}
+.weather_icon_zhongxue {
+  background-image: url(../img/weather_large_icon.png);
+  background-position: -232px -58px;
+  width: 58px;
+  height: 58px;
+}
+.weather_icon_zhongyu {
+  background-image: url(../img/weather_large_icon.png);
+  background-position: -232px -116px;
+  width: 58px;
+  height: 58px;
+}
+
+
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.weather_icon_s_baoxue {
+  background-image: url(../img/weather_small_icon.png);
+  background-position: -27px 0px;
+  width: 27px;
+  height: 27px;
+}
+.weather_icon_s_bingbao {
+  background-image: url(../img/weather_small_icon.png);
+  background-position: -81px 0px;
+  width: 27px;
+  height: 27px;
+}
+.weather_icon_s_dafeng {
+  background-image: url(../img/weather_small_icon.png);
+  background-position: 0px -27px;
+  width: 27px;
+  height: 27px;
+}
+.weather_icon_s_dayu {
+  background-image: url(../img/weather_small_icon.png);
+  background-position: -27px -27px;
+  width: 27px;
+  height: 27px;
+}
+.weather_icon_s_duoyun {
+  background-image: url(../img/weather_small_icon.png);
+  background-position: -54px 0px;
+  width: 27px;
+  height: 27px;
+}
+.weather_icon_s_leizhenyu {
+  background-image: url(../img/weather_small_icon.png);
+  background-position: -54px -27px;
+  width: 27px;
+  height: 27px;
+}
+.weather_icon_s_qing {
+  background-image: url(../img/weather_small_icon.png);
+  background-position: 0px -54px;
+  width: 27px;
+  height: 27px;
+}
+.weather_icon_s_shachenbao {
+  background-image: url(../img/weather_small_icon.png);
+  background-position: -27px -54px;
+  width: 27px;
+  height: 27px;
+}
+.weather_icon_s_shuangdong {
+  background-image: url(../img/weather_small_icon.png);
+  background-position: -54px -54px;
+  width: 27px;
+  height: 27px;
+}
+.weather_icon_s_taifeng {
+  background-image: url(../img/weather_small_icon.png);
+  background-position: 0px 0px;
+  width: 27px;
+  height: 27px;
+}
+.weather_icon_s_wu {
+  background-image: url(../img/weather_small_icon.png);
+  background-position: -81px -27px;
+  width: 27px;
+  height: 27px;
+}
+.weather_icon_s_xiaoxue {
+  background-image: url(../img/weather_small_icon.png);
+  background-position: -81px -54px;
+  width: 27px;
+  height: 27px;
+}
+.weather_icon_s_xiaoyu {
+  background-image: url(../img/weather_small_icon.png);
+  background-position: 0px -81px;
+  width: 27px;
+  height: 27px;
+}
+.weather_icon_s_ying {
+  background-image: url(../img/weather_small_icon.png);
+  background-position: -27px -81px;
+  width: 27px;
+  height: 27px;
+}
+.weather_icon_s_yujiaxue {
+  background-image: url(../img/weather_small_icon.png);
+  background-position: -54px -81px;
+  width: 27px;
+  height: 27px;
+}
+.weather_icon_s_zhenxue {
+  background-image: url(../img/weather_small_icon.png);
+  background-position: -81px -81px;
+  width: 27px;
+  height: 27px;
+}
+.weather_icon_s_zhenyu {
+  background-image: url(../img/weather_small_icon.png);
+  background-position: -108px 0px;
+  width: 27px;
+  height: 27px;
+}
+.weather_icon_s_zhongxue {
+  background-image: url(../img/weather_small_icon.png);
+  background-position: -108px -27px;
+  width: 27px;
+  height: 27px;
+}
+.weather_icon_s_zhongyu {
+  background-image: url(../img/weather_small_icon.png);
+  background-position: -108px -54px;
+  width: 27px;
+  height: 27px;
+}

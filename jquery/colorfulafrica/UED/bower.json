@@ -1,0 +1,28 @@
+{
+  "name": "appbuilderphp",
+  "description": "A AngularJS project",
+  "version": "0.0.0",
+  "homepage": "ssh://git@gitlab.doboyu.com:58133/tuxiaohui/appbuilderphp.git",
+  "license": "MIT",
+  "authors": [
+    "loongjoy"
+  ],
+  "main": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "js/lib",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "~3.3.x",
+    "jquery_lazyload": "jquery.lazyload#^1.9.7",
+    "jqzoom": "^2.3.0",
+    "uploadify": "^3.2.1",
+    "js-cookie": "^2.1.2",
+    "jquery": "^1.12.x",
+    "mousetrap": "^1.6.0",
+    "bootstrap-select": "^1.11.2"
+  }
+}

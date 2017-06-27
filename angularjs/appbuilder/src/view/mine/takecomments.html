@@ -1,0 +1,17 @@
+<div class="take-comments-main">
+	<div class="header">
+		<i backpage></i>
+		<span>发表评价</span>
+	</div>
+	<ul class="list">
+		<li ng-repeat="product in list" data-productid="{{product.productId}}" data-userscore="5">
+			<img ng-src="{{product.imagePath}}">
+			<textarea placeholder="产品怎么样？"></textarea>
+			<div>
+				<span>总分</span>
+				<star totalstar="5"></star>
+			</div>
+		</li>
+	</ul>
+	<button usercomment>立即评价</button>
+</div>
